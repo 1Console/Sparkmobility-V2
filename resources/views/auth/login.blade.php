@@ -44,7 +44,7 @@
                             <p>Trekk</p>
                                 
                         </div>
-                        <h1 class=" font-black text-black text-3xl mt-6">Welcome Back!</h1>
+                        <h1 class=" font-black text-black text-3xl mt-6">Welcome Back - Deploy!</h1>
                         <p class=" mt-1">Please enter your details to sign in</p>
                         <form action="" class="flex flex-col mt-8">
                             <input class=" rounded-full p-3" type="text" placeholder="example@gmail.com">
