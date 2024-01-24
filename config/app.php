@@ -16,7 +16,10 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    // 'name' => env('APP_NAME', 'Spark Mobility'),
+    'name' => [
+        'app_name' => 'Spark Mobility'
+    ],
 
     /*
     |--------------------------------------------------------------------------
