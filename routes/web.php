@@ -23,8 +23,16 @@ Route::get('/dashboard2', function () {
 });
 
 Route::get('/commands/create', function () {
-    return view('modules.commands.create');
+    return view('modules.commands.create'); //resources
 });
+
+// Route::get('/fleets/create', function () {
+//     return view('modules.commands.create'); //resources
+// });
+
+// Route::get('/fleets/index', function () {
+//     return view('modules.fleets.create'); //resources
+// });
 
 
 
