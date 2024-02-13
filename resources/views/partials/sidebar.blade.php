@@ -289,10 +289,11 @@
         </li>
       </ul>
     </div>
-
   </div>
+
   <div class="px-4 mb-2">
     <span class="mt-auto text-xs font-thin">Powered by Trekk</span>
   </div>
+  
   </div>
 </aside>
