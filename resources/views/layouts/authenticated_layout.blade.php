@@ -14,37 +14,15 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-      
-        
     </head>
-    <body class="font-sans text-gray-900 antialiased overflow-y-auto">
-        <div class="flex h-screen text-[#9E9E9E]  bg-white dark:bg-gray-900">
+    <body class="overflow-y-auto antialiased text-gray-900">
+        <div class="flex h-screen text-[#9E9E9E]">
             
                 @include('partials.sidebar')
 
-                <div class=" bg-white flex-1 mx-auto  w-full px-10  py-4 overflow-x-auto overflow-y-auto">
+                <div class="flex-1 w-full px-10 py-8 mx-auto overflow-x-auto overflow-y-auto">
                     @yield('content')
-                </div>
-
-            
-                {{-- left --}}
-                {{-- <div class=" bg-white flex-none  w-96 px-6 py-4 text-sm overflow-y-auto">
-              
-                        
-                    
-                </div> --}}
-
-                {{-- center --}}
-                {{-- <div class=" bg-white flex-1 mx-auto  w-full px-10  py-4 overflow-x-auto overflow-y-auto">
-                        
-                </div> --}}
-
-                {{-- right i--}}
-                {{-- <div class=" bg-white  w-[24rem]">
-                
-                    
-                </div> --}}
-               
+                </div>         
             </div>
         </div>
     </body>
