@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('trekk_admins', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('partner_id')->constrained('partners')->nullable();
             $table->string('name');
             $table->string('phone');
             $table->string('email')->unique();

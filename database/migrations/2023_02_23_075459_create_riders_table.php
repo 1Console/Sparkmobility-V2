@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('address');
             $table->longText('community');
             $table->string('status');
-            $table->foreignId('user_id')->constrained('users');
+            // $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
         });
     }

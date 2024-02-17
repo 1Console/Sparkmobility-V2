@@ -16,7 +16,8 @@ return new class extends Migration
         Schema::create('promo_flat_discounts', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('partner_id')->constrained('partners')->nullable(); 
+            $table->foreignId('user_id')->constrained('users'); 
             $table->timestamps();
         });
     }

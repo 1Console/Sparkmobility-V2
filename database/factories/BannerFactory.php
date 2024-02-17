@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Partner;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,6 +19,7 @@ class BannerFactory extends Factory
     {
         return [
             'title' => fake()->unique()->sentence(10),
+            'partner_id' => collect(Partner::all()->modelKeys())->random(),
             'description' => fake()->sentence(),
             'location' => fake()->sentence(),
             'info_title' => fake()->sentence(20),

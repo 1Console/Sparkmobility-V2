@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('campaigns', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->foreignId('rider_id')->constrained('riders');
+            $table->foreignId('rider_id')->constrained('riders'); //this already has a partner associated
             $table->string('send_notifications');
             $table->longText('to');
             $table->longText('message'); // it has a lot

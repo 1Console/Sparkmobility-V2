@@ -13,6 +13,7 @@ use Database\Seeders\RiderSeeder;
 use Database\Seeders\BannerSeeder;
 use Database\Seeders\TicketSeeder;
 use Database\Seeders\CommandSeeder;
+use Database\Seeders\PartnerSeeder;
 use Database\Seeders\PricingSeeder;
 use Database\Seeders\RidelogSeeder;
 use Database\Seeders\VehicleSeeder;
@@ -38,12 +39,13 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call([
+            PartnerSeeder::class,
             UserSeeder::class,
-            PartnerAdminSeeder::class,
-            TrekkAdminSeeder::class,
+            // PartnerAdminSeeder::class,
+            // TrekkAdminSeeder::class,
             FleetSeeder::class,
             VehicleSeeder::class,
-            RiderSeeder::class,
+            // RiderSeeder::class,
             RideSeeder::class,
             PricingSeeder::class,
             TicketSeeder::class,

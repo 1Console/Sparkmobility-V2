@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('offers', function (Blueprint $table) {
             $table->id();
+            // $table->foreignId('partner_id')->constrained('partners')->nullable();
             $table->string('title');
             $table->longText('description');
             $table->string('location');
@@ -27,7 +28,7 @@ return new class extends Migration
             $table->longText('notes');
             $table->string('radius');
             $table->longText('thumbnail_image_path');
-            $table->foreignId('fleet_id')->constrained('fleets');
+            $table->foreignId('fleet_id')->constrained('fleets'); //this already contains the partner id
             $table->timestamps();
         });
     }
