@@ -29,7 +29,7 @@ class RideFactory extends Factory
             'end_location' => fake()->address(),
             'pause_duration' => rand(10,20),
             'vehicle_id' => collect(Vehicle::all()->modelKeys())->random(),
-            'fleet_id' => collect(Fleet::all()->modelKeys())->random(),
+            'fleet_id' => collect(Fleet::all()->modelKeys())->random(), 
             'unlock_fee' => 100,
             'price' => [100,200,300,400,500][rand(0,4)],
         ];

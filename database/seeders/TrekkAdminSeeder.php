@@ -13,6 +13,6 @@ class TrekkAdminSeeder extends Seeder
      */
     public function run(): void
     {
-        TrekkAdmin::factory(3)->create();
+        // TrekkAdmin::factory(3)->create();
     }
 }

@@ -17,12 +17,13 @@ class TrekkAdminFactory extends Factory
      */
     public function definition(): array
     {
+        //not used for now
         return [
-            'name' => fake()->firstName(),
-            'phone' => fake()->phoneNumber(),
-            'email' => fake()->unique()->safeEmail(),
-            // 'user_id' => collect(User::all()->modelKeys())->random(),
-            'last_connection' => date('Y-m-d H:i:s'),
+            // 'name' => fake()->firstName(),
+            // 'phone' => fake()->phoneNumber(),
+            // 'email' => fake()->unique()->safeEmail(),
+            // // 'user_id' => collect(User::all()->modelKeys())->random(),
+            // 'last_connection' => date('Y-m-d H:i:s'),
         ];
     }
 }

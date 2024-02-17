@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->foreignId('rider_id')->constrained('riders')->nullable();
-            $table->foreignId('user_id')->constrained('users')->nullable();
+            $table->foreignId('user_id')->constrained('users')->nullable(); // in this context user is Trekk/Partner Admin
             $table->longText('body');
             $table->string('location');
             $table->date('start_time');

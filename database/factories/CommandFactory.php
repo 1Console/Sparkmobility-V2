@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Partner;
 use App\Models\CommandList;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -18,6 +19,7 @@ class CommandFactory extends Factory
     public function definition()
     {
         return [
+            'partner_id' => collect(Partner::all()->modelKeys())->random(),
             'command_id' => collect(CommandList::all()->modelKeys())->random(),
             'type' => ['active','inactive'][rand(0,1)], 
             'associated_ids'=>rand(1,20),

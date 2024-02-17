@@ -21,7 +21,7 @@ class TicketLogFactory extends Factory
         return [
             'title' => fake()->title(),
             'rider_id' => collect(Rider::all()->modelKeys())->random(),
-            'user_id' => collect(User::all()->modelKeys())->random(),
+            'user_id' => collect(User::where('userable_type','!=',Rider::class)->get()->modelKeys())->random(),
             'body' => fake()->sentence(),
             'location' => fake()->address(),
             'start_time' =>  date('Y-m-d H:i:s', strtotime(['2021-01-11','2021-03-12'][rand(0,1)])),
