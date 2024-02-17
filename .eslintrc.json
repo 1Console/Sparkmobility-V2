@@ -1,0 +1,67 @@
+{
+    "root": true,
+    "extends": [
+      "eslint:recommended",
+      "plugin:tailwindcss/recommended",
+      "plugin:eslint-comments/recommended",
+      "prettier",
+      "plugin:prettier/recommended"
+    ],
+    "plugins": [
+        "prettier",
+        "import"
+      ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "useTabs": true,
+          "tabWidth": 4,
+          "printWidth": 100,
+          "trailingComma": "all"
+        }
+      ],
+      "eslint-comments/no-unused-disable": "error",
+      "no-console": [
+        "error",
+        {
+          "allow": [
+            "warn",
+            "error"
+          ]
+        }
+      ],
+      "no-tabs": 0,
+      "import/extensions": 0,
+      "no-underscore-dangle": 0,
+      "import/no-unresolved": 0,
+      "import/no-anonymous-default-export": 0
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".ts",
+            ".tsx",
+            ".d.ts",
+            ".js",
+            ".jsx",
+            ".json",
+            ".blade.php",
+            ".php",
+            ".node"
+          ],
+          "paths": "."
+        },
+        "typescript": {
+          "directory": ".",
+          "alwaysTryTypes": true
+        }
+      }
+    },
+    "parserOptions": {
+      "warnOnUnsupportedTypeScriptVersion": false
+    }
+  }
+  
+  

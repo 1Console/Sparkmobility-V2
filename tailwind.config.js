@@ -9,11 +9,17 @@ export default {
         './resources/views/**/*.blade.php',
         './node_modules/flowbite/**/*.js',
     ],
-    plugins: [forms, require('flowbite/plugin')],
+    plugins: [forms, require('flowbite/plugin')({
+        charts: true,
+    }),
+        // ... other plugins
+    ],
     theme: {
         extend: {
             fontSize: {
-                16: "16px",
+                xxxs: '0.4rem',
+                xxs: '0.6rem',
+                xs: '0.8rem',
             },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
@@ -50,6 +56,7 @@ export default {
                     950: "#172554"
                 },
                 brand: {
+                    100: "#e8fbf4",
                     200: "#DCEDE7",
                     400: "#4ea685",
                 },

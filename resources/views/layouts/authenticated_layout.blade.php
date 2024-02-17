@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,17 +14,21 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-
+        {{-- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> --}}
+        
     </head>
-    <body class="overflow-y-auto antialiased text-gray-900">
-        <div class="flex h-screen text-[#9E9E9E]">
-            
-                @include('partials.sidebar')
 
-                <div class="flex-1 w-full px-10 py-8 mx-auto overflow-x-auto overflow-y-auto">
-                    @yield('content')
-                </div>         
-            </div>
+    <body class="antialiased">
+        @include('partials.navbar')
+
+        <div class="flex h-screen">
+            @include('partials.sidebar')
+
+            <main class="bg-neutral-100 flex-1 w-full mx-auto overflow-y-auto">
+                @yield('content')
+            </main>
+        </div>
         </div>
     </body>
+
 </html>
