@@ -18,9 +18,9 @@ class VehicleFactory extends Factory
     public function definition()
     {
         return [
-            'type' => ['type1','type2'][rand(0,1)],
-            // 'fleet_id' => collect(Fleet::all()->modelKeys())->random(),
-            'vehicle_number' => '0'.rand(10,99),
+            'vehicle_category' => ['type1','type2'][rand(0,1)],
+            // 'fleet_id' => collect(Fleet::all()->modelKeys())->random(), //this was removed so it comes as a pivot
+            'vehicle_number' => '0'.rand(10,99), 
             'mac_id' => ['macid1','macid2','macid3','macid4'][rand(0,3)],
             'description' => fake()->sentence(),
             'imei' => ['imei1','imei2','imei3','imei4'][rand(0,3)],

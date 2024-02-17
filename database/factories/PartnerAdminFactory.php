@@ -17,14 +17,9 @@ class PartnerAdminFactory extends Factory
      */
     public function definition(): array
     {
+        //not used for now
         return [
-            'company_name' => fake()->company(),
-            'company_phone' => fake()->phoneNumber(),
-            'agent_name' => fake()->unique()->firstName(),
-            'cac_document_path' => 'image.png',
-            'company_email' => fake()->unique()->safeEmail(),
-            // 'user_id' => collect(User::all()->modelKeys())->random(),
-            'last_connection' => date('Y-m-d H:i:s'),
+            
         ];
     }
 }

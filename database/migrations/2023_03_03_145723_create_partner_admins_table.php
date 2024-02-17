@@ -13,11 +13,10 @@ return new class extends Migration
     {
         Schema::create('partner_admins', function (Blueprint $table) {
             $table->id();
-            $table->string('company_name');
-            $table->string('company_phone');
-            $table->string('agent_name');
-            $table->longText('cac_document_path');
-            $table->string('company_email')->unique();
+            $table->foreignId('partner_id')->constrained('partners')->nullable();
+            $table->string('name');
+            $table->string('phone');
+            $table->string('email')->unique();
             // $table->foreignId('user_id')->constrained('users');
             $table->date('last_connection');
             $table->timestamps();

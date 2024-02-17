@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('banners', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('partner_id')->constrained('partners')->nullable();
             $table->string('title');
             $table->longText('description');
             $table->string('location');

@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\User;
+use App\Models\Partner;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -20,6 +21,7 @@ class PromoFlatDiscountFactory extends Factory
         return [
             'name' => fake()->name(),
             'user_id' => collect(User::all()->modelKeys())->random(),
+            'partner_id' =>[1,2][rand(0,1)],
         ];
     }
 }
