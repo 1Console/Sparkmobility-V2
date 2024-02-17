@@ -28,6 +28,10 @@ Route::get('/commands/create', function () {
     return view('modules.commands.create'); //resources
 });
 
+Route::get('/riders/create', function () {
+    return view('modules.riders.create'); //resources
+});
+
 // Route::get('/fleets/create', function () {
 //     return view('modules.commands.create'); //resources
 // });
