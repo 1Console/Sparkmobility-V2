@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\LoginController;
 use Illuminate\Validation\ValidationException;
 use App\Http\Controllers\Api\RiderAuthController;
+use App\Http\Controllers\Api\Riders\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,11 +20,14 @@ use App\Http\Controllers\Api\RiderAuthController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/', function (Request $request) {
+// return $request->user();
+Route::post('/rider/dashboard',[DashboardController::class,'index'])->name('rider.dashboard')->middleware('auth:sanctum');
+// });
 
 
 
 //MOBILE APP - CLEAN UP LATER
-Route::post('/rider/login',[RiderAuthController::class,'login'])->name('auth.rider');
+Route::post('/rider/login',[RiderAuthController::class,'login'])->name('auth.rider.login');
+Route::post('/rider/logout',[RiderAuthController::class,'logout'])->name('auth.rider.logout');
+Route::post('/rider/register',[RiderAuthController::class,'register'])->name('auth.rider.register');
