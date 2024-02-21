@@ -28,6 +28,14 @@ Route::get('/commands/create', function () {
     return view('modules.commands.create'); //resources
 });
 
+Route::get('/riders-management', function () {
+    return view('modules.riders-management.index'); //riders-management
+});
+
+Route::get('/riders-management/rides', function () {
+    return view('modules.riders-management.rides.index');
+});
+
 // Route::get('/fleets/create', function () {
 //     return view('modules.commands.create'); //resources
 // });
@@ -65,7 +73,7 @@ Route::get('/dashboard', function () {
 // //////MAIN ROUTES
 // //////MAIN ROUTES
 // Route::middleware('auth')->group( function(){  
-    
+
 //     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
 //     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -80,7 +88,7 @@ Route::get('/dashboard', function () {
 //     Route::get('/trekk-admins/filterTrekkAdmin/{admin_type}',[TrekkAdminController::class,'filterTrekkAdmin'])->name('filterTrekkAdmin');
 //     Route::resource('trekk-admins',TrekkAdminController::class);
 
-    
+
 //     Route::get('fleets/{fleet}/assign-vehicles',[FleetController::class,'createAssignVehicles'])->name('fleets.create.assign-vehicles');
 //     Route::post('fleets/{fleet}/assign-vehicles/',[FleetController::class,'storeAssignVehicles'])->name('fleets.store.assign-vehicles');
 //     Route::resource('fleets',FleetController::class);
@@ -109,4 +117,4 @@ Route::get('/dashboard', function () {
 //     });      
 //  });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

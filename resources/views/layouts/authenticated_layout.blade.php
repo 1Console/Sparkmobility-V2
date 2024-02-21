@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,38 +15,22 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-      
-        
     </head>
-    <body class="font-sans text-gray-900 antialiased overflow-y-auto">
-        <div class="flex h-screen text-[#9E9E9E]  bg-white dark:bg-gray-900">
-            
-                @include('partials.sidebar')
 
-                <div class=" bg-white flex-1 mx-auto  w-full px-10  py-4 overflow-x-auto overflow-y-auto">
-                    @yield('content')
-                </div>
+    <body class="antialiased">
+        @include('partials.navbar')
 
-            
-                {{-- left --}}
-                {{-- <div class=" bg-white flex-none  w-96 px-6 py-4 text-sm overflow-y-auto">
-              
-                        
-                    
-                </div> --}}
+        <div class="flex h-screen">
+            @include('partials.sidebar')
 
-                {{-- center --}}
-                {{-- <div class=" bg-white flex-1 mx-auto  w-full px-10  py-4 overflow-x-auto overflow-y-auto">
-                        
-                </div> --}}
-
-                {{-- right i--}}
-                {{-- <div class=" bg-white  w-[24rem]">
-                
-                    
-                </div> --}}
-               
-            </div>
+            <main class="bg-neutral-100 flex-1 w-full mx-auto overflow-y-auto mt-20 md:mt-16">
+                @yield('content')
+            </main>
         </div>
+
+        <div class="bg-white flex justify-center grow p-6 md:hidden">
+            <span class="mt-auto text-xs text-gray-500 font-thin">Powered by Trekk</span>
+          </div>
     </body>
+
 </html>
