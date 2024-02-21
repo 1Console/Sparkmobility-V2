@@ -1,13 +1,12 @@
 @extends('layouts.authenticated_layout')
 
 @section('content')
-{{-- <div class="bg-white flex h-full pl-8 space-y-0.5"> --}}
-<div class="flex flex-col h-auto mt-20 md:flex-row md:flex-1 md:h-full md:mt-14">
+<div class="flex flex-col h-auto md:flex-row md:flex-1 md:h-full">
 
     <section class="mb-8 flex px-4 md:px-8 md:overflow-y-auto">
         <div class="w-full max-w-3xl flex flex-col">
-            <div class="mt-6 mb-6 space-y-2">
-                <h1 class="font-black text-black text-3xl">Overview</h1>
+            <div class="mt-6 mb-6 space-y-1.5">
+                <h1 class="text-xl text-gray-800 font-medium">Overview</h1>
                 <p>Dashboard overview of all major operations</p>
             </div>
 
@@ -36,7 +35,6 @@
 
             {{-- tickets --}}
             @include('partials.tickets_overview')
-
         </div>
     </aside>
 </div>

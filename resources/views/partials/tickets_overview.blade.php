@@ -1,4 +1,4 @@
-<div class="mb-10">
+<div class="h-auto pb-4 md:mb-10 md:pb-14">
 
     <div class="mb-3 relative flex items-start">
         <span
