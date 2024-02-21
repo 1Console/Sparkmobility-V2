@@ -14,8 +14,7 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-        {{-- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> --}}
-        
+
     </head>
 
     <body class="antialiased">
@@ -24,11 +23,14 @@
         <div class="flex h-screen">
             @include('partials.sidebar')
 
-            <main class="bg-neutral-100 flex-1 w-full mx-auto overflow-y-auto">
+            <main class="bg-neutral-100 flex-1 w-full mx-auto overflow-y-auto mt-20 md:mt-16">
                 @yield('content')
             </main>
         </div>
-        </div>
+
+        <div class="bg-white flex justify-center grow p-6 md:hidden">
+            <span class="mt-auto text-xs text-gray-500 font-thin">Powered by Trekk</span>
+          </div>
     </body>
 
 </html>
