@@ -4,9 +4,9 @@
 		"eslint:recommended",
 		"plugin:tailwindcss/recommended",
 		"plugin:eslint-comments/recommended",
-		"@salesforce/eslint-config-lwc/recommended",
+		"plugin:@cspell/recommended",
 		"prettier",
-		"plugin:prettier/recommended"
+		"plugin:prettier/recommended",
 	],
 	"plugins": ["prettier", "import"],
 	"rules": {
@@ -16,23 +16,26 @@
 				"useTabs": true,
 				"tabWidth": 4,
 				"printWidth": 100,
-				"trailingComma": "all"
-			}
+				"trailingComma": "all",
+			},
 		],
 		"eslint-comments/no-unused-disable": "error",
 		"no-console": [
 			"error",
 			{
-				"allow": ["warn", "error"]
-			}
+				"allow": ["warn", "error"],
+			},
 		],
 		"no-tabs": 0,
 		"import/extensions": 0,
 		"no-underscore-dangle": 0,
 		"import/no-unresolved": 0,
-		"import/no-anonymous-default-export": 0
+		"import/no-anonymous-default-export": 0,
 	},
 	"settings": {
+		"tailwindcss": {
+			"config": "tailwind.config.js",
+		},
 		"import/resolver": {
 			"node": {
 				"extensions": [
@@ -44,17 +47,17 @@
 					".json",
 					".blade.php",
 					".php",
-					".node"
+					".node",
 				],
-				"paths": "."
+				"paths": ".",
 			},
-			"typescript": {
-				"directory": ".",
-				"alwaysTryTypes": true
-			}
-		}
+		},
 	},
+	// "parser": "babel-eslint",
+	"parser": "@babel/eslint-parser",
 	"parserOptions": {
-		"warnOnUnsupportedTypeScriptVersion": false
-	}
+		"sourceType": "module",
+		"requireConfigFile": false,
+		"warnOnUnsupportedTypeScriptVersion": false,
+	},
 }
