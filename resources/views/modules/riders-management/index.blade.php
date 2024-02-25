@@ -101,7 +101,7 @@
 							<button
 								id="dropdownActionButton"
 								data-dropdown-toggle="dropdownAction"
-								class="inline-flex items-center rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-xs font-medium text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100 md:text-sm"
+								class="inline-flex items-center rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-xs font-medium text-gray-500 hover:bg-brand-100 focus:outline-none focus:ring-4 focus:ring-gray-100 md:text-sm"
 								type="button"
 							>
 								<span class="sr-only">Action button</span>
@@ -132,22 +132,22 @@
 									aria-labelledby="dropdownActionButton"
 								>
 									<li>
-										<a href="#" class="block px-4 py-2 hover:bg-gray-100">
+										<a href="#" class="block px-4 py-2 hover:bg-brand-100">
 											Reward
 										</a>
 									</li>
 									<li>
-										<a href="#" class="block px-4 py-2 hover:bg-gray-100">
+										<a href="#" class="block px-4 py-2 hover:bg-brand-100">
 											Can lock scooter
 										</a>
 									</li>
 									<li>
-										<a href="#" class="block px-4 py-2 hover:bg-gray-100">
+										<a href="#" class="block px-4 py-2 hover:bg-brand-100">
 											Activate account
 										</a>
 									</li>
 									<li>
-										<a href="#" class="block px-4 py-2 hover:bg-gray-100">
+										<a href="#" class="block px-4 py-2 hover:bg-brand-100">
 											Deactivate account
 										</a>
 									</li>
@@ -167,7 +167,7 @@
 							<button
 								id="dropdownRadioButton"
 								data-dropdown-toggle="dropdownRadio"
-								class="inline-flex items-center rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-xs font-medium text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100 md:text-sm"
+								class="inline-flex items-center rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-xs font-medium text-gray-500 hover:bg-brand-100 focus:outline-none focus:ring-4 focus:ring-gray-100 md:text-sm"
 								type="button"
 							>
 								<svg
@@ -223,7 +223,7 @@
 								>
 									<li>
 										<div
-											class="flex items-center rounded px-3 py-2 hover:bg-gray-100"
+											class="flex items-center rounded px-3 py-2 hover:bg-brand-100"
 										>
 											<input
 												id="filter-radio-example-1"
@@ -252,7 +252,7 @@
 									</li>
 									<li>
 										<div
-											class="flex items-center rounded px-3 py-2 hover:bg-gray-100"
+											class="flex items-center rounded px-3 py-2 hover:bg-brand-100"
 										>
 											<input
 												checked=""
@@ -282,7 +282,7 @@
 									</li>
 									<li>
 										<div
-											class="flex items-center rounded px-3 py-2 hover:bg-gray-100"
+											class="flex items-center rounded px-3 py-2 hover:bg-brand-100"
 										>
 											<input
 												id="filter-radio-example-3"
@@ -311,7 +311,7 @@
 									</li>
 									<li>
 										<div
-											class="flex items-center rounded px-3 py-2 hover:bg-gray-100"
+											class="flex items-center rounded px-3 py-2 hover:bg-brand-100"
 										>
 											<input
 												id="filter-radio-example-4"
@@ -340,7 +340,7 @@
 									</li>
 									<li>
 										<div
-											class="flex items-center rounded px-3 py-2 hover:bg-gray-100"
+											class="flex items-center rounded px-3 py-2 hover:bg-brand-100"
 										>
 											<input
 												id="filter-radio-example-5"

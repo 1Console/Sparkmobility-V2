@@ -8,7 +8,7 @@
 					id="toggleSidebar"
 					aria-expanded="true"
 					aria-controls="sidebar"
-					class="mr-2 hidden cursor-pointer rounded p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900 lg:inline"
+					class="mr-2 hidden cursor-pointer rounded p-2 text-gray-600 hover:bg-brand-100 hover:text-gray-900 lg:inline"
 				>
 					<svg
 						class="size-5"
@@ -29,7 +29,7 @@
 				<button
 					aria-expanded="true"
 					aria-controls="sidebar"
-					class="mr-2 cursor-pointer rounded-lg p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:ring-2 focus:ring-gray-100 lg:hidden"
+					class="mr-2 cursor-pointer rounded-lg p-2 text-gray-600 hover:bg-brand-100 hover:text-gray-900 focus:bg-gray-100 focus:ring-2 focus:ring-gray-100 lg:hidden"
 				>
 					<svg
 						class="size-5"
@@ -86,7 +86,7 @@
 				<button
 					id="toggleSidebarMobileSearch"
 					type="button"
-					class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 lg:hidden"
+					class="rounded-lg p-2 text-gray-500 hover:bg-brand-100 hover:text-gray-900 lg:hidden"
 				>
 					<span class="sr-only">Search</span>
 					<!-- Search icon -->
@@ -111,7 +111,7 @@
 				<button
 					type="button"
 					data-dropdown-toggle="notification-dropdown"
-					class="mr-1 rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900"
+					class="mr-1 rounded-lg p-2 text-gray-500 hover:bg-brand-100 hover:text-gray-900"
 				>
 					<span class="sr-only">View notifications</span>
 					<!-- Bell icon -->
@@ -132,11 +132,11 @@
 							/>
 						</svg>
 						<div
-							class="absolute -right-3 -top-0 me-2 size-1.5 rounded-full bg-green-500"
+							class="absolute -right-2.5 top-0.5 me-2 size-1 rounded-full bg-green-500"
 						></div>
 					</div>
 				</button>
-				<!-- Dropdown menu -->
+				<!-- Dropdown menu grid -->
 				<div
 					class="z-50 my-4 hidden max-w-sm list-none divide-y divide-gray-100 overflow-hidden rounded bg-white text-base shadow-lg"
 					id="notification-dropdown"
@@ -147,7 +147,7 @@
 						Notifications
 					</div>
 					<div>
-						<a href="#" class="flex border-b px-4 py-3 hover:bg-gray-100">
+						<a href="#" class="flex border-b px-4 py-3 hover:bg-brand-100">
 							<div class="flex-shrink-0">
 								<img
 									class="size-11 rounded-full"
@@ -184,7 +184,7 @@
 								</div>
 							</div>
 						</a>
-						<a href="#" class="flex border-b px-4 py-3 hover:bg-gray-100">
+						<a href="#" class="flex border-b px-4 py-3 hover:bg-brand-100">
 							<div class="flex-shrink-0">
 								<img
 									class="size-11 rounded-full"
@@ -219,7 +219,7 @@
 								</div>
 							</div>
 						</a>
-						<a href="#" class="flex border-b px-4 py-3 hover:bg-gray-100">
+						<a href="#" class="flex border-b px-4 py-3 hover:bg-brand-100">
 							<div class="flex-shrink-0">
 								<img
 									class="size-11 rounded-full"
@@ -254,7 +254,7 @@
 								</div>
 							</div>
 						</a>
-						<a href="#" class="flex border-b px-4 py-3 hover:bg-gray-100">
+						<a href="#" class="flex border-b px-4 py-3 hover:bg-brand-100">
 							<div class="flex-shrink-0">
 								<img
 									class="size-11 rounded-full"
@@ -289,7 +289,7 @@
 								<div class="text-xs font-medium text-primary-700">1 hour ago</div>
 							</div>
 						</a>
-						<a href="#" class="hover:bg-gray-1000 flex px-4 py-3">
+						<a href="#" class="flex px-4 py-3 hover:bg-brand-100">
 							<div class="flex-shrink-0">
 								<img
 									class="size-11 rounded-full"
@@ -324,7 +324,7 @@
 					</div>
 					<a
 						href="#"
-						class="block bg-gray-50 py-2 text-center text-base font-medium text-gray-900 hover:bg-gray-100"
+						class="block bg-gray-50 py-2 text-center text-base font-medium text-gray-900 hover:bg-brand-100"
 					>
 						<div class="inline-flex items-center">
 							<svg
@@ -349,7 +349,7 @@
 				<button
 					type="button"
 					data-dropdown-toggle="apps-dropdown"
-					class="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900"
+					class="rounded-lg p-2 text-gray-500 hover:bg-brand-100 hover:text-gray-800"
 				>
 					<span class="sr-only">View notifications</span>
 					<!-- Icon -->
@@ -378,7 +378,7 @@
 					<div class="grid grid-cols-3 gap-4 p-4">
 						<a
 							href="#"
-							class="hover:bg-gray-1000 group block rounded-lg p-4 text-center"
+							class="group block rounded-lg p-4 text-center hover:bg-brand-100"
 						>
 							<svg
 								class="mx-auto mb-2 size-5 text-gray-400 group-hover:text-gray-500"
@@ -395,7 +395,7 @@
 						</a>
 						<a
 							href="#"
-							class="hover:bg-gray-1000 group block rounded-lg p-4 text-center"
+							class="group block rounded-lg p-4 text-center hover:bg-brand-100"
 						>
 							<svg
 								class="mx-auto mb-2 size-5 text-gray-400 group-hover:text-gray-500"
@@ -415,7 +415,7 @@
 						</a>
 						<a
 							href="#"
-							class="hover:bg-gray-1000 group block rounded-lg p-4 text-center"
+							class="group block rounded-lg p-4 text-center hover:bg-brand-100"
 						>
 							<svg
 								class="mx-auto mb-2 size-5 text-gray-400 group-hover:text-gray-500"
@@ -435,7 +435,7 @@
 						</a>
 						<a
 							href="#"
-							class="hover:bg-gray-1000 group block rounded-lg p-4 text-center"
+							class="group block rounded-lg p-4 text-center hover:bg-brand-100"
 						>
 							<svg
 								class="mx-auto mb-2 size-5 text-gray-400 group-hover:text-gray-500"
@@ -452,7 +452,7 @@
 						</a>
 						<a
 							href="#"
-							class="hover:bg-gray-1000 group block rounded-lg p-4 text-center"
+							class="group block rounded-lg p-4 text-center hover:bg-brand-100"
 						>
 							<svg
 								class="mx-auto mb-2 size-5 text-gray-400 group-hover:text-gray-500"
@@ -469,7 +469,7 @@
 						</a>
 						<a
 							href="#"
-							class="hover:bg-gray-1000 group block rounded-lg p-4 text-center"
+							class="group block rounded-lg p-4 text-center hover:bg-brand-100"
 						>
 							<svg
 								class="mx-auto mb-2 size-5 text-gray-400 group-hover:text-gray-500"
@@ -486,7 +486,7 @@
 						</a>
 						<a
 							href="#"
-							class="hover:bg-gray-1000 group block rounded-lg p-4 text-center"
+							class="group block rounded-lg p-4 text-center hover:bg-brand-100"
 						>
 							<svg
 								class="mx-auto mb-2 size-5 text-gray-400 group-hover:text-gray-500"
@@ -507,7 +507,7 @@
 						</a>
 						<a
 							href="#"
-							class="hover:bg-gray-1000 group block rounded-lg p-4 text-center"
+							class="group block rounded-lg p-4 text-center hover:bg-brand-100"
 						>
 							<svg
 								class="mx-auto mb-2 size-5 text-gray-400 group-hover:text-gray-500"
@@ -528,7 +528,7 @@
 						</a>
 						<a
 							href="#"
-							class="hover:bg-gray-1000 group block rounded-lg p-4 text-center"
+							class="group block rounded-lg p-4 text-center hover:bg-brand-100"
 						>
 							<svg
 								class="mx-auto mb-2 size-5 text-gray-400 group-hover:text-gray-500"
@@ -602,12 +602,12 @@
 					</div>
 					<ul class="py-1 text-gray-500" aria-labelledby="dropdown">
 						<li>
-							<a href="#" class="hover:bg-gray-1000 block px-4 py-2 text-sm">
+							<a href="#" class="block px-4 py-2 text-sm hover:bg-brand-100">
 								My profile
 							</a>
 						</li>
 						<li>
-							<a href="#" class="hover:bg-gray-1000 block px-4 py-2 text-sm">
+							<a href="#" class="block px-4 py-2 text-sm hover:bg-brand-100">
 								Account settings
 							</a>
 						</li>
@@ -616,7 +616,7 @@
 						<li>
 							<a
 								href="#"
-								class="hover:bg-gray-1000 flex items-center px-4 py-2 text-sm"
+								class="flex items-center px-4 py-2 text-sm hover:bg-brand-100"
 							>
 								<svg
 									class="mr-2 size-4 text-gray-400"
@@ -635,7 +635,7 @@
 						<li>
 							<a
 								href="#"
-								class="hover:bg-gray-1000 flex items-center px-4 py-2 text-sm"
+								class="flex items-center px-4 py-2 text-sm hover:bg-brand-100"
 							>
 								<svg
 									class="mr-2 size-4 text-gray-400"
@@ -660,7 +660,7 @@
 						<li>
 							<a
 								href="#"
-								class="hover:bg-gray-1000 flex items-center justify-between px-4 py-2 text-sm"
+								class="flex items-center justify-between px-4 py-2 text-sm hover:bg-brand-100"
 							>
 								<span class="flex items-center">
 									<svg
@@ -696,7 +696,7 @@
 					</ul>
 					<ul class="py-1 text-gray-500" aria-labelledby="dropdown">
 						<li>
-							<a href="#" class="hover:bg-gray-1000 block px-4 py-2 text-sm">
+							<a href="#" class="block px-4 py-2 text-sm hover:bg-brand-100">
 								Sign out
 							</a>
 						</li>
