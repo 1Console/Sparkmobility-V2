@@ -39,7 +39,7 @@
 					alt="user photo"
 				/>
 			</div>
-			<div>
+			<div class="w-full">
 				<p class="text-xs font-semibold text-black">Paul Simeon</p>
 				<p class="text-xs text-zinc-500">
 					Please can you checkout what could be the problem...
@@ -87,7 +87,7 @@
 					alt="user photo"
 				/>
 			</div>
-			<div>
+			<div class="w-full">
 				<p class="text-xs font-semibold text-black">Paul Simeon</p>
 				<p class="text-xs text-zinc-500">
 					Please can you checkout what could be the problem...
@@ -107,7 +107,7 @@
 					alt="user photo"
 				/>
 			</div>
-			<div>
+			<div class="w-full">
 				<p class="text-xs font-semibold text-black">Paul Simeon</p>
 				<p class="text-xs text-zinc-500">
 					Please can you checkout what could be the problem...
@@ -125,7 +125,7 @@
 					alt="user photo"
 				/>
 			</div>
-			<div>
+			<div class="w-full">
 				<p class="text-xs font-semibold text-black">Paul Simeon</p>
 				<p class="text-xs text-zinc-500">
 					Please can you checkout what could be the problem...

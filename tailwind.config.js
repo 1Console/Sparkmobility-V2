@@ -89,6 +89,7 @@ export default {
             lg: "992px",
             xl: "1280px",
             xxl: "1500px",
+            xxxl: '1850px',
         },
     },
 };

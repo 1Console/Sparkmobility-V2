@@ -21,10 +21,10 @@
 	<body class="antialiased">
 		@include("partials.navbar")
 
-		<div class="flex h-screen">
+		<div class="flex md:h-screen">
 			@include("partials.sidebar")
 
-			<main class="mx-auto mt-20 w-full flex-1 overflow-y-auto bg-neutral-100 md:mt-16">
+			<main class="mx-auto mt-20 w-full overflow-y-auto bg-neutral-100 md:mt-16 md:flex-1">
 				@yield("content")
 			</main>
 		</div>

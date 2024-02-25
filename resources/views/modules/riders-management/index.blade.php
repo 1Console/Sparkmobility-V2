@@ -1,11 +1,11 @@
 @extends("layouts.authenticated_layout")
 
 @section("content")
-	<div class="mx-auto flex h-auto w-full max-w-7xl flex-col bg-white px-4 py-8 md:px-8">
+	<div class="mx-auto h-auto w-full py-8 md:px-4 lg:max-w-7xl">
 		<!-- Breadcrumb -->
-		<div class="mb-5 flex w-auto">
+		<div class="mb-5 flex md:w-auto">
 			<nav
-				class="flex rounded-lg border border-gray-200 bg-gray-50 px-5 py-3 text-gray-700"
+				class="flex w-full rounded-lg border border-gray-200 bg-white px-4 py-3 text-gray-700 md:w-auto"
 				aria-label="Breadcrumb"
 			>
 				<ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
@@ -33,7 +33,7 @@
 					<li aria-current="page">
 						<div class="flex items-center">
 							<svg
-								class="mx-1 size-6 text-gray-400"
+								class="me-1 size-6 text-gray-400"
 								aria-hidden="true"
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
@@ -54,8 +54,8 @@
 			</nav>
 		</div>
 
-		<div>
-			<div class="relative flex w-auto items-center space-y-0.5 p-2">
+		<div class="rounded-lg border border-gray-200 bg-white p-4">
+			<div class="relative mt-4 flex w-auto items-center space-y-0.5 px-4 py-5">
 				<span
 					class="absolute left-36 top-3 rounded-full bg-brand-100 px-2 py-0.5 text-xxs font-medium tracking-wide text-brand-400"
 				>
@@ -80,7 +80,7 @@
 				</div>
 			</div>
 
-			<div class="mt-4">
+			<div class="mt-4 px-4">
 				Section: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad harum dolor
 				amet laudantium? Doloremque consequuntur quaerat minus facilis minima cum officiis,
 				unde recusandae perferendis velit iure harum nihil ipsum voluptatibus?
@@ -90,79 +90,288 @@
 
 			{{-- Table --}}
 
-			<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+			<div class="flex flex-col rounded bg-white px-2">
 				<div
-					class="flex-column flex flex-wrap items-center justify-between space-y-4 bg-white py-4 dark:bg-gray-900 md:flex-row md:space-y-0"
+					class="flex-column flex flex-wrap items-center justify-between py-4 md:flex-row"
 				>
-					<div>
-						<button
-							id="dropdownActionButton"
-							data-dropdown-toggle="dropdownAction"
-							class="inline-flex items-center rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:hover:border-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
-							type="button"
-						>
-							<span class="sr-only">Action button</span>
-							Action
-							<svg
-								class="ms-2.5 size-2.5"
-								aria-hidden="true"
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 10 6"
+					<div
+						class="flex-column flex flex-wrap items-center justify-between gap-4 py-4 md:flex-row"
+					>
+						<div>
+							<button
+								id="dropdownActionButton"
+								data-dropdown-toggle="dropdownAction"
+								class="inline-flex items-center rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-xs font-medium text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100 md:text-sm"
+								type="button"
 							>
-								<path
-									stroke="currentColor"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="2"
-									d="m1 1 4 4 4-4"
-								/>
-							</svg>
-						</button>
-						<!-- Dropdown menu -->
-						<div
-							id="dropdownAction"
-							class="z-10 hidden w-44 divide-y divide-gray-100 rounded-lg bg-white shadow"
-						>
-							<ul
-								class="py-1 text-sm text-gray-700 dark:text-gray-200"
-								aria-labelledby="dropdownActionButton"
-							>
-								<li>
-									<a
-										href="#"
-										class="block px-4 py-2 hover:bg-gray-100 dark:hover:text-white"
-									>
-										Reward
-									</a>
-								</li>
-								<li>
-									<a
-										href="#"
-										class="block px-4 py-2 hover:bg-gray-100 dark:hover:text-white"
-									>
-										Promote
-									</a>
-								</li>
-								<li>
-									<a
-										href="#"
-										class="block px-4 py-2 hover:bg-gray-100 dark:hover:text-white"
-									>
-										Activate account
-									</a>
-								</li>
-							</ul>
-							<div class="py-1">
-								<a
-									href="#"
-									class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:text-white"
+								<span class="sr-only">Action button</span>
+								Action
+								<svg
+									class="ms-2.5 size-2.5"
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 10 6"
 								>
-									Delete User
-								</a>
+									<path
+										stroke="currentColor"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="m1 1 4 4 4-4"
+									/>
+								</svg>
+							</button>
+							<!-- Dropdown menu -->
+							<div
+								id="dropdownAction"
+								class="z-10 hidden w-48 divide-y divide-gray-100 rounded-lg bg-white shadow"
+							>
+								<ul
+									class="py-1 text-sm text-gray-700"
+									aria-labelledby="dropdownActionButton"
+								>
+									<li>
+										<a href="#" class="block px-4 py-2 hover:bg-gray-100">
+											Reward
+										</a>
+									</li>
+									<li>
+										<a href="#" class="block px-4 py-2 hover:bg-gray-100">
+											Can lock scooter
+										</a>
+									</li>
+									<li>
+										<a href="#" class="block px-4 py-2 hover:bg-gray-100">
+											Activate account
+										</a>
+									</li>
+									<li>
+										<a href="#" class="block px-4 py-2 hover:bg-gray-100">
+											Deactivate account
+										</a>
+									</li>
+								</ul>
+								<div class="py-1">
+									<a
+										href="#"
+										class="block px-4 py-2 text-sm text-red-600 hover:bg-red-100"
+									>
+										Delete User
+									</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<!-- Filter by Partners -->
+							<button
+								id="dropdownRadioButton"
+								data-dropdown-toggle="dropdownRadio"
+								class="inline-flex items-center rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-xs font-medium text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-100 md:text-sm"
+								type="button"
+							>
+								<svg
+									class="me-3 size-4 text-gray-500"
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+								>
+									<path
+										stroke="currentColor"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M16.9 9.7 20 6.6 17.4 4 4 17.4 6.6 20 16.9 9.7Zm0 0L14.3 7M6 7v2m0 0v2m0-2H4m2 0h2m7 7v2m0 0v2m0-2h-2m2 0h2M8 4h0v0h0v0Zm2 2h0v0h0v0Zm2-2h0v0h0v0Zm8 8h0v0h0v0Zm-2 2h0v0h0v0Zm2 2h0v0h0v0Z"
+									/>
+								</svg>
+								Partners
+								<svg
+									class="ms-2.5 size-2.5"
+									aria-hidden="true"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 10 6"
+								>
+									<path
+										stroke="currentColor"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="m1 1 4 4 4-4"
+									/>
+								</svg>
+								<span class="sr-only">Partners filter button</span>
+							</button>
+							<!-- Dropdown menu -->
+							<div
+								id="dropdownRadio"
+								class="z-10 hidden w-52 divide-y divide-gray-100 rounded-lg bg-white shadow"
+								data-popper-reference-hidden=""
+								data-popper-escaped=""
+								data-popper-placement="top"
+								style="
+									position: absolute;
+									inset: auto auto 0px 0px;
+									margin: 0px;
+									transform: translate3d(522.5px, 3847.5px, 0px);
+								"
+							>
+								<ul
+									class="space-y-1 p-3 text-sm text-gray-700"
+									aria-labelledby="dropdownRadioButton"
+								>
+									<li>
+										<div
+											class="flex items-center rounded px-3 py-2 hover:bg-gray-100"
+										>
+											<input
+												id="filter-radio-example-1"
+												type="radio"
+												value=""
+												name="filter-radio"
+												class="focus:ring-brand-300 size-4 border-gray-300 bg-gray-100 text-brand-400 focus:ring-2"
+											/>
+
+											<div
+												class="ml-4 inline-flex items-center justify-center"
+											>
+												<img
+													class="size-6 rounded-full"
+													src="https://api.multiavatar.com/BinxBond.png"
+													alt=""
+												/>
+												<label
+													for="filter-radio-example-1"
+													class="ms-2 w-full rounded text-sm font-medium text-gray-900"
+												>
+													Trekkscooters
+												</label>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div
+											class="flex items-center rounded px-3 py-2 hover:bg-gray-100"
+										>
+											<input
+												checked=""
+												id="filter-radio-example-2"
+												type="radio"
+												value=""
+												name="filter-radio"
+												class="focus:ring-brand-300 size-4 border-gray-300 bg-gray-100 text-brand-400 focus:ring-2"
+											/>
+
+											<div
+												class="ml-4 inline-flex shrink-0 items-center justify-center"
+											>
+												<img
+													class="size-6 rounded-full"
+													src="https://api.multiavatar.com/CHXd.png"
+													alt=""
+												/>
+												<label
+													for="filter-radio-example-2"
+													class="ms-2 w-full rounded text-sm font-medium text-gray-900"
+												>
+													CHX Houston
+												</label>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div
+											class="flex items-center rounded px-3 py-2 hover:bg-gray-100"
+										>
+											<input
+												id="filter-radio-example-3"
+												type="radio"
+												value=""
+												name="filter-radio"
+												class="focus:ring-brand-300 size-4 border-gray-300 bg-gray-100 text-brand-400 focus:ring-2"
+											/>
+
+											<div
+												class="ml-4 inline-flex shrink-0 items-center justify-center"
+											>
+												<img
+													class="size-6 rounded-full"
+													src="https://api.multiavatar.com/andred.png"
+													alt=""
+												/>
+												<label
+													for="filter-radio-example-3"
+													class="ms-2 w-full rounded text-sm font-medium text-gray-900"
+												>
+													Repurpose SLB
+												</label>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div
+											class="flex items-center rounded px-3 py-2 hover:bg-gray-100"
+										>
+											<input
+												id="filter-radio-example-4"
+												type="radio"
+												value=""
+												name="filter-radio"
+												class="focus:ring-brand-300 size-4 border-gray-300 bg-gray-100 text-brand-400 focus:ring-2"
+											/>
+
+											<div
+												class="ml-4 inline-flex shrink-0 items-center justify-center"
+											>
+												<img
+													class="size-6 rounded-full"
+													src="https://api.multiavatar.com/dfgtyj.png"
+													alt=""
+												/>
+												<label
+													for="filter-radio-example-4"
+													class="ms-2 w-full rounded text-sm font-medium text-gray-900"
+												>
+													Empowr
+												</label>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div
+											class="flex items-center rounded px-3 py-2 hover:bg-gray-100"
+										>
+											<input
+												id="filter-radio-example-5"
+												type="radio"
+												value=""
+												name="filter-radio"
+												class="focus:ring-brand-300 size-4 border-gray-300 bg-gray-100 text-brand-400 focus:ring-2"
+											/>
+
+											<div
+												class="ml-4 inline-flex shrink-0 items-center justify-center"
+											>
+												<img
+													class="size-6 rounded-full"
+													src="https://api.multiavatar.com/lbawerty.png"
+													alt=""
+												/>
+												<label
+													for="filter-radio-example-5"
+													class="ms-2 w-full rounded text-sm font-medium text-gray-900"
+												>
+													Targett
+												</label>
+											</div>
+										</div>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
+
 					<label for="table-search" class="sr-only">Search</label>
 					<div class="relative">
 						<div
@@ -187,337 +396,248 @@
 						<input
 							type="text"
 							id="table-search-users"
-							class="block w-80 rounded-lg border border-gray-300 bg-gray-50 ps-10 pt-2 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-							placeholder="Search for users"
+							class="focus:ring-brand-300 block w-full max-w-md rounded-lg border border-gray-300 bg-gray-50 ps-10 text-xs text-gray-600 focus:border-brand-400 md:text-sm"
+							placeholder="Search for riders"
 						/>
 					</div>
 				</div>
-				<table
-					id="riders-list"
-					class="w-full text-left text-sm text-gray-500 rtl:text-right"
-				>
-					<thead class="bg-gray-50 text-xs uppercase text-gray-700">
-						<tr>
-							<th scope="col" class="p-4">
-								<div class="flex items-center">
-									<input
-										id="checkbox-all-search"
-										type="checkbox"
-										class="size-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500"
-									/>
-									<label for="checkbox-all-search" class="sr-only">
-										checkbox
-									</label>
-								</div>
-							</th>
-							<th scope="col" class="px-4 py-3">
-								<div class="flex items-center">
-									<span class="shrink-0">Name</span>
 
-									<a href="#">
-										<svg
-											class="ms-1.5 h-3 w-3"
-											aria-hidden="true"
-											xmlns="http://www.w3.org/2000/svg"
-											fill="currentColor"
-											viewBox="0 0 24 24"
-										>
-											<path
-												d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
+				<div class="overflow-hidden shadow">
+					<div class="relative overflow-x-auto">
+						<table
+							id="riders-list"
+							class="w-full text-left text-sm text-gray-500 rtl:text-right"
+						>
+							<thead class="bg-gray-50 text-xs uppercase text-gray-500">
+								<tr>
+									<th scope="col" class="p-4">
+										<div class="flex items-center">
+											<input
+												id="checkbox-all-riders"
+												type="checkbox"
+												class="focus:ring-brand-300 size-4 rounded border-gray-300 bg-gray-100 text-brand-400 focus:ring-2"
 											/>
-										</svg>
-									</a>
-								</div>
-							</th>
-							<th scope="col" class="px-4 py-3">
-								<div class="flex items-center">
-									<span class="shrink-0">Name</span>
+											<label for="checkbox-all-riders" class="sr-only">
+												checkbox
+											</label>
+										</div>
+									</th>
+									<th scope="col" class="px-4 py-3">
+										<div class="flex items-center">
+											<span class="shrink-0">Full name</span>
 
-									<a href="#">
-										<svg
-											class="ms-1.5 h-3 w-3"
-											aria-hidden="true"
-											xmlns="http://www.w3.org/2000/svg"
-											fill="currentColor"
-											viewBox="0 0 24 24"
-										>
-											<path
-												d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
-											/>
-										</svg>
-									</a>
-								</div>
-							</th>
-							<th scope="col" class="px-4 py-3">
-								<div class="flex items-center">
-									<span class="shrink-0">Phone</span>
+											<a href="#">
+												<svg
+													class="ms-1.5 h-3 w-3"
+													aria-hidden="true"
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													viewBox="0 0 24 24"
+												>
+													<path
+														d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
+													/>
+												</svg>
+											</a>
+										</div>
+									</th>
+									<th scope="col" class="px-4 py-3">
+										<div class="flex items-center">
+											<span class="shrink-0">Email</span>
 
-									<a href="#">
-										<svg
-											class="ms-1.5 h-3 w-3"
-											aria-hidden="true"
-											xmlns="http://www.w3.org/2000/svg"
-											fill="currentColor"
-											viewBox="0 0 24 24"
-										>
-											<path
-												d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
-											/>
-										</svg>
-									</a>
-								</div>
-							</th>
-							<th scope="col" class="px-4 py-3">
-								<div class="flex items-center">
-									<span class="shrink-0">Gender</span>
+											<a href="#">
+												<svg
+													class="ms-1.5 h-3 w-3"
+													aria-hidden="true"
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													viewBox="0 0 24 24"
+												>
+													<path
+														d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
+													/>
+												</svg>
+											</a>
+										</div>
+									</th>
+									<th scope="col" class="px-4 py-3">
+										<div class="flex items-center">
+											<span class="shrink-0">Phone</span>
 
-									<a href="#">
-										<svg
-											class="ms-1.5 h-3 w-3"
-											aria-hidden="true"
-											xmlns="http://www.w3.org/2000/svg"
-											fill="currentColor"
-											viewBox="0 0 24 24"
-										>
-											<path
-												d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
-											/>
-										</svg>
-									</a>
-								</div>
-							</th>
-							<th scope="col" class="px-4 py-3">
-								<div class="flex items-center">
-									<span class="shrink-0">Fleet</span>
+											<a href="#">
+												<svg
+													class="ms-1.5 h-3 w-3"
+													aria-hidden="true"
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													viewBox="0 0 24 24"
+												>
+													<path
+														d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
+													/>
+												</svg>
+											</a>
+										</div>
+									</th>
+									<th scope="col" class="px-4 py-3">
+										<div class="flex items-center">
+											<span class="shrink-0">Gender</span>
 
-									<a href="#">
-										<svg
-											class="ms-1.5 h-3 w-3"
-											aria-hidden="true"
-											xmlns="http://www.w3.org/2000/svg"
-											fill="currentColor"
-											viewBox="0 0 24 24"
-										>
-											<path
-												d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
-											/>
-										</svg>
-									</a>
-								</div>
-							</th>
-							<th scope="col" class="px-4 py-3">
-								<div class="flex items-center">
-									<span class="shrink-0">Can ride?</span>
+											<a href="#">
+												<svg
+													class="ms-1.5 h-3 w-3"
+													aria-hidden="true"
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													viewBox="0 0 24 24"
+												>
+													<path
+														d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
+													/>
+												</svg>
+											</a>
+										</div>
+									</th>
+									<th scope="col" class="px-4 py-3">
+										<div class="flex items-center">
+											<span class="shrink-0">Fleet</span>
 
-									<a href="#">
-										<svg
-											class="ms-1.5 h-3 w-3"
-											aria-hidden="true"
-											xmlns="http://www.w3.org/2000/svg"
-											fill="currentColor"
-											viewBox="0 0 24 24"
-										>
-											<path
-												d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
-											/>
-										</svg>
-									</a>
-								</div>
-							</th>
-							<th scope="col" class="px-4 py-3">
-								<div class="flex items-center">
-									<span class="shrink-0">Wallet</span>
+											<a href="#">
+												<svg
+													class="ms-1.5 h-3 w-3"
+													aria-hidden="true"
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													viewBox="0 0 24 24"
+												>
+													<path
+														d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
+													/>
+												</svg>
+											</a>
+										</div>
+									</th>
+									<th scope="col" class="px-4 py-3">
+										<div class="flex items-center">
+											<span class="shrink-0">Can lock?</span>
 
-									<a href="#">
-										<svg
-											class="ms-1.5 h-3 w-3"
-											aria-hidden="true"
-											xmlns="http://www.w3.org/2000/svg"
-											fill="currentColor"
-											viewBox="0 0 24 24"
-										>
-											<path
-												d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
-											/>
-										</svg>
-									</a>
-								</div>
-							</th>
-							<th scope="col" class="px-4 py-3">
-								<div class="flex items-center">
-									Fines
-									<a href="#">
-										<svg
-											class="ms-1.5 h-3 w-3"
-											aria-hidden="true"
-											xmlns="http://www.w3.org/2000/svg"
-											fill="currentColor"
-											viewBox="0 0 24 24"
-										>
-											<path
-												d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
-											/>
-										</svg>
-									</a>
-								</div>
-							</th>
-							<th scope="col" class="px-4 py-3">
-								<div class="flex items-center">
-									<span class="shrink-0">Status</span>
+											<a href="#">
+												<svg
+													class="ms-1.5 h-3 w-3"
+													aria-hidden="true"
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													viewBox="0 0 24 24"
+												>
+													<path
+														d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
+													/>
+												</svg>
+											</a>
+										</div>
+									</th>
+									<th scope="col" class="px-4 py-3">
+										<div class="flex items-center">
+											<span class="shrink-0">Wallet</span>
 
-									<a href="#">
-										<svg
-											class="ms-1.5 h-3 w-3"
-											aria-hidden="true"
-											xmlns="http://www.w3.org/2000/svg"
-											fill="currentColor"
-											viewBox="0 0 24 24"
-										>
-											<path
-												d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
-											/>
-										</svg>
-									</a>
-								</div>
-							</th>
-							<th scope="col" class="px-4 py-3">
-								<div class="flex items-center">
-									<span class="shrink-0">Created</span>
+											<a href="#">
+												<svg
+													class="ms-1.5 h-3 w-3"
+													aria-hidden="true"
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													viewBox="0 0 24 24"
+												>
+													<path
+														d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
+													/>
+												</svg>
+											</a>
+										</div>
+									</th>
+									<th scope="col" class="px-4 py-3">
+										<div class="flex items-center">
+											Fines
+											<a href="#">
+												<svg
+													class="ms-1.5 h-3 w-3"
+													aria-hidden="true"
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													viewBox="0 0 24 24"
+												>
+													<path
+														d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
+													/>
+												</svg>
+											</a>
+										</div>
+									</th>
+									<th scope="col" class="px-4 py-3">
+										<div class="flex items-center">
+											<span class="shrink-0">Status</span>
 
-									<a href="#">
-										<svg
-											class="ms-1.5 h-3 w-3"
-											aria-hidden="true"
-											xmlns="http://www.w3.org/2000/svg"
-											fill="currentColor"
-											viewBox="0 0 24 24"
-										>
-											<path
-												d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
-											/>
-										</svg>
-									</a>
-								</div>
-							</th>
-							<th scope="col" class="px-4 py-3">
-								<div class="flex items-center">
-									Action
+											<a href="#">
+												<svg
+													class="ms-1.5 h-3 w-3"
+													aria-hidden="true"
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													viewBox="0 0 24 24"
+												>
+													<path
+														d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
+													/>
+												</svg>
+											</a>
+										</div>
+									</th>
+									<th scope="col" class="px-4 py-3">
+										<div class="flex items-center">
+											<span class="shrink-0">Date Created</span>
 
-									<a href="#">
-										<svg
-											class="ms-1.5 h-3 w-3"
-											aria-hidden="true"
-											xmlns="http://www.w3.org/2000/svg"
-											fill="currentColor"
-											viewBox="0 0 24 24"
-										>
-											<path
-												d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
-											/>
-										</svg>
-									</a>
-								</div>
-							</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr class="border-b bg-white hover:bg-gray-50 dark:border-gray-700">
-							<td class="w-4 p-4">
-								<div class="flex items-center">
-									<input
-										id="checkbox-table-search-1"
-										type="checkbox"
-										class="size-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:ring-offset-gray-800 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-800"
-									/>
-									<label for="checkbox-table-search-1" class="sr-only">
-										checkbox
-									</label>
-								</div>
-							</td>
-							<th
-								scope="row"
-								class="flex items-center whitespace-nowrap px-6 py-4 text-gray-900"
-							>
-								<img
-									class="size-10 rounded-full"
-									src="api.multiavatar.com/stefan.svg"
-									alt="Jese image"
-								/>
-								<div class="ps-3">
-									<div class="text-base font-semibold">Neil Sims</div>
-									<div class="font-normal text-gray-500">
-										neil.sims@flowbite.com
-									</div>
-								</div>
-							</th>
-							<td class="px-6 py-4">React Developer</td>
-							<td class="px-6 py-4">
-								<div class="flex items-center">
-									<div class="me-2 size-2.5 rounded-full bg-green-500"></div>
-									Online
-								</div>
-							</td>
-							<td class="px-6 py-4">
-								<!-- Modal toggle -->
-								<a
-									href="#"
-									type="button"
-									data-modal-target="editUserModal"
-									data-modal-show="editUserModal"
-									class="font-medium text-blue-600 hover:underline"
-								>
-									Edit user
-								</a>
-							</td>
-						</tr>
-						<tr class="bg-white hover:bg-gray-50">
-							<td class="w-4 p-4">
-								<div class="flex items-center">
-									<input
-										id="checkbox-table-search-3"
-										type="checkbox"
-										class="size-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-600 dark:ring-offset-gray-800 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-800"
-									/>
-									<label for="checkbox-table-search-3" class="sr-only">
-										checkbox
-									</label>
-								</div>
-							</td>
-							<th
-								scope="row"
-								class="flex items-center whitespace-nowrap px-6 py-4 font-medium text-gray-900"
-							>
-								<img
-									class="size-10 rounded-full"
-									src="/docs/images/people/profile-picture-4.jpg"
-									alt="Jese image"
-								/>
-								<div class="ps-3">
-									<div class="text-base font-semibold">Leslie Livingston</div>
-									<div class="font-normal text-gray-500">leslie@flowbite.com</div>
-								</div>
-							</th>
-							<td class="px-6 py-4">SEO Specialist</td>
-							<td class="px-6 py-4">
-								<div class="flex items-center">
-									<div class="me-2 size-2.5 rounded-full bg-red-500"></div>
-									Offline
-								</div>
-							</td>
-							<td class="px-6 py-4">
-								<!-- Modal toggle -->
-								<a
-									href="#"
-									type="button"
-									data-modal-show="editUserModal"
-									class="font-medium text-blue-600 hover:underline"
-								>
-									Edit user
-								</a>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+											<a href="#">
+												<svg
+													class="ms-1.5 h-3 w-3"
+													aria-hidden="true"
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													viewBox="0 0 24 24"
+												>
+													<path
+														d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
+													/>
+												</svg>
+											</a>
+										</div>
+									</th>
+									<th scope="col" class="px-4 py-3">
+										<div class="flex items-center">
+											Action
+
+											<a href="#">
+												<svg
+													class="ms-1.5 h-3 w-3"
+													aria-hidden="true"
+													xmlns="http://www.w3.org/2000/svg"
+													fill="currentColor"
+													viewBox="0 0 24 24"
+												>
+													<path
+														d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
+													/>
+												</svg>
+											</a>
+										</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- Table row dynamically generated -->
+							</tbody>
+						</table>
+					</div>
+				</div>
 
 				<!-- Edit user modal -->
 				<div
@@ -530,13 +650,16 @@
 						<!-- Modal content -->
 						<form class="relative rounded-lg bg-white shadow">
 							<!-- Modal header -->
-							<div
-								class="flex items-start justify-between rounded-t border-b p-4 dark:border-gray-600"
-							>
-								<h3 class="text-xl font-semibold text-gray-900">Edit user</h3>
+							<div class="flex items-start justify-between rounded-t border-b p-4">
+								<div class="flex flex-col">
+									<h3 class="text-xl font-semibold text-gray-900">Edit rider</h3>
+									<p class="text-sm text-gray-500">
+										Edit rider profile information
+									</p>
+								</div>
 								<button
 									type="button"
-									class="ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:text-white"
+									class="ms-auto inline-flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900"
 									data-modal-hide="editUserModal"
 								>
 									<svg
@@ -571,7 +694,7 @@
 											type="text"
 											name="first-name"
 											id="first-name"
-											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-600 focus:ring-blue-600 dark:border-gray-500 dark:bg-gray-600 dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
 											placeholder="Bonnie"
 											required=""
 										/>
@@ -587,7 +710,7 @@
 											type="text"
 											name="last-name"
 											id="last-name"
-											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-600 focus:ring-blue-600 dark:border-gray-500 dark:bg-gray-600 dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
 											placeholder="Green"
 											required=""
 										/>
@@ -603,7 +726,7 @@
 											type="email"
 											name="email"
 											id="email"
-											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-600 focus:ring-blue-600 dark:border-gray-500 dark:bg-gray-600 dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
 											placeholder="example@company.com"
 											required=""
 										/>
@@ -619,42 +742,51 @@
 											type="number"
 											name="phone-number"
 											id="phone-number"
-											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-600 focus:ring-blue-600 dark:border-gray-500 dark:bg-gray-600 dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-											placeholder="e.g. +(12)3456 789"
+											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
+											placeholder="e.g. +(234) 000 3456 789"
 											required=""
 										/>
 									</div>
 									<div class="col-span-6 sm:col-span-3">
 										<label
-											for="fleet"
+											for="gender"
 											class="mb-2 block text-sm font-medium text-gray-900"
 										>
-											Fleet
+											Gender
 										</label>
-										<input
-											type="text"
-											name="fleet"
-											id="fleet"
-											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-600 focus:ring-blue-600 dark:border-gray-500 dark:bg-gray-600 dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-											placeholder="Development"
+										<select
+											name="gender"
+											id="gender"
+											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
 											required=""
-										/>
+										>
+											<option value="">Select</option>
+											<option value="Abuja">Male</option>
+											<option value="Lagos">Female</option>
+										</select>
 									</div>
 									<div class="col-span-6 sm:col-span-3">
 										<label
-											for="company"
+											for="community"
 											class="mb-2 block text-sm font-medium text-gray-900"
 										>
-											Company
+											Community
 										</label>
-										<input
-											type="number"
-											name="company"
-											id="company"
-											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-600 focus:ring-blue-600 dark:border-gray-500 dark:bg-gray-600 dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-											placeholder="123456"
+										<select
+											name="community"
+											id="community"
+											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
 											required=""
-										/>
+										>
+											<option value="">Select community</option>
+											<option value="Abuja">Abuja</option>
+											<option value="Lagos">Lagos</option>
+											<option value="Run">Run</option>
+											<option value="Bells">Bells</option>
+											<option value="Ikoyi">Ikoyi</option>
+											<option value="ABU">ABU</option>
+											<option value="Futa">Futa</option>
+										</select>
 									</div>
 									<div class="col-span-6 sm:col-span-3">
 										<label
@@ -667,7 +799,7 @@
 											type="password"
 											name="current-password"
 											id="current-password"
-											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-600 focus:ring-blue-600 dark:border-gray-500 dark:bg-gray-600 dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
 											placeholder="••••••••"
 											required=""
 										/>
@@ -683,7 +815,7 @@
 											type="password"
 											name="new-password"
 											id="new-password"
-											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-blue-600 focus:ring-blue-600 dark:border-gray-500 dark:bg-gray-600 dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
 											placeholder="••••••••"
 											required=""
 										/>
@@ -692,11 +824,11 @@
 							</div>
 							<!-- Modal footer -->
 							<div
-								class="flex items-center space-x-3 rounded-b border-t border-gray-200 p-6 dark:border-gray-600 rtl:space-x-reverse"
+								class="flex items-center space-x-3 rounded-b border-t border-gray-200 p-6 rtl:space-x-reverse"
 							>
 								<button
 									type="submit"
-									class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+									class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
 								>
 									Save all
 								</button>

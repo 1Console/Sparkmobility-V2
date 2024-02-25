@@ -62,7 +62,7 @@
 				@include("partials.top_search_section")
 			</div>
 
-			<div class="flex items-center justify-between space-x-0 md:justify-end lg:order-2">
+			<div class="flex items-center justify-between space-x-2 md:justify-end lg:order-2">
 				{{-- Date --}}
 				<span class="hidden shrink-0 items-center text-sm sm:inline-flex">
 					<svg
@@ -71,7 +71,7 @@
 						viewBox="0 0 24 24"
 						stroke-width="1.5"
 						stroke="currentColor"
-						class="mr-1 size-4 text-slate-500"
+						class="me-1.5 size-4 text-slate-500"
 					>
 						<path
 							stroke-linecap="round"
@@ -79,7 +79,6 @@
 							d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
 						/>
 					</svg>
-
 					<span id="todaysDate"></span>
 				</span>
 
@@ -116,21 +115,26 @@
 				>
 					<span class="sr-only">View notifications</span>
 					<!-- Bell icon -->
-					<svg
-						class="size-5 text-gray-800"
-						aria-hidden="true"
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-					>
-						<path
-							stroke="currentColor"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="1.5"
-							d="M12 5.4V3m0 2.4a5.3 5.3 0 0 1 5.1 5.3v1.8c0 2.4 1.9 3 1.9 4.2 0 .6 0 1.3-.5 1.3h-13c-.5 0-.5-.7-.5-1.3 0-1.2 1.9-1.8 1.9-4.2v-1.8A5.3 5.3 0 0 1 12 5.4ZM8.7 18c.1.9.3 1.5 1 2.1a3.5 3.5 0 0 0 4.6 0c.7-.6 1.3-1.2 1.4-2.1h-7Z"
-						/>
-					</svg>
+					<div class="relative">
+						<svg
+							class="size-5 text-gray-800"
+							aria-hidden="true"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+						>
+							<path
+								stroke="currentColor"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="1.5"
+								d="M12 5.4V3m0 2.4a5.3 5.3 0 0 1 5.1 5.3v1.8c0 2.4 1.9 3 1.9 4.2 0 .6 0 1.3-.5 1.3h-13c-.5 0-.5-.7-.5-1.3 0-1.2 1.9-1.8 1.9-4.2v-1.8A5.3 5.3 0 0 1 12 5.4ZM8.7 18c.1.9.3 1.5 1 2.1a3.5 3.5 0 0 0 4.6 0c.7-.6 1.3-1.2 1.4-2.1h-7Z"
+							/>
+						</svg>
+						<div
+							class="absolute -right-3 -top-0 me-2 size-1.5 rounded-full bg-green-500"
+						></div>
+					</div>
 				</button>
 				<!-- Dropdown menu -->
 				<div
@@ -547,10 +551,10 @@
 				</div>
 
 				<!-- Profile menu -->
-				<div class="hidden shrink-0 items-center justify-center space-y-0.5 md:flex">
+				<div class="hidden shrink-0 items-center justify-center md:flex">
 					<button
 						type="button"
-						class="mx-3 flex items-center space-x-0.5 rounded-md bg-gray-100 px-3 py-1.5 focus:ring-4 focus:ring-gray-300"
+						class="flex items-center space-x-0.5 rounded-md px-3 py-1.5 hover:bg-brand-100 focus:ring-4 focus:ring-gray-300"
 						id="user-menu-button"
 						aria-expanded="false"
 						data-dropdown-toggle="dropdown"
