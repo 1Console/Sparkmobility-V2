@@ -1,0 +1,17 @@
+{
+	"plugins": ["prettier-plugin-blade", "prettier-plugin-tailwindcss"],
+	 "overrides": [
+    {
+      "files": ["*.blade.php"],
+      "options": {
+        "parser": "blade"
+      }
+    }
+  ],
+  "tailwindFunctions": ["clsx, cn"],
+	"useTabs": true,
+	"tabWidth": 4,
+	"printWidth": 100,
+	"trailingComma": "all"
+}
+	

@@ -1,11 +1,11 @@
 {
 	"folders": [
 		{
-			"path": "../.."
+			"path": "../..",
 		},
 		{
-			"path": "../../../church-world-july-2022"
-		}
+			"path": "../../../church-world-july-2022",
+		},
 	],
-	"settings": {}
+	"settings": {},
 }
