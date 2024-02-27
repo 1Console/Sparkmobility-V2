@@ -32,8 +32,8 @@ Route::get('/riders-management', function () {
     return view('modules.riders-management.index'); //riders-management
 });
 
-Route::get('/riders-management/rides', function () {
-    return view('modules.riders-management.rides.index');
+Route::get('/riders-management/transactions', function () {
+    return view('modules.riders-management.transactions.index');
 });
 
 // Route::get('/fleets/create', function () {

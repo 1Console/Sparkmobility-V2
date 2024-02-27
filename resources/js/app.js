@@ -3,7 +3,7 @@ import "flowbite";
 import { format } from "date-fns";
 import Alpine from "alpinejs";
 import "./chart";
-import "./users";
+import "./tables";
 
 window.Alpine = Alpine;
 
