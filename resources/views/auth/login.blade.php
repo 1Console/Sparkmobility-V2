@@ -1,26 +1,6 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends('layouts.guest')
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-
-        <title>{{ config('app.name.app_name') }}</title>
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-    </head>
-
-    <body class="font-sans text-gray-900 antialiased overflow-x-hidden overflow-y-auto ">
-        <div class="min-h-screen w-full flex sm:justify-center  pt-6 sm:p-0 bg-white dark:bg-gray-900">
-
-
+@section("content")
             {{-- left --}}
             <div class=" w-1/2 flex items-center px-20">
                 {{-- bg-red-300  --}}
@@ -51,9 +31,17 @@
                     </div>
                     <h1 class=" font-black text-black text-3xl mt-6">Welcome Back - Deploy!</h1>
                     <p class=" mt-1">Please enter your details to sign in</p>
-                    <form action="" class="flex flex-col mt-8">
-                        <input class=" rounded-full p-3" type="text" placeholder="example@gmail.com">
-                        <input class=" rounded-full p-3 mt-3" type="text" placeholder="xxxxxxxxxxxxxxxxx">
+                        
+                        {{-- <x-auth-session-status class="mb-4" :status="session('status')" /> --}}
+
+                        <form class="flex flex-col mt-8" method="POST" action="{{ route('login') }}">
+                        @csrf
+                        <input class="form-control rounded-full px-6 py-3 mt-2" placeholder="example@gmail.com" id="email" type="email" name="email"
+                        required  />
+                        <input class="form-control rounded-full px-6 py-3 mt-6" placeholder="xxxxxxxxxxxxxxxxx" id="password" type="password" name="password"
+                        required  />
+                        {{-- <span class="fas fa-key text-900 fs--1 form-icon"></span> --}}
+    
                         <button></button>
                         <div class="flex items-center justify-between px-4 mt-6">
                             <div class="space-x-1 relative inline-flex items-center cursor-pointer">
@@ -70,7 +58,7 @@
                             </div>
                         </div>
 
-                        <button class=" w-full rounded-full p-4 mt-4 bg-[#282828] text-white">Sign in</button>
+                        <button type="submit" class=" w-full rounded-full p-4 mt-4 bg-[#282828] text-white">Sign in</button>
                         <p class="mt-5 text-center">Don't have an account? <strong>Create an account</strong> </p>
                     </form>
                 </div>
@@ -96,24 +84,4 @@
 
             </div>
 
-            {{-- <svg width="1106" class=" absolute inset-0" height="576" viewBox="0 0 1106 576" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M-9 0C-9.55228 0 -10 0.447715 -10 1C-10 1.55228 -9.55228 2 -9 2V0ZM1094.67 570C1094.67 572.946 1097.05 575.333 1100 575.333C1102.95 575.333 1105.33 572.946 1105.33 570C1105.33 567.055 1102.95 564.667 1100 564.667C1097.05 564.667 1094.67 567.055 1094.67 570ZM-9 2C223.759 2 430.259 2.01273 613.849 73.0576C797.362 144.073 958.089 286.114 1099.1 570.444L1100.9 569.556C959.713 284.886 798.652 142.427 614.571 71.1924C430.567 -0.0127251 223.666 0 -9 0V2Z" fill="#C4E1D6"/>
-            </svg> --}}
-
-            {{-- <svg width="1106" class=" absolute inset-0" height="576" viewBox="0 0 1106 576" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M-9 0C-9.55228 0 -10 0.447715 -10 1C-10 1.55228 -9.55228 2 -9 2V0ZM1094.67 570C1094.67 572.946 1097.05 575.333 1100 575.333C1102.95 575.333 1105.33 572.946 1105.33 570C1105.33 567.055 1102.95 564.667 1100 564.667C1097.05 564.667 1094.67 567.055 1094.67 570ZM-9 2C223.759 2 430.259 2.01273 613.849 73.0576C797.362 144.073 958.089 286.114 1099.1 570.444L1100.9 569.556C959.713 284.886 798.652 142.427 614.571 71.1924C430.567 -0.0127251 223.666 0 -9 0V2Z" fill="#C4E1D6"/>
-                <rect width="34" height="30.5" transform="translate(496.526 18.1198) rotate(15)" fill="white"/>
-                <path d="M513.998 32.1189C515.061 32.4036 516.163 31.7672 516.448 30.7047C516.733 29.6422 516.096 28.5399 515.034 28.2552C513.971 27.9705 512.869 28.6069 512.584 29.6694C512.299 30.732 512.936 31.8342 513.998 32.1189ZM502.174 35.6798C499.469 34.9552 496.775 36.5108 496.05 39.2154C495.325 41.92 496.881 44.6144 499.586 45.3391C502.29 46.0638 504.985 44.5082 505.709 41.8036C506.434 39.099 504.878 36.4045 502.174 35.6798ZM499.974 43.8902C498.139 43.3985 497.007 41.4389 497.499 39.6036C497.991 37.7684 499.95 36.637 501.786 37.1287C503.621 37.6205 504.752 39.5801 504.26 41.4153C503.769 43.2506 501.809 44.382 499.974 43.8902ZM508.164 35.7321L511.104 34.0351L511.669 35.0148C512.419 36.3131 513.508 37.3502 514.972 37.9909C515.528 38.2332 516.174 37.9093 516.332 37.3201C516.459 36.8468 516.21 36.3453 515.767 36.1438C514.741 35.6827 513.999 34.9352 513.481 34.0508L512.137 31.7238C511.758 31.208 511.327 30.8854 510.747 30.7301C510.167 30.5748 509.633 30.6386 509.239 30.9473L505.81 32.9272C505.32 33.21 504.998 33.6412 504.868 34.1242C504.713 34.7038 504.777 35.2385 505.085 35.6318L507.452 39.1646L506.416 43.0283C506.274 43.5596 506.592 44.1107 507.124 44.2531C507.655 44.3954 508.206 44.0772 508.348 43.546L509.487 39.2959C509.622 38.7936 509.555 38.2685 509.313 37.8206L508.164 35.7321ZM515.697 39.3033C512.992 38.5786 510.298 40.1343 509.573 42.8388C508.848 45.5434 510.404 48.2379 513.109 48.9626C515.813 49.6873 518.508 48.1316 519.232 45.427C519.957 42.7224 518.401 40.028 515.697 39.3033ZM513.497 47.5137C511.662 47.0219 510.53 45.0623 511.022 43.2271C511.514 41.3918 513.473 40.2604 515.309 40.7522C517.144 41.244 518.275 43.2036 517.783 45.0388C517.292 46.8741 515.332 48.0054 513.497 47.5137Z" fill="#4EA685"/>
-                </svg> --}}
-            {{--
-                <svg width="1106" height="576" viewBox="0 0 1106 576" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M-9 0C-9.55228 0 -10 0.447715 -10 1C-10 1.55228 -9.55228 2 -9 2V0ZM1094.67 570C1094.67 572.946 1097.05 575.333 1100 575.333C1102.95 575.333 1105.33 572.946 1105.33 570C1105.33 567.055 1102.95 564.667 1100 564.667C1097.05 564.667 1094.67 567.055 1094.67 570ZM-9 2C223.759 2 430.259 2.01273 613.849 73.0576C797.362 144.073 958.089 286.114 1099.1 570.444L1100.9 569.556C959.713 284.886 798.652 142.427 614.571 71.1924C430.567 -0.0127251 223.666 0 -9 0V2Z" fill="#C4E1D6"/>
-                    </svg>
-                     --}}
-
-
-        </div>
-        </div>
-    </body>
-
-</html>
+@endsection

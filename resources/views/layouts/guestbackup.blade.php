@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="csrf-token" content="{{ csrf_token() }}" />
 
-		<title>Trekk Admin Dashboard</title>
+		<title>{{ config("app.name", "Laravel") }}</title>
 
 		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.bunny.net" />
@@ -17,20 +17,21 @@
 		<!-- Scripts -->
 		@vite(["resources/css/app.css", "resources/js/app.js"])
 	</head>
+	<body class="font-sans text-gray-900 antialiased">
+		<div
+			class="flex min-h-screen flex-col items-center bg-gray-100 pt-6 dark:bg-gray-900 sm:justify-center sm:pt-0"
+		>
+			<div>
+				<a href="/">
+					<x-application-logo class="h-20 w-20 fill-current text-gray-500" />
+				</a>
+			</div>
 
-	<body class="antialiased">
-		@include("partials.navbar")
-
-		<div class="flex md:h-screen">
-			@include("partials.sidebar")
-
-			<main class="mx-auto mt-20 w-full overflow-y-auto bg-neutral-100 md:mt-16 md:flex-1">
-				@yield("content")
-			</main>
-		</div>
-
-		<div class="flex grow justify-center bg-white p-6 md:hidden">
-			<span class="mt-auto text-xs font-thin text-gray-500">Powered by Trekk</span>
+			<div
+				class="mt-6 w-full overflow-hidden bg-white px-6 py-4 shadow-md dark:bg-gray-800 sm:max-w-md sm:rounded-lg"
+			>
+				{{ $slot }}
+			</div>
 		</div>
 	</body>
 </html>

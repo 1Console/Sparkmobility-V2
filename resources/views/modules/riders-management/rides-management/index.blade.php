@@ -10,8 +10,9 @@
 			>
 				<ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
 					<li class="inline-flex items-center">
-						<span
-							class="inline-flex items-center text-sm font-normal text-gray-500"
+						<a
+							href="/riders-management/"
+							class="inline-flex items-center text-sm font-normal text-gray-400 hover:text-brand-400"
 						>
 							<svg
 								class="me-2.5 size-2.5"
@@ -24,10 +25,30 @@
 									d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z"
 								/>
 							</svg>
-							<span>
-								Riders Management
+							<span class="text-xs font-normal text-gray-400 hover:text-brand-400">
+								Rides Management
 							</span>
-						</span>
+						</a>
+					</li>
+					<li aria-current="page">
+						<div class="flex items-center">
+							<svg
+								class="me-1 size-6 text-gray-400"
+								aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke="currentColor"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="1.5"
+									d="m10 16 4-4-4-4"
+								/>
+							</svg>
+							<span class="text-xs font-medium text-gray-500">Rides management</span>
+						</div>
 					</li>
 				</ol>
 			</nav>
@@ -39,33 +60,28 @@
 				<p class="text-sm text-gray-500">Manage users, rides and transactions</p>
 			</div>
 
-			<div class="relative mt-4 flex w-auto items-center px-4 py-5">
-				<div class="mr-5 shrink-0">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						fill="none"
-						viewBox="0 0 24 24"
-						stroke-width="1.5"
-						stroke="currentColor"
-						class="size-10 text-brand-400"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							d="M21 12a2.25 2.25 0 0 0-2.25-2.25H15a3 3 0 1 1-6 0H5.25A2.25 2.25 0 0 0 3 12m18 0v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 9m18 0V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v3"
-						/>
-					</svg>
-				</div>
-				<div>
-					<div class="relative text-xl font-medium text-gray-600">
-						<span
-							class="absolute -top-7 right-0 rounded-full bg-brand-100 px-2 text-xxs font-medium tracking-wide text-brand-400"
+			<div class="relative mt-4 flex w-auto items-end px-4 py-5">
+				<div class="flex">
+					<div class="mr-5 shrink-0">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="size-10 text-brand-400"
 						>
-							505 Active
-						</span>
-						Riders
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M21 12a2.25 2.25 0 0 0-2.25-2.25H15a3 3 0 1 1-6 0H5.25A2.25 2.25 0 0 0 3 12m18 0v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 9m18 0V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v3"
+							/>
+						</svg>
 					</div>
-					<p class="text-sm text-zinc-500">Monitor all user’s account here</p>
+					<div>
+						<div class="text-xl font-medium text-gray-600">Rides Management</div>
+						<p class="text-sm text-zinc-500">Monitor all rides here</p>
+					</div>
 				</div>
 			</div>
 
@@ -419,7 +435,15 @@
 													class="size-4 border-gray-300 bg-gray-100 text-brand-400"
 												/>
 
-												<span class="ms-4 inline-flex">Active</span>
+												<div
+													class="ms-3 inline-flex items-center justify-center gap-2"
+												>
+													<div
+														class="me-0.5 size-2 rounded-full bg-green-500"
+													></div>
+
+													Paid
+												</div>
 											</div>
 										</label>
 									</li>
@@ -439,7 +463,15 @@
 													class="size-4 border-gray-300 bg-gray-100 text-brand-400"
 												/>
 
-												<span class="ms-4 inline-flex">In-Active</span>
+												<div
+													class="ms-3 inline-flex items-center justify-center gap-2"
+												>
+													<div
+														class="me-0.5 size-2 rounded-full bg-red-500"
+													></div>
+
+													Owing
+												</div>
 											</div>
 										</label>
 									</li>
@@ -481,7 +513,7 @@
 				<div class="overflow-hidden shadow">
 					<div class="relative overflow-x-auto">
 						<table
-							id="riders-list"
+							id="rides-mgt-list"
 							class="w-full text-left text-sm text-gray-500 rtl:text-right"
 						>
 							<thead class="bg-gray-50 text-xs uppercase text-gray-500">
@@ -489,11 +521,11 @@
 									<th scope="col" class="p-4">
 										<div class="flex items-center">
 											<input
-												id="select-all-riders"
+												id="check-all-rides-mgt-rides"
 												type="checkbox"
 												class="focus:ring-brand-300 size-4 rounded border-gray-300 bg-gray-100 text-brand-400 focus:ring-2"
 											/>
-											<label for="select-all-riders" class="sr-only">
+											<label for="check-all-rides-mgt-rides" class="sr-only">
 												checkbox
 											</label>
 										</div>
@@ -538,31 +570,17 @@
 									</th>
 									<th scope="col" class="px-4 py-3">
 										<div class="flex items-center">
-											<span class="shrink-0">Phone</span>
-										</div>
-									</th>
-									<th scope="col" class="px-4 py-3">
-										<div class="flex items-center">
-											<span class="shrink-0">Gender</span>
-
-											<a href="#">
-												<svg
-													class="ms-1.5 size-3"
-													aria-hidden="true"
-													xmlns="http://www.w3.org/2000/svg"
-													fill="currentColor"
-													viewBox="0 0 24 24"
-												>
-													<path
-														d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
-													/>
-												</svg>
-											</a>
+											<span class="shrink-0">Device Name</span>
 										</div>
 									</th>
 									<th scope="col" class="px-4 py-3">
 										<div class="flex items-center">
 											<span class="shrink-0">Fleet</span>
+										</div>
+									</th>
+									<th scope="col" class="px-4 py-3">
+										<div class="flex items-center">
+											<span class="shrink-0">Ride Start</span>
 
 											<a href="#">
 												<svg
@@ -581,7 +599,7 @@
 									</th>
 									<th scope="col" class="px-4 py-3">
 										<div class="flex items-center">
-											<span class="shrink-0">Can lock?</span>
+											<span class="shrink-0">Ride End</span>
 
 											<a href="#">
 												<svg
@@ -600,7 +618,7 @@
 									</th>
 									<th scope="col" class="px-4 py-3">
 										<div class="flex items-center">
-											<span class="shrink-0">Wallet</span>
+											<span class="shrink-0">Duration</span>
 
 											<a href="#">
 												<svg
@@ -618,8 +636,9 @@
 										</div>
 									</th>
 									<th scope="col" class="px-4 py-3">
-										<div class="flex items-center">
-											Fines
+										<div class="mr-3 flex items-center">
+											<span class="shrink-0">Ride Cost</span>
+
 											<a href="#">
 												<svg
 													class="ms-1.5 size-3"
@@ -638,43 +657,7 @@
 									<th scope="col" class="px-4 py-3">
 										<div class="flex items-center">
 											<span class="shrink-0">Status</span>
-
-											<a href="#">
-												<svg
-													class="ms-1.5 size-3"
-													aria-hidden="true"
-													xmlns="http://www.w3.org/2000/svg"
-													fill="currentColor"
-													viewBox="0 0 24 24"
-												>
-													<path
-														d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
-													/>
-												</svg>
-											</a>
 										</div>
-									</th>
-									<th scope="col" class="px-4 py-3">
-										<div class="flex items-center">
-											<span class="shrink-0">Date Created</span>
-
-											<a href="#">
-												<svg
-													class="ms-1.5 size-3"
-													aria-hidden="true"
-													xmlns="http://www.w3.org/2000/svg"
-													fill="currentColor"
-													viewBox="0 0 24 24"
-												>
-													<path
-														d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z"
-													/>
-												</svg>
-											</a>
-										</div>
-									</th>
-									<th scope="col" class="px-4 py-3">
-										<div class="flex items-center">Action</div>
 									</th>
 								</tr>
 							</thead>
@@ -758,282 +741,6 @@
 						</li>
 					</ul>
 				</nav>
-
-				<!-- Edit user modal -->
-				<div
-					id="editUserModal"
-					tabindex="-1"
-					aria-hidden="true"
-					class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden p-4 md:inset-0"
-				>
-					<div class="relative max-h-full w-full max-w-2xl">
-						<!-- Modal content -->
-						<form class="relative rounded-lg bg-white shadow">
-							<!-- Modal header -->
-							<div
-								class="relative flex items-start justify-between rounded-t border-b p-4"
-							>
-								<div class="flex flex-col">
-									<h3 class="text-xl font-semibold text-gray-900">Edit rider</h3>
-									<p class="text-sm text-gray-500">
-										Edit rider profile information
-									</p>
-								</div>
-								<button
-									type="button"
-									class="absolute right-3 top-3 inline-flex size-8 items-center justify-center rounded-full bg-transparent text-sm text-red-600 hover:bg-red-100"
-									data-modal-hide="editUserModal"
-								>
-									<svg
-										class="size-3"
-										aria-hidden="true"
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 14 14"
-									>
-										<path
-											stroke="currentColor"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-										/>
-									</svg>
-									<span class="sr-only">Close modal</span>
-								</button>
-							</div>
-							<!-- Modal body -->
-							<div class="space-y-6 p-6">
-								<div class="grid grid-cols-6 gap-6">
-									<div class="col-span-6 sm:col-span-3">
-										<label for="first-name" class="mb-2 block font-medium">
-											First Name
-										</label>
-										<input
-											type="text"
-											name="first-name"
-											id="first-name"
-											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
-											placeholder="Bonnie"
-											required=""
-										/>
-									</div>
-									<div class="col-span-6 sm:col-span-3">
-										<label for="last-name" class="mb-2 block font-medium">
-											Last Name
-										</label>
-										<input
-											type="text"
-											name="last-name"
-											id="last-name"
-											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
-											placeholder="Green"
-											required=""
-										/>
-									</div>
-									<div class="col-span-6 sm:col-span-3">
-										<label for="email" class="mb-2 block font-medium">
-											Email
-										</label>
-										<input
-											type="email"
-											name="email"
-											id="email"
-											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
-											placeholder="example@company.com"
-											required=""
-										/>
-									</div>
-									<div class="col-span-6 sm:col-span-3">
-										<label for="phone-number" class="mb-2 block font-medium">
-											Phone Number
-										</label>
-										<input
-											type="number"
-											name="phone-number"
-											id="phone-number"
-											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
-											placeholder="e.g. +(234) 000 3456 789"
-											required=""
-										/>
-									</div>
-									<div class="col-span-6 sm:col-span-3">
-										<label for="gender" class="mb-2 block font-medium">
-											Gender
-										</label>
-										<select
-											name="gender"
-											id="gender"
-											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
-											required=""
-										>
-											<option value="">Select</option>
-											<option value="Abuja">Male</option>
-											<option value="Lagos">Female</option>
-										</select>
-									</div>
-									<div class="col-span-6 sm:col-span-3">
-										<label for="community" class="mb-2 block font-medium">
-											Community
-										</label>
-										<select
-											name="community"
-											id="community"
-											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
-											required=""
-										>
-											<option value="">Select community</option>
-											<option value="Abuja">Abuja</option>
-											<option value="Lagos">Lagos</option>
-											<option value="Run">Run</option>
-											<option value="Bells">Bells</option>
-											<option value="Ikoyi">Ikoyi</option>
-											<option value="ABU">ABU</option>
-											<option value="Futa">Futa</option>
-										</select>
-									</div>
-									<div class="col-span-6 sm:col-span-3">
-										<label
-											for="current-password"
-											class="mb-2 block font-medium"
-										>
-											Current Password
-										</label>
-										<input
-											type="password"
-											name="current-password"
-											id="current-password"
-											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
-											placeholder="••••••••"
-											required=""
-										/>
-									</div>
-									<div class="col-span-6 sm:col-span-3">
-										<label for="new-password" class="mb-2 block font-medium">
-											New Password
-										</label>
-										<input
-											type="password"
-											name="new-password"
-											id="new-password"
-											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
-											placeholder="••••••••"
-											required=""
-										/>
-									</div>
-								</div>
-							</div>
-
-							<!-- Modal footer -->
-							<div
-								class="flex items-center space-x-3 rounded-b border-t border-gray-200 p-6 rtl:space-x-reverse"
-							>
-								<button
-									type="submit"
-									class="rounded-lg bg-brand-400 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-100"
-								>
-									Save all
-								</button>
-							</div>
-						</form>
-					</div>
-				</div>
-
-				<!-- User Wallet Modal toggle -->
-				<div
-					id="editUserWalletModal"
-					tabindex="-1"
-					aria-hidden="true"
-					class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden p-4 md:inset-0"
-				>
-					<div class="relative max-h-full w-full max-w-md">
-						<!-- Modal content -->
-						<form class="relative rounded-lg bg-white shadow">
-							<!-- Modal header -->
-							<div
-								class="relative flex items-start justify-between rounded-t border-b p-6"
-							>
-								<div class="flex flex-col">
-									<h3 class="text-xl font-semibold text-gray-900">Wallet</h3>
-									<p class="text-sm text-gray-500">Add, Remove or Refund money</p>
-								</div>
-								<button
-									type="button"
-									class="absolute right-3 top-3 inline-flex size-8 items-center justify-center rounded-full bg-transparent text-sm text-red-600 hover:bg-red-100"
-									data-modal-hide="editUserWalletModal"
-								>
-									<svg
-										class="size-3"
-										aria-hidden="true"
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 14 14"
-									>
-										<path
-											stroke="currentColor"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-										/>
-									</svg>
-									<span class="sr-only">Close modal</span>
-								</button>
-							</div>
-							<!-- Modal body -->
-							<div class="p-6">
-								<div class="flex flex-col gap-1.5">
-									<label for="wallet-amount" class="mb-2 block font-medium">
-										<input
-											type="number"
-											name="wallet-amount"
-											id="wallet-amount"
-											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-500 shadow-sm focus:border-brand-400 focus:ring-brand-400"
-											placeholder="Enter amount"
-											required=""
-										/>
-									</label>
-									<div>
-										<p class="text-lg font-bold text-gray-700">
-											Current balance
-											<span class="text-brand-400">N,3000</span>
-										</p>
-									</div>
-								</div>
-							</div>
-
-							<!-- Modal footer -->
-
-							<div class="rounded-b border-t border-gray-200 p-6 rtl:space-x-reverse">
-								<span
-									class="mb-2.5 block text-xs font-semibold uppercase text-gray-400"
-								>
-									Action
-								</span>
-								<div class="flex items-center space-x-3">
-									<button
-										type="button"
-										class="rounded-lg bg-brand-400 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-100"
-									>
-										Add
-									</button>
-									<button
-										type="button"
-										class="rounded-lg bg-amber-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-amber-600 focus:outline-none focus:ring-4 focus:ring-amber-100"
-									>
-										Refund
-									</button>
-									<button
-										type="button"
-										class="rounded-lg bg-red-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-500 focus:outline-none focus:ring-4 focus:ring-red-100"
-									>
-										Remove
-									</button>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
