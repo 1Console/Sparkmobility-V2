@@ -1,9 +1,7 @@
 {{-- <div class="mb-5 w-full flex flex-col mx-auto md:flex-row md:items-center md:justify-between space-y-5 md:space-y-0"> --}}
 
-<div class="mb-5 grid grid-cols-1 gap-4 sm:grid-cols-3">
-	<div
-		class="relative flex w-full items-center space-y-0.5 rounded-lg bg-white p-8 shadow sm:max-w-sm"
-	>
+<div class="mb-5 grid grid-cols-1 gap-4 md:grid-cols-3">
+	<div class="relative flex max-w-sm items-center space-y-0.5 rounded-lg bg-white p-8 shadow">
 		<span
 			class="absolute right-3 top-3 rounded-full bg-brand-100 px-2 py-0.5 text-xxs font-medium tracking-wide text-brand-400"
 		>
@@ -23,9 +21,7 @@
 		</div>
 	</div>
 
-	<div
-		class="relative flex w-full items-center space-y-0.5 rounded-lg bg-white p-8 shadow sm:max-w-sm"
-	>
+	<div class="relative flex max-w-sm items-center space-y-0.5 rounded-lg bg-white p-8 shadow">
 		<span
 			class="absolute right-3 top-3 rounded-full bg-brand-100 px-2 py-0.5 text-xxs font-medium tracking-wide text-brand-400"
 		>
@@ -45,7 +41,7 @@
 		</div>
 	</div>
 
-	<div class="relative flex w-full items-center rounded-lg bg-white p-8 shadow sm:max-w-sm">
+	<div class="relative flex max-w-sm items-center rounded-lg bg-white p-8 shadow">
 		<span
 			class="absolute right-3 top-3 rounded-full bg-brand-100 px-2 py-0.5 text-xxs font-medium tracking-wide text-brand-400"
 		>
@@ -299,7 +295,7 @@
 		<div class="my-4 flex justify-end">
 			<a
 				href="#"
-				class="inline-flex items-center rounded-lg px-3 py-2 text-sm font-medium uppercase text-brand-400 hover:bg-gray-100 hover:font-semibold hover:text-brand-400"
+				class="inline-flex items-center rounded px-3 py-2 text-sm font-medium uppercase text-brand-400 hover:bg-brand-100 hover:font-semibold hover:text-brand-400"
 			>
 				Users Report
 

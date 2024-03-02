@@ -62,9 +62,10 @@
 
 			<div>
 				<h2 class="mb-2 pl-4 text-xs font-thin uppercase text-gray-500">Admin Access</h2>
-				<ul class="flex flex-col space-y-0.5 text-sm">
-					<li
-						class="flex items-center justify-between rounded-r-full border-l-4 border-l-brand-400 py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
+				<div class="side-menu flex flex-col space-y-0.5 text-sm">
+					<a
+						href="/dashboard2/"
+						class="mr-4 flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
 					>
 						<div class="flex items-center justify-start space-x-2.5 text-brand-400">
 							<svg
@@ -82,7 +83,7 @@
 								/>
 							</svg>
 
-							<a href="#">Dashboard</a>
+							<span>Dashboard</span>
 						</div>
 
 						<svg
@@ -100,9 +101,10 @@
 								d="m9 16 4-4-4-4"
 							/>
 						</svg>
-					</li>
-					<li
-						class="flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
+					</a>
+					<a
+						href="#"
+						class="mr-4 flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
 					>
 						<div class="flex justify-start space-x-2.5">
 							<svg
@@ -120,7 +122,7 @@
 								/>
 							</svg>
 
-							<a href="">Commands</a>
+							<span>Commands</span>
 						</div>
 
 						<svg
@@ -138,9 +140,10 @@
 								d="m9 16 4-4-4-4"
 							/>
 						</svg>
-					</li>
-					<li
-						class="flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
+					</a>
+					<a
+						href="#"
+						class="mr-4 flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
 					>
 						<div class="flex justify-start space-x-2.5">
 							<svg
@@ -158,7 +161,7 @@
 								/>
 							</svg>
 
-							<a>Fleet Management</a>
+							<span>Fleet Management</span>
 						</div>
 
 						<svg
@@ -176,9 +179,10 @@
 								d="m10 16 4-4-4-4"
 							/>
 						</svg>
-					</li>
-					<li
-						class="flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
+					</a>
+					<a
+						href="#"
+						class="mr-4 flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
 					>
 						<div class="flex justify-start space-x-2.5">
 							<svg
@@ -196,7 +200,7 @@
 								/>
 							</svg>
 
-							<a>Vehicle Management</a>
+							<span>Vehicle Management</span>
 						</div>
 
 						<svg
@@ -214,13 +218,14 @@
 								d="m10 16 4-4-4-4"
 							/>
 						</svg>
-					</li>
+					</a>
 
 					{{-- toggler start --}}
-					<li
+					<span
 						id="menu-accordion-grp-1"
 						data-accordion="collapse"
 						data-active-classes="bg-brand-100 text-brand-400 border-l-4 border-l-brand-400"
+						class="mr-4"
 					>
 						<span id="menu-accordion-color-heading-1">
 							<button
@@ -232,18 +237,21 @@
 							>
 								<div class="flex justify-start space-x-2.5">
 									<svg
-										class="size-5 text-gray-800"
-										viewBox="0 0 40 40"
-										fill="none"
 										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke-width="1.5"
+										stroke="currentColor"
+										class="size-5"
 									>
 										<path
-											d="M25.8333 9.16667C27.6667 9.16667 29.1667 7.66667 29.1667 5.83333C29.1667 4 27.6667 2.5 25.8333 2.5C24 2.5 22.5 4 22.5 5.83333C22.5 7.66667 24 9.16667 25.8333 9.16667ZM8.33333 20C3.66667 20 0 23.6667 0 28.3333C0 33 3.66667 36.6667 8.33333 36.6667C13 36.6667 16.6667 33 16.6667 28.3333C16.6667 23.6667 13 20 8.33333 20ZM8.33333 34.1667C5.16667 34.1667 2.5 31.5 2.5 28.3333C2.5 25.1667 5.16667 22.5 8.33333 22.5C11.5 22.5 14.1667 25.1667 14.1667 28.3333C14.1667 31.5 11.5 34.1667 8.33333 34.1667ZM18 17.5L22 13.5L23.3333 14.8333C25.1 16.6 27.3 17.8 29.9333 18.2C30.9333 18.35 31.8333 17.55 31.8333 16.5333C31.8333 15.7167 31.2167 15.0167 30.4167 14.8833C28.5667 14.5833 27.05 13.7 25.8333 12.5L22.6667 9.33333C21.8333 8.66667 21 8.33333 20 8.33333C19 8.33333 18.1667 8.66667 17.6667 9.33333L13 14C12.3333 14.6667 12 15.5 12 16.3333C12 17.3333 12.3333 18.1667 13 18.6667L18.3333 23.3333V30C18.3333 30.9167 19.0833 31.6667 20 31.6667C20.9167 31.6667 21.6667 30.9167 21.6667 30V22.6667C21.6667 21.8 21.3333 20.9833 20.75 20.3667L18 17.5ZM31.6667 20C27 20 23.3333 23.6667 23.3333 28.3333C23.3333 33 27 36.6667 31.6667 36.6667C36.3333 36.6667 40 33 40 28.3333C40 23.6667 36.3333 20 31.6667 20ZM31.6667 34.1667C28.5 34.1667 25.8333 31.5 25.8333 28.3333C25.8333 25.1667 28.5 22.5 31.6667 22.5C34.8333 22.5 37.5 25.1667 37.5 28.3333C37.5 31.5 34.8333 34.1667 31.6667 34.1667Z"
-											fill="#333"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"
 										/>
 									</svg>
 
-									<a href="#">Riders Management</a>
+									<a href="/riders-management/">Riders Management</a>
 								</div>
 
 								<svg
@@ -265,17 +273,17 @@
 							</button>
 						</span>
 
+						<!-- submenu items -->
 						<div
 							id="menu-accordion-color-body-1"
-							class="hidden space-y-2 pl-4 pr-2"
+							class="mr-4 hidden space-y-0.5 pl-4 pr-2 pt-1"
 							aria-labelledby="menu-accordion-color-heading-1"
 						>
-							<span
-								class="flex items-center justify-between rounded-r-full py-2 pl-8 pr-2 hover:bg-brand-100 hover:text-brand-400"
+							<a
+								href="/riders-management/rides-management/"
+								class="flex items-center justify-between rounded-r-full border-l-4 border-l-transparent py-2 pl-8 pr-2 hover:bg-brand-100 hover:text-brand-400"
 							>
-								<div class="flex justify-start space-x-2.5">
-									<a href="">Rides management</a>
-								</div>
+								<span class="flex justify-start space-x-2.5">Rides management</span>
 
 								<svg
 									class="size-5 text-gray-400 hover:text-brand-400"
@@ -292,14 +300,12 @@
 										d="m10 16 4-4-4-4"
 									/>
 								</svg>
-							</span>
-
-							<span
-								class="flex items-center justify-between rounded-r-full py-2 pl-8 pr-2 hover:bg-brand-100 hover:text-brand-400"
+							</a>
+							<a
+								href="/riders-management/active-rides/"
+								class="flex items-center justify-between rounded-r-full border-l-4 border-l-transparent py-2 pl-8 pr-2 hover:bg-brand-100 hover:text-brand-400"
 							>
-								<div class="flex justify-start space-x-2.5">
-									<a href="">Settings</a>
-								</div>
+								<span class="flex justify-start space-x-2.5">Active rides</span>
 
 								<svg
 									class="size-5 text-gray-400 hover:text-brand-400"
@@ -316,14 +322,15 @@
 										d="m10 16 4-4-4-4"
 									/>
 								</svg>
-							</span>
+							</a>
 
-							<span
-								class="flex items-center justify-between rounded-r-full py-2 pl-8 pr-2 hover:bg-brand-100 hover:text-brand-400"
+							<a
+								href="/riders-management/ride-transactions/"
+								class="flex items-center justify-between rounded-r-full border-l-4 border-l-transparent py-2 pl-8 pr-2 hover:bg-brand-100 hover:text-brand-400"
 							>
-								<div class="flex justify-start space-x-2.5">
-									<a href="">Active rides</a>
-								</div>
+								<span class="flex justify-start space-x-2.5">
+									Ride transactions
+								</span>
 
 								<svg
 									class="size-5 text-gray-400 hover:text-brand-400"
@@ -340,14 +347,13 @@
 										d="m10 16 4-4-4-4"
 									/>
 								</svg>
-							</span>
+							</a>
 
-							<span
-								class="flex items-center justify-between rounded-r-full py-2 pl-8 pr-2 hover:bg-brand-100 hover:text-brand-400"
+							<a
+								href="/riders-management/all-transactions/"
+								class="flex items-center justify-between rounded-r-full border-l-4 border-l-transparent py-2 pl-8 pr-2 hover:bg-brand-100 hover:text-brand-400"
 							>
-								<div class="flex justify-start space-x-2.5">
-									<a href="">Rides transactions</a>
-								</div>
+								<span class="flex justify-start space-x-2.5">All transactions</span>
 
 								<svg
 									class="size-5 text-gray-400 hover:text-brand-400"
@@ -364,37 +370,14 @@
 										d="m10 16 4-4-4-4"
 									/>
 								</svg>
-							</span>
-
-							<span
-								class="flex items-center justify-between rounded-r-full py-2 pl-8 pr-2 hover:bg-brand-100 hover:text-brand-400"
-							>
-								<div class="flex justify-start space-x-2.5">
-									<a href="">All transactions</a>
-								</div>
-
-								<svg
-									class="size-5 text-gray-400 hover:text-brand-400"
-									aria-hidden="true"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-								>
-									<path
-										stroke="currentColor"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										stroke-width="1.5"
-										d="m10 16 4-4-4-4"
-									/>
-								</svg>
-							</span>
+							</a>
 						</div>
-					</li>
+					</span>
 					{{-- toggler end --}}
 
-					<li
-						class="flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
+					<a
+						href="#"
+						class="mr-4 flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
 					>
 						<div class="flex justify-start space-x-2.5">
 							<svg
@@ -412,7 +395,7 @@
 								/>
 							</svg>
 
-							<a>Rides Management</a>
+							<span>Marketing Campaigns</span>
 						</div>
 
 						<svg
@@ -430,48 +413,10 @@
 								d="m10 16 4-4-4-4"
 							/>
 						</svg>
-					</li>
-
-					<li
-						class="flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
-					>
-						<div class="flex justify-start space-x-2.5">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke-width="1.5"
-								stroke="currentColor"
-								class="size-5"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 0 1-1.44-4.282m3.102.069a18.03 18.03 0 0 1-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 0 1 8.835 2.535M10.34 6.66a23.847 23.847 0 0 0 8.835-2.535m0 0A23.74 23.74 0 0 0 18.795 3m.38 1.125a23.91 23.91 0 0 1 1.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 0 0 1.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 0 1 0 3.46"
-								/>
-							</svg>
-
-							<a>Marketing Campaigns</a>
-						</div>
-
-						<svg
-							class="size-5 text-gray-400 hover:text-brand-400"
-							aria-hidden="true"
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-						>
-							<path
-								stroke="currentColor"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								stroke-width="1.5"
-								d="m10 16 4-4-4-4"
-							/>
-						</svg>
-					</li>
-					<li
-						class="flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
+					</a>
+					<a
+						href="#"
+						class="mr-4 flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
 					>
 						<div class="flex justify-start space-x-2.5">
 							<svg
@@ -489,7 +434,7 @@
 								/>
 							</svg>
 
-							<a>Promos</a>
+							<span>Promos</span>
 						</div>
 
 						<svg
@@ -507,27 +452,28 @@
 								d="m10 16 4-4-4-4"
 							/>
 						</svg>
-					</li>
-					<li
-						class="flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
+					</a>
+					<a
+						class="mr-4 flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
 					>
 						<div class="flex justify-start space-x-2.5">
 							<svg
+								class="size-5"
+								aria-hidden="true"
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
 								viewBox="0 0 24 24"
-								stroke-width="1.5"
-								stroke="currentColor"
-								class="size-5"
 							>
 								<path
+									stroke="currentColor"
 									stroke-linecap="round"
 									stroke-linejoin="round"
-									d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z"
+									stroke-width="1.5"
+									d="M4 4v15c0 .6.4 1 1 1h15M8 16l2.5-5.5 3 3L17.3 7 20 9.7"
 								/>
 							</svg>
 
-							<a>Pricing Plan Management</a>
+							<span>Pricing Plan Management</span>
 						</div>
 
 						<svg
@@ -545,9 +491,10 @@
 								d="m10 16 4-4-4-4"
 							/>
 						</svg>
-					</li>
-					<li
-						class="flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
+					</a>
+					<a
+						href="#"
+						class="mr-4 flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
 					>
 						<div class="flex justify-start space-x-2.5">
 							<svg
@@ -565,7 +512,7 @@
 								/>
 							</svg>
 
-							<a>Tickets Management</a>
+							<span>Tickets Management</span>
 						</div>
 
 						<svg
@@ -583,9 +530,10 @@
 								d="m10 16 4-4-4-4"
 							/>
 						</svg>
-					</li>
-					<li
-						class="flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
+					</a>
+					<a
+						href="#"
+						class="mr-4 flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
 					>
 						<div class="flex justify-start space-x-2.5">
 							<svg
@@ -603,7 +551,7 @@
 								/>
 							</svg>
 
-							<a>Organization</a>
+							<span>Organization</span>
 						</div>
 
 						<svg
@@ -621,8 +569,8 @@
 								d="m10 16 4-4-4-4"
 							/>
 						</svg>
-					</li>
-				</ul>
+					</a>
+				</div>
 			</div>
 
 			<hr class="my-4" />
@@ -632,9 +580,10 @@
 					Account management
 				</h2>
 
-				<ul class="flex flex-col space-y-0.5 text-sm">
-					<li
-						class="flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
+				<div class="side-menu flex flex-col space-y-0.5 text-sm">
+					<a
+						href="#"
+						class="mr-4 flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
 					>
 						<div class="flex justify-start space-x-2.5">
 							<svg
@@ -660,7 +609,7 @@
 								/>
 							</svg>
 
-							<a href="">Settings</a>
+							<span>Settings</span>
 						</div>
 
 						<svg
@@ -678,10 +627,10 @@
 								d="m10 16 4-4-4-4"
 							/>
 						</svg>
-					</li>
-
-					<li
-						class="flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
+					</a>
+					<a
+						href="#"
+						class="mr-4 flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
 					>
 						<div class="flex justify-start space-x-2.5">
 							<svg
@@ -725,8 +674,8 @@
 								d="m10 16 4-4-4-4"
 							/>
 						</svg>
-					</li>
-				</ul>
+					</a>
+				</div>
 			</div>
 		</div>
 		<div class="my-4 flex h-auto grow px-6">

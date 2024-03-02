@@ -75,10 +75,11 @@
 			<span class="font-medium">DA</span>
 		</div>
 
-		<a
+		<button
+			type="button"
 			href="#"
-			class="mx-auto ml-2 inline-flex items-center justify-between text-center text-xs font-normal text-brand-400"
-		>
+			class="mx-auto ml-2 inline-flex items-center justify-between rounded px-3 py-1.5 text-center text-xs font-normal text-brand-400 hover:bg-brand-100"
+		 >
 			See more
 
 			<svg
@@ -96,6 +97,6 @@
 					d="m9 16 4-4-4-4"
 				/>
 			</svg>
-		</a>
+		</button>
 	</div>
 </div>
