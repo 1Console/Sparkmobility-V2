@@ -86,8 +86,9 @@
 					</div>
 				</div>
 
-				<div
-					class="inline-flex items-center text-sm font-medium text-gray-500 hover:cursor-pointer hover:text-brand-400 hover:underline"
+				<button
+					type="button"
+					class="inline-flex items-center rounded bg-transparent px-3.5 py-2 text-sm font-medium text-gray-500 hover:cursor-pointer hover:bg-brand-100 hover:text-brand-400 hover:underline"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -103,9 +104,8 @@
 							d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
 						/>
 					</svg>
-
 					Download csv
-				</div>
+				</button>
 			</div>
 
 			<hr class="my-4" />
@@ -241,7 +241,7 @@
 								"
 							>
 								<ul
-									class="max-h-52 space-y-1 p-3 text-xs font-medium capitalize text-gray-700 md:text-sm"
+									class="max-h-52 space-y-1 overflow-y-auto p-3 text-xs font-medium capitalize text-gray-700 md:text-sm"
 									aria-labelledby="dropdownRadioButton"
 								>
 									<li>
@@ -459,7 +459,7 @@
 												/>
 
 												<div
-													class="ms-4 inline-flex items-center justify-center gap-2"
+													class="ms-3 inline-flex items-center justify-center gap-2"
 												>
 													<div
 														class="me-0.5 size-2 rounded-full bg-green-500"
@@ -487,7 +487,7 @@
 												/>
 
 												<div
-													class="ms-4 inline-flex items-center justify-center gap-2"
+													class="ms-3 inline-flex items-center justify-center gap-2"
 												>
 													<div
 														class="me-0.5 size-2 rounded-full bg-red-500"
@@ -536,7 +536,7 @@
 				<div class="overflow-hidden shadow">
 					<div class="relative overflow-x-auto">
 						<table
-							id="riders-transaction-list"
+							id="all-riders-transaction-list"
 							class="w-full text-left text-sm text-gray-500 rtl:text-right"
 						>
 							<thead class="bg-gray-50 text-xs uppercase text-gray-500">
@@ -544,11 +544,14 @@
 									<th scope="col" class="p-4">
 										<div class="flex items-center">
 											<input
-												id="checkbox-all-riders"
+												id="check-all-riders-transaction"
 												type="checkbox"
 												class="focus:ring-brand-300 size-4 rounded border-gray-300 bg-gray-100 text-brand-400 focus:ring-2"
 											/>
-											<label for="checkbox-all-riders" class="sr-only">
+											<label
+												for="check-all-riders-transaction"
+												class="sr-only"
+											>
 												checkbox
 											</label>
 										</div>

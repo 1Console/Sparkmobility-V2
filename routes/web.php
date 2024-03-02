@@ -32,8 +32,20 @@ Route::get('/riders-management', function () {
     return view('modules.riders-management.index'); //riders-management
 });
 
-Route::get('/riders-management/transactions', function () {
-    return view('modules.riders-management.transactions.index');
+Route::get('/riders-management/rides-management', function () {
+    return view('modules.riders-management.rides-management.index');
+});
+
+Route::get('/riders-management/active-rides', function () {
+    return view('modules.riders-management.active-rides.index');
+});
+
+Route::get('/riders-management/all-transactions', function () {
+    return view('modules.riders-management.all-transactions.index');
+});
+
+Route::get('/riders-management/ride-transactions', function () {
+    return view('modules.riders-management.ride-transactions.index');
 });
 
 // Route::get('/fleets/create', function () {
