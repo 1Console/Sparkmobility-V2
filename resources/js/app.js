@@ -1,12 +1,12 @@
-import "./bootstrap";
+import "./bootstrap.js";
 import "flowbite";
 import { format } from "date-fns";
 import Alpine from "alpinejs";
 import "./chart";
 import "./tables";
+import Breadcrumbs from "./breadcrumbs";
 
 window.Alpine = Alpine;
-
 Alpine.start();
 
 // Set current date on navbar
@@ -69,8 +69,10 @@ function highlightCurrentMenuItem() {
 	}
 }
 
-// Call the function when the DOM content is loaded
-document.addEventListener("DOMContentLoaded", highlightCurrentMenuItem);
+document.addEventListener("DOMContentLoaded", function () {
+	Breadcrumbs.init();
+	highlightCurrentMenuItem();
+});
 
 // Toggle arrow icon rotation in Sidebar menu
 const accordionGrp = document.querySelector("#menu-accordion-grp-1");

@@ -526,8 +526,8 @@
 							</svg>
 							<div class="text-sm font-medium text-gray-900">Billing</div>
 						</a>
-						<form method="POST" action="{{ route('logout') }}">
-								@csrf
+						<form method="POST" action="{{ route("logout") }}">
+							@csrf
 							<button
 								href="#"
 								class="group block rounded-lg p-4 text-center hover:bg-brand-100"
