@@ -581,9 +581,9 @@
 						id="user-menu-dropdown"
 					>
 						<div class="px-4 py-3">
-							<span class="block text-sm font-semibold text-gray-900">Neil sims</span>
+							<span class="block text-sm font-semibold text-gray-900">Admin Pro</span>
 							<span class="block truncate text-sm text-gray-500">
-								name@flowbite.com
+								name.pro@trekkscooters.com
 							</span>
 						</div>
 						<ul class="py-1 text-gray-500" aria-labelledby="user-menu-button">
@@ -650,7 +650,7 @@
 								>
 									<span class="flex items-center">
 										<svg
-											class="mr-2 size-4 text-primary-600"
+											class="mr-2 size-4 text-brand-400"
 											aria-hidden="true"
 											xmlns="http://www.w3.org/2000/svg"
 											fill="currentColor"

@@ -11,7 +11,7 @@
 				<ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
 					<li class="inline-flex items-center">
 						<a
-							href="#"
+							href="/riders-management/"
 							class="inline-flex items-center text-sm font-normal text-gray-400 hover:text-brand-400"
 						>
 							<svg
@@ -47,7 +47,7 @@
 									d="m10 16 4-4-4-4"
 								/>
 							</svg>
-							<span class="text-xs font-medium text-gray-500">Ride transactions</span>
+							<span class="text-xs font-medium text-gray-500">All transactions</span>
 						</div>
 					</li>
 				</ol>

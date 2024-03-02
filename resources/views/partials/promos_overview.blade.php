@@ -61,7 +61,7 @@
 	<div class="my-4 flex justify-end">
 		<a
 			href="#"
-			class="inline-flex items-center rounded-lg px-3 py-2 text-xs font-medium uppercase text-brand-400 hover:bg-gray-100 hover:font-semibold hover:text-brand-400"
+			class="inline-flex items-center rounded px-3 py-2 text-xs font-medium uppercase text-brand-400 hover:bg-brand-100 hover:font-semibold hover:text-brand-400"
 		>
 			See more
 
