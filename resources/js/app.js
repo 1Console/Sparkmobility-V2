@@ -1,17 +1,16 @@
-import "./bootstrap.js";
-import "flowbite";
-import { format } from "date-fns";
 import Alpine from "alpinejs";
+import "./flowbite";
+import "./bootstrap";
+import { format } from "date-fns";
+import Breadcrumbs from "./breadcrumbs";
 import "./chart";
 import "./tables";
-import Breadcrumbs from "./breadcrumbs";
 
 window.Alpine = Alpine;
 Alpine.start();
 
 // Set current date on navbar
-const today = new Date();
-const formattedDate = format(today, "eeee, MMMM do");
+const formattedDate = format(new Date(), "eeee, MMMM do");
 
 document.getElementById("todaysDate").innerText = formattedDate;
 
