@@ -68,6 +68,8 @@
 
 6.  Make sure to create a feature branch off the Dev branch not the master branch while working [See guide](https://geekflare.com/how-to-create-a-new-git-branch/).
 
+7. When done editing, make sure to do an `npm run format` command to format your code so things are tidy.
+
 ## QA process
 
 1. Submit a Pull Request (PR) for code review

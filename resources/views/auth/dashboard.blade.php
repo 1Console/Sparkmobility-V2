@@ -1,10 +1,10 @@
 @extends("layouts.authenticated_layout")
 
 @section("content")
-	<div class="flex h-auto flex-col md:h-full md:flex-1 md:flex-row">
-		<section class="mb-8 flex px-4 md:overflow-y-auto md:px-8">
-			<div class="flex w-full max-w-3xl flex-col">
-				<div class="mb-6 mt-6 space-y-1.5">
+	<div class="flex h-auto flex-col lg:h-full lg:flex-1 lg:flex-row">
+		<section class="mb-8 flex w-full px-4 md:overflow-y-auto md:px-8">
+			<div class="flex w-full flex-1 flex-col">
+				<div class="mb-6 mt-10 space-y-1.5 md:mt-6">
 					<h1 class="text-xl font-medium text-gray-800">Overview</h1>
 					<p>Dashboard overview of all major operations</p>
 				</div>
@@ -21,7 +21,7 @@
 		</section>
 
 		<aside
-			class="transition-width h-auto w-full flex-shrink-0 flex-col border-l border-gray-200 bg-white shadow duration-75 md:ml-8 md:w-80 md:overflow-y-auto lg:flex"
+			class="hidden h-auto w-full flex-shrink-0 flex-col border-l border-gray-200 bg-white shadow duration-75 md:flex lg:ml-8 lg:w-80 lg:overflow-y-auto"
 			aria-label="Sidebar"
 		>
 			<div class="mt-5 flex h-full flex-1 flex-col px-4">

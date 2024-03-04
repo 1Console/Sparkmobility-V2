@@ -1,13 +1,15 @@
 {{-- <div class="mb-5 w-full flex flex-col mx-auto md:flex-row md:items-center md:justify-between space-y-5 md:space-y-0"> --}}
 
-<div class="mb-5 grid grid-cols-1 gap-4 md:grid-cols-3">
-	<div class="relative flex max-w-sm items-center space-y-0.5 rounded-lg bg-white p-8 shadow">
+<div class="mb-5 grid w-full grid-cols-1 gap-4 md:grid-cols-3">
+	<div
+		class="relative flex w-full flex-col items-start space-y-0.5 rounded-lg bg-white p-6 shadow lg:max-w-sm lg:p-8 xl:flex-row xl:justify-center"
+	>
 		<span
 			class="absolute right-3 top-3 rounded-full bg-brand-100 px-2 py-0.5 text-xxs font-medium tracking-wide text-brand-400"
 		>
 			505 Active
 		</span>
-		<div class="mr-5 shrink-0">
+		<div class="lg:mr-5 lg:shrink-0">
 			<svg class="size-9" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path
 					d="M25.8333 9.16667C27.6667 9.16667 29.1667 7.66667 29.1667 5.83333C29.1667 4 27.6667 2.5 25.8333 2.5C24 2.5 22.5 4 22.5 5.83333C22.5 7.66667 24 9.16667 25.8333 9.16667ZM8.33333 20C3.66667 20 0 23.6667 0 28.3333C0 33 3.66667 36.6667 8.33333 36.6667C13 36.6667 16.6667 33 16.6667 28.3333C16.6667 23.6667 13 20 8.33333 20ZM8.33333 34.1667C5.16667 34.1667 2.5 31.5 2.5 28.3333C2.5 25.1667 5.16667 22.5 8.33333 22.5C11.5 22.5 14.1667 25.1667 14.1667 28.3333C14.1667 31.5 11.5 34.1667 8.33333 34.1667ZM18 17.5L22 13.5L23.3333 14.8333C25.1 16.6 27.3 17.8 29.9333 18.2C30.9333 18.35 31.8333 17.55 31.8333 16.5333C31.8333 15.7167 31.2167 15.0167 30.4167 14.8833C28.5667 14.5833 27.05 13.7 25.8333 12.5L22.6667 9.33333C21.8333 8.66667 21 8.33333 20 8.33333C19 8.33333 18.1667 8.66667 17.6667 9.33333L13 14C12.3333 14.6667 12 15.5 12 16.3333C12 17.3333 12.3333 18.1667 13 18.6667L18.3333 23.3333V30C18.3333 30.9167 19.0833 31.6667 20 31.6667C20.9167 31.6667 21.6667 30.9167 21.6667 30V22.6667C21.6667 21.8 21.3333 20.9833 20.75 20.3667L18 17.5ZM31.6667 20C27 20 23.3333 23.6667 23.3333 28.3333C23.3333 33 27 36.6667 31.6667 36.6667C36.3333 36.6667 40 33 40 28.3333C40 23.6667 36.3333 20 31.6667 20ZM31.6667 34.1667C28.5 34.1667 25.8333 31.5 25.8333 28.3333C25.8333 25.1667 28.5 22.5 31.6667 22.5C34.8333 22.5 37.5 25.1667 37.5 28.3333C37.5 31.5 34.8333 34.1667 31.6667 34.1667Z"
@@ -21,13 +23,15 @@
 		</div>
 	</div>
 
-	<div class="relative flex max-w-sm items-center space-y-0.5 rounded-lg bg-white p-8 shadow">
+	<div
+		class="relative flex w-full flex-col items-start space-y-0.5 rounded-lg bg-white p-6 shadow lg:max-w-sm lg:p-8 xl:flex-row xl:justify-center"
+	>
 		<span
 			class="absolute right-3 top-3 rounded-full bg-brand-100 px-2 py-0.5 text-xxs font-medium tracking-wide text-brand-400"
 		>
 			05 Active
 		</span>
-		<div class="mr-5 shrink-0">
+		<div class="lg:mr-5 lg:shrink-0">
 			<svg class="size-9" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path
 					d="M19 26.4944C21.9788 26.4944 24.3833 24.0899 24.3833 21.1111C24.3833 19.1013 23.2887 17.3428 21.6917 16.4276L4.2676 6.34282L14.1909 23.5336C15.0881 25.2922 16.9005 26.4944 19 26.4944ZM19 3.16666C15.752 3.16666 12.7194 4.06388 10.0816 5.53532L13.8499 7.7066C15.4111 7.09649 17.2055 6.75554 19 6.75554C26.9314 6.75554 33.3555 13.1797 33.3555 21.1111C33.3555 25.0768 31.7585 28.6657 29.1565 31.2497H29.1386C28.9722 31.4157 28.8403 31.6129 28.7502 31.83C28.6602 32.0471 28.6138 32.2798 28.6138 32.5148C28.6138 32.7498 28.6602 32.9825 28.7502 33.1996C28.8403 33.4167 28.9722 33.6139 29.1386 33.7799C29.8384 34.4797 30.9869 34.4797 31.6867 33.7978C33.3556 32.1337 34.6792 30.1563 35.5815 27.9791C36.4838 25.8019 36.947 23.4679 36.9444 21.1111C36.9444 11.2417 28.8694 3.16666 19 3.16666ZM1.05554 21.1111C1.05554 26.0638 3.06532 30.5499 6.31326 33.7978C7.0131 34.4797 8.1436 34.4797 8.84343 33.7799C9.00978 33.6139 9.14176 33.4167 9.23181 33.1996C9.32186 32.9825 9.36821 32.7498 9.36821 32.5148C9.36821 32.2798 9.32186 32.0471 9.23181 31.83C9.14176 31.6129 9.00978 31.4157 8.84343 31.2497C7.5089 29.9206 6.45076 28.3404 5.73007 26.6003C5.00938 24.8602 4.6404 22.9946 4.64443 21.1111C4.64443 19.3167 4.98537 17.5222 5.61343 15.9072L3.44215 12.1389C1.95276 14.8305 1.05554 17.8452 1.05554 21.1111Z"
@@ -41,13 +45,15 @@
 		</div>
 	</div>
 
-	<div class="relative flex max-w-sm items-center rounded-lg bg-white p-8 shadow">
+	<div
+		class="relative flex w-full flex-col items-start space-y-0.5 rounded-lg bg-white p-6 shadow lg:max-w-sm lg:p-8 xl:flex-row xl:justify-center"
+	>
 		<span
 			class="absolute right-3 top-3 rounded-full bg-brand-100 px-2 py-0.5 text-xxs font-medium tracking-wide text-brand-400"
 		>
 			215 In service
 		</span>
-		<div class="mr-5 shrink-0">
+		<div class="lg:mr-5 lg:shrink-0">
 			<svg class="size-9" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<g clip-path="url(#clip0_56_52708)">
 					<path

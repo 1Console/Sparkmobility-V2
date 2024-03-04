@@ -1,11 +1,12 @@
 <aside
-	class="transition-width hidden h-full w-80 flex-shrink-0 flex-col bg-white duration-75 lg:flex"
+	class="absolute z-20 flex h-full w-64 flex-shrink-0 flex-col bg-white transition-all delay-700 duration-1000 ease-in-out md:w-80 lg:relative"
 	aria-label="Sidebar"
+	id="Sidebar"
 >
 	<div
 		class="relative flex h-full min-h-0 flex-1 flex-col overflow-y-auto border-r border-gray-200 shadow"
 	>
-		<div class="flex flex-1 flex-col pt-16">
+		<div class="flex flex-1 flex-col pt-28 md:pt-16">
 			<div class="mb-6 mt-4 flex -space-x-3 px-4 text-white rtl:space-x-reverse">
 				<div
 					class="border-1 relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-red-400"
@@ -648,14 +649,11 @@
 								/>
 							</svg>
 
-							
-							  <!-- Authentication -->
-							  <form method="POST" action="{{ route('logout') }}">
+							<!-- Authentication -->
+							<form method="POST" action="{{ route("logout") }}">
 								@csrf
-	
-								<button type="submit">
-									Logout
-								</button>
+
+								<button type="submit">Logout</button>
 							</form>
 						</div>
 
@@ -678,7 +676,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="my-4 flex h-auto grow px-6">
+		<div class="my-4 flex hidden h-auto grow px-6 md:flex">
 			<span class="mt-auto text-xs font-thin text-gray-400">Powered by Trekk</span>
 		</div>
 	</div>
