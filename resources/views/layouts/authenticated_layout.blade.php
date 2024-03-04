@@ -21,7 +21,7 @@
 	<body class="antialiased">
 		@include("partials.navbar")
 
-		<div class="flex md:h-screen">
+		<div class="relative flex md:h-screen" id="main-container">
 			@include("partials.sidebar")
 
 			<main class="mx-auto mt-20 w-full overflow-y-auto bg-neutral-100 md:mt-16 md:flex-1">

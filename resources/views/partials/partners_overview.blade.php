@@ -79,7 +79,7 @@
 			type="button"
 			href="#"
 			class="mx-auto ml-2 inline-flex items-center justify-between rounded px-3 py-1.5 text-center text-xs font-normal text-brand-400 hover:bg-brand-100"
-		 >
+		>
 			See more
 
 			<svg

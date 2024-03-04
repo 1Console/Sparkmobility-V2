@@ -4,32 +4,37 @@
 		<div class="flex flex-col md:flex-row md:items-center md:justify-between">
 			<div class="flex items-center justify-start">
 				{{-- toggle sidebar start --}}
-				<button
-					id="toggleSidebar"
-					aria-expanded="true"
-					aria-controls="sidebar"
-					class="mr-2 hidden cursor-pointer rounded p-2 text-gray-600 hover:bg-brand-100 hover:text-gray-900 lg:inline"
+				<!-- <button
+					data-collapse-toggle="navbar-hamburger"
+					aria-controls="navbar-hamburger"
+					aria-expanded="false"
+					type="button"
+					class="mr-2 cursor-pointer rounded-lg p-2 text-gray-600 hover:bg-brand-100 hover:text-gray-900 focus:bg-gray-100 focus:ring-2 focus:ring-gray-100"
 				>
 					<svg
 						class="size-5"
 						aria-hidden="true"
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
-						viewBox="0 0 16 12"
+						viewBox="0 0 17 14"
 					>
 						<path
 							stroke="currentColor"
 							stroke-linecap="round"
 							stroke-linejoin="round"
 							stroke-width="2"
-							d="M1 1h14M1 6h14M1 11h7"
+							d="M1 1h15M1 7h15M1 13h15"
 						/>
 					</svg>
-				</button>
+					<span class="sr-only">Toggle sidebar</span>
+				</button> -->
+
 				<button
+					id="toggleSidebar"
 					aria-expanded="true"
 					aria-controls="sidebar"
-					class="mr-2 cursor-pointer rounded-lg p-2 text-gray-600 hover:bg-brand-100 hover:text-gray-900 focus:bg-gray-100 focus:ring-2 focus:ring-gray-100 lg:hidden"
+					type="button"
+					class="mr-2 cursor-pointer rounded-lg p-2 text-gray-600 hover:bg-brand-100 hover:text-gray-900 focus:bg-gray-100 focus:ring-2 focus:ring-gray-100"
 				>
 					<svg
 						class="size-5"
@@ -155,10 +160,10 @@
 									alt="Bonnie Green avatar"
 								/>
 								<div
-									class="absolute -mt-5 ml-6 flex size-5 items-center justify-center rounded-full border border-white bg-primary-700"
+									class="bg-brand-text-brand-400 absolute -mt-5 ml-6 flex size-5 items-center justify-center rounded-full border border-white"
 								>
 									<svg
-										class="size-2 text-white"
+										class="size-2 text-brand-400"
 										aria-hidden="true"
 										xmlns="http://www.w3.org/2000/svg"
 										fill="currentColor"
@@ -179,7 +184,7 @@
 									<span class="font-semibold text-gray-900">Bonnie Green</span>
 									: "Hey, what's up? All set for the presentation?"
 								</div>
-								<div class="text-xs font-medium text-primary-700">
+								<div class="text-xs font-medium text-brand-400">
 									a few moments ago
 								</div>
 							</div>
@@ -214,9 +219,7 @@
 									<span class="font-medium text-gray-900">5 others</span>
 									started following you.
 								</div>
-								<div class="text-xs font-medium text-primary-700">
-									10 minutes ago
-								</div>
+								<div class="text-xs font-medium text-brand-400">10 minutes ago</div>
 							</div>
 						</a>
 						<a href="#" class="flex border-b px-4 py-3 hover:bg-brand-100">
@@ -249,9 +252,7 @@
 									<span class="font-medium text-gray-900">141 others</span>
 									love your story. See it and view more stories.
 								</div>
-								<div class="text-xs font-medium text-primary-700">
-									44 minutes ago
-								</div>
+								<div class="text-xs font-medium text-brand-400">44 minutes ago</div>
 							</div>
 						</a>
 						<a href="#" class="flex border-b px-4 py-3 hover:bg-brand-100">
@@ -283,10 +284,10 @@
 										Leslie Livingston
 									</span>
 									mentioned you in a comment:
-									<span class="font-medium text-primary-700">@bonnie.green</span>
+									<span class="font-medium text-brand-400">@bonnie.green</span>
 									what do you say?
 								</div>
-								<div class="text-xs font-medium text-primary-700">1 hour ago</div>
+								<div class="text-xs font-medium text-brand-400">1 hour ago</div>
 							</div>
 						</a>
 						<a href="#" class="flex px-4 py-3 hover:bg-brand-100">
@@ -318,7 +319,7 @@
 									posted a new video: Glassmorphism - learn how to implement the
 									new design trend.
 								</div>
-								<div class="text-xs font-medium text-primary-700">3 hours ago</div>
+								<div class="text-xs font-medium text-brand-400">3 hours ago</div>
 							</div>
 						</a>
 					</div>
@@ -526,8 +527,8 @@
 							</svg>
 							<div class="text-sm font-medium text-gray-900">Billing</div>
 						</a>
-						<form method="POST" action="{{ route('logout') }}">
-								@csrf
+						<form method="POST" action="{{ route("logout") }}">
+							@csrf
 							<button
 								href="#"
 								class="group block rounded-lg p-4 text-center hover:bg-brand-100"
