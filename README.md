@@ -92,7 +92,7 @@
 The wiki has some helpful information for developers:
 #### TailwindCSS
 -   TailwindCSS Docs --> [https://tailwindcss.com/docs/utility-first/](https://tailwindcss.com/docs/utility-first/)
--   Learn how the TailwindCSS framework works, prototyping a new idea, or creating a demo to share online.) --> [Tailwind Play](https://play.tailwindcss.com/)
+-   Learn how the TailwindCSS framework works, prototyping a new idea, or creating a demo to share online. --> [Tailwind Play](https://play.tailwindcss.com/)
 
 #### Git version control 
 -   [https://geekflare.com/how-to-create-a-new-git-branch/](https://geekflare.com/how-to-create-a-new-git-branch/)
