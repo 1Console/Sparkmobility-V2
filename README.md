@@ -91,6 +91,7 @@
 
 The wiki has some helpful information for developers:
 
+-  TailwindCSS Docs --> [https://tailwindcss.com/docs/utility-first/](https://tailwindcss.com/docs/utility-first/)
 -   [https://geekflare.com/how-to-create-a-new-git-branch/](https://geekflare.com/how-to-create-a-new-git-branch/)
 -   [https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
 -   [https://www.atlassian.com/git/tutorials/using-branches/git-merge](https://www.atlassian.com/git/tutorials/using-branches/git-merge)
