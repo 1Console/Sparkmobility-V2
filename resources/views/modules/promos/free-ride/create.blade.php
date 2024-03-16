@@ -7,7 +7,7 @@
 
 		<div class="rounded-lg border border-gray-200 bg-white p-4">
 			<div class="mt-4 space-y-1 px-4">
-				<h3 class="text-3xl font-semibold text-gray-700">Commands management:::: Create Commands here</h3>
+				<h3 class="text-3xl font-semibold text-gray-700">Promo: Free Ride Create</h3>
 				<p class="text-sm text-gray-500">Manage users, rides and transactions</p>
 			</div>
 

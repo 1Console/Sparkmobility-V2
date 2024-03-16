@@ -11,8 +11,9 @@ use App\Http\Requests\UpdatePromoReferFriendRequest;
 
 class PromoReferFriendController extends Controller
 {
-    public function __construct(protected PromoReferFriendRepository $promoReferFriendRepository,
-    protected FleetRepository $fleetRepository){}
+    
+    // protected FleetRepository $fleetRepository
+    public function __construct(protected PromoReferFriendRepository $promoReferFriendRepository){}
     /**
      * Display a listing of the resource.
      *
@@ -30,8 +31,9 @@ class PromoReferFriendController extends Controller
      */
     public function create()
     {
-        $fleets = $this->fleetRepository->showAll();
-        return view('modules.promos.refer-friend.create',compact('fleets'));
+        // $fleets = $this->fleetRepository->showAll();
+        // ,compact('fleets')
+        return view('modules.promos.refer-friend.create');
         
     }
 
@@ -43,7 +45,7 @@ class PromoReferFriendController extends Controller
      */
     public function store(StorePromoReferFriendRequest $request)
     {
-        $this->promoReferFriendRepository->store($request->validated());
+        // $this->promoReferFriendRepository->store($request->validated());
         return redirect()->route('promos.refer-friend.create')->with('success','Promo refer friend was successfully added'); 
     }
 
