@@ -65,7 +65,7 @@
 				<h2 class="mb-2 pl-4 text-xs font-thin uppercase text-gray-500">Admin Access</h2>
 				<div class="side-menu flex flex-col space-y-0.5 text-sm">
 					<a
-						href="/dashboard2/"
+						href="/dashboard/"
 						class="mr-4 flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
 					>
 						<div class="flex items-center justify-start space-x-2.5 text-brand-400">
@@ -104,7 +104,7 @@
 						</svg>
 					</a>
 					<a
-						href="#"
+						href="/commands/"
 						class="mr-4 flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
 					>
 						<div class="flex justify-start space-x-2.5">
