@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         type="button"
                         data-modal-target="editUserWalletModal"
 						data-modal-show="editUserWalletModal"
-                        class="font-medium px-4 py-2 rounded hover:cursor-text hover:bg-cyan-50"
+						 class="font-medium px-4 py-2 rounded bg-gray-50 hover:bg-gray-100"
                     >
                         ${walletBalance}
                     </button>

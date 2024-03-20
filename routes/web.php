@@ -42,10 +42,21 @@ Route::get('/', function () {
 //     return view('modules.commands.create'); //resources
 // });
 
-Route::get('/riders-management', function () {
-    return view('modules.riders-management.index'); //riders-management
+//fleets-management start
+Route::get('/fleets-management', function () {
+    return view('modules.fleets-management.index'); 
+});
+Route::get('/fleets-management/add-new-fleet', function () {
+    return view('modules.fleets-management.add-new-fleet.index');
+});
+Route::get('/fleets-management/fleet-analytics', function () {
+    return view('modules.fleets-management.fleet-analytics.index');
 });
 
+//riders-management start
+Route::get('/riders-management', function () {
+    return view('modules.riders-management.index'); 
+});
 
 Route::get('/riders-management/rides-management', function () {
     return view('modules.riders-management.rides-management.index');

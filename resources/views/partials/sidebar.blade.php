@@ -143,7 +143,7 @@
 						</svg>
 					</a>
 					<a
-						href="#"
+						href="/fleets-management/"
 						class="mr-4 flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
 					>
 						<div class="flex justify-start space-x-2.5">
@@ -162,7 +162,7 @@
 								/>
 							</svg>
 
-							<span>Fleet Management</span>
+							<span>Fleets Management</span>
 						</div>
 
 						<svg

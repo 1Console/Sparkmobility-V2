@@ -968,7 +968,7 @@
 									<div>
 										<p class="text-lg font-bold text-gray-700">
 											Current balance
-											<span class="text-brand-400">N,3000</span>
+											<span class="text-brand-400">₦,3000</span>
 										</p>
 									</div>
 								</div>

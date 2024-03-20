@@ -46,9 +46,9 @@ if (typeof window !== "undefined" && window.location.pathname.includes("/riders-
 }
 
 const menuItems = [
-	"/dashboard2/",
+	"/dashboard/",
 	"/commands/",
-	"/fleet-management/",
+	"/fleets-management/",
 	"/vehicle-management/",
 	"/marketing-campaigns/",
 	"/promos/",
@@ -60,6 +60,7 @@ const menuItems = [
 // Function to highlight the current menu item
 function highlightCurrentMenuItem() {
 	const currentPathname = typeof window !== "undefined" && window.location.pathname;
+	console.log("currentPathname", currentPathname);
 	if (currentPathname && menuItems.includes(currentPathname)) {
 		const menuItem = document.querySelector(`.side-menu a[href="${currentPathname}"]`);
 		if (menuItem) {
