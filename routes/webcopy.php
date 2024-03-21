@@ -1,12 +1,8 @@
 <?php
 
-<<<<<<< HEAD
-use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-=======
 use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Application;
 use App\Http\Controllers\FleetController;
 use App\Http\Controllers\OfferController;
 use App\Http\Controllers\RiderController;
@@ -25,18 +21,6 @@ use App\Http\Controllers\PromoFlatDiscountController;
 use App\Http\Controllers\PromoWalletCreditController;
 use App\Http\Controllers\PromoPercentageDiscountController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
->>>>>>> 645c49fd8a3b7dac59f0b60818b23f39b63da7ff
-
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -46,11 +30,6 @@ Route::get('/', function () {
     ]);
 });
 
-<<<<<<< HEAD
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-=======
 // Route::get('/dashboard2', function () {
 //     return view('auth.dashboard');
 // });
@@ -102,7 +81,6 @@ Route::get('/riders-management/ride-transactions', function () {
 // Route::get('/dashboard', function () {
 //     return view('auth.dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
->>>>>>> 645c49fd8a3b7dac59f0b60818b23f39b63da7ff
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -110,9 +88,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-<<<<<<< HEAD
-require __DIR__.'/auth.php';
-=======
 
 
 
@@ -169,4 +144,3 @@ Route::middleware('auth')->group( function(){
  });
 
 require __DIR__ . '/auth.php';
->>>>>>> 645c49fd8a3b7dac59f0b60818b23f39b63da7ff
