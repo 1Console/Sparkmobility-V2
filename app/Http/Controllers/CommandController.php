@@ -15,7 +15,7 @@ class CommandController extends Controller
      */
     public function index()
     {
-        //
+        return view('modules.commands.index');
     }
 
     /**
