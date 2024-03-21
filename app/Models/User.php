@@ -3,17 +3,6 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use App\Models\Fleet;
-use App\Models\Rider;
-use App\Models\Ticket;
-use App\Models\TicketLog;
-use App\Models\TrekkAdmin;
-use App\Models\PromoFreePass;
-use App\Models\PromoFlatDiscount;
-use App\Models\PromoWalletCredit;
-use Laravel\Sanctum\HasApiTokens;
-use Spatie\Permission\Traits\HasRoles;
-use App\Models\PromoPercentageDiscount;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
@@ -23,14 +12,18 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use  HasApiTokens, HasRoles, HasFactory, Notifiable;
+    use HasFactory, Notifiable;
 
     /**
-     * The attributes that are mass assignable. changed
+     * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
-    protected $guarded = [];
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+    ];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -38,16 +31,12 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'userable_id',
-        'userable_type',
-        'email_verified_at',
-        'created_at',
-        'updated_at',
         'password',
         'remember_token',
     ];
 
     /**
+
      * The attributes that should be cast.
      *
      * @var array<string, string>
@@ -124,5 +113,5 @@ class User extends Authenticatable
     {
         return $this->hasMany(TrekkAdmin::class);
     }
-    
+
 }
