@@ -2,6 +2,7 @@
 namespace App\Repositories;
 
 use App\Models\PromoReferFriend;
+use App\Models\PromoWalletCredit;
 // use App\Repositories\PromoReferFriendRepositoryInterface;
 
 class PromoReferFriendRepository
