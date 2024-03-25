@@ -59,6 +59,14 @@ Route::get('/riders-management/ride-transactions', function () {
     return view('modules.riders-management.ride-transactions.index');
 });
 
+Route::get('/vehicle-management/add-vehicle', function () {
+    return view('modules.vehicle-management.add-vehicle.index');
+});
+
+Route::get('/vehicle-management/overview', function () {
+    return view('modules.vehicle-management.overview.index');
+});
+
 // Route::get('/fleets/create', function () {
 //     return view('modules.commands.create'); //resources
 // });
