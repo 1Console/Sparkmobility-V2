@@ -1,3 +1,6 @@
+@extends("layouts.authenticated_layout")
+
+@section("content")
 <div class="mx-auto h-auto w-full py-8 md:px-4 lg:max-w-7xl">
 		<!-- Breadcrumb -->
 		<div class="bcrumbs"></div>
@@ -601,4 +604,4 @@
             </div>                
         </div>
 </div>        
-	
+@endsection	
