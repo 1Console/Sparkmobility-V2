@@ -4,9 +4,10 @@
 		"eslint:recommended",
 		"plugin:tailwindcss/recommended",
 		"plugin:eslint-comments/recommended",
-		"plugin:@cspell/recommended",
-		"prettier",
+		"plugin:react/recommended",
+		"plugin:react-hooks/recommended",
 		"plugin:prettier/recommended",
+		"prettier",
 	],
 	"plugins": ["prettier", "import"],
 	"rules": {
@@ -16,9 +17,10 @@
 				"useTabs": true,
 				"tabWidth": 4,
 				"printWidth": 100,
-				"trailingComma": "all",
+				"trailingComma": "es5",
 			},
 		],
+		"tailwindcss/no-custom-classname": "warn",
 		"eslint-comments/no-unused-disable": "error",
 		"no-console": [
 			"error",
@@ -31,8 +33,12 @@
 		"no-underscore-dangle": 0,
 		"import/no-unresolved": 0,
 		"import/no-anonymous-default-export": 0,
+		"react/prop-types": ["off"]
 	},
 	"settings": {
+		"react": {
+			"version": "detect",
+		},
 		"tailwindcss": {
 			"config": "tailwind.config.js",
 		},
@@ -53,11 +59,13 @@
 			},
 		},
 	},
-	// "parser": "babel-eslint",
 	"parser": "@babel/eslint-parser",
 	"parserOptions": {
 		"sourceType": "module",
 		"requireConfigFile": false,
 		"warnOnUnsupportedTypeScriptVersion": false,
+		"babelOptions": {
+			"presets": ["@babel/preset-react"],
+		},
 	},
 }
