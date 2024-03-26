@@ -1,3 +1,6 @@
+@extends("layouts.authenticated_layout")
+
+@section("content")
 <div class="rounded-lg border border-gray-200 bg-white p-4">
   <div class="mt-4 space-y-1 px-4">
     <h3 class="text-3xl font-semibold text-gray-700">Vehicles management</h3>
