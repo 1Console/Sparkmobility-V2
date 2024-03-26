@@ -1,16 +1,19 @@
-import Alpine from "alpinejs";
-import "./flowbite";
+// import Alpine from "alpinejs";
+// import "./flowbite";
 import "./bootstrap";
 import { format } from "date-fns";
-import Breadcrumbs from "./breadcrumbs";
-import "./chart";
-import "./tables";
+// import Breadcrumbs from "./breadcrumbs";
+// import "./chart";
+// import "./tables";
 
-window.Alpine = Alpine;
-Alpine.start();
+// window.Alpine = Alpine;
+// Alpine.start();
+
+
 
 // Set current date on navbar
 const formattedDate = format(new Date(), "eeee, MMMM do");
+console.log(formattedDate);
 
 document.getElementById("todaysDate").innerText = formattedDate;
 
@@ -46,9 +49,9 @@ if (typeof window !== "undefined" && window.location.pathname.includes("/riders-
 }
 
 const menuItems = [
-	"/dashboard2/",
+	"/dashboard/",
 	"/commands/",
-	"/fleet-management/",
+	"/fleets-management/",
 	"/vehicle-management/",
 	"/marketing-campaigns/",
 	"/promos/",
@@ -60,6 +63,7 @@ const menuItems = [
 // Function to highlight the current menu item
 function highlightCurrentMenuItem() {
 	const currentPathname = typeof window !== "undefined" && window.location.pathname;
+	console.log("currentPathname", currentPathname);
 	if (currentPathname && menuItems.includes(currentPathname)) {
 		const menuItem = document.querySelector(`.side-menu a[href="${currentPathname}"]`);
 		if (menuItem) {
@@ -79,3 +83,5 @@ const accordionIcon = document.querySelector("#accordion-icon-rotate");
 
 const handleClick = () => accordionIcon.classList.toggle("rotate-90");
 accordionGrp.addEventListener("click", handleClick);
+
+console.log(document.getElementById("todaysDate"));

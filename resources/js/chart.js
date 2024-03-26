@@ -24,14 +24,8 @@ const options = {
 		enabled: false,
 	},
 	series: [
-		{
-			name: "Total rides",
-			data: [30, 40, 135, 50, 9, 21, 70, 11, 105],
-		},
-		{
-			name: "Total users",
-			data: [5, 11, 19, 37, 93, 98, 106, 114, 220, 208],
-		},
+		{ name: "Total rides", data: [30, 40, 135, 50, 9, 21, 70, 11, 105] },
+		{ name: "Total users", data: [5, 11, 19, 37, 93, 98, 106, 114, 220, 208] },
 	],
 	markers: {
 		size: 0,
@@ -44,7 +38,7 @@ const options = {
 		},
 	},
 	xaxis: {
-		//   type: "datetime",
+		// type: "datetime",
 		type: "category",
 		categories: [
 			"Jan",
