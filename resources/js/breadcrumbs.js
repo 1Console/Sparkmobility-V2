@@ -15,7 +15,7 @@ const Breadcrumbs = {
 			const words = part.split("-");
 			const capitalizedText = words
 				.map((word, index) =>
-					index === 0 ? word.charAt(0).toUpperCase() + word.slice(1) : word,
+					index === 0 ? word.charAt(0).toUpperCase() + word.slice(1) : word
 				)
 				.join(" ");
 			this.breadcrumbs.push({ text: capitalizedText, url: url });
@@ -86,7 +86,7 @@ const Breadcrumbs = {
 								: ""
 						}
                     </li>
-                    `,
+                    `
 						)
 						.join("")}
                 </ol>

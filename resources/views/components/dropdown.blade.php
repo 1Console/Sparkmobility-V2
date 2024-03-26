@@ -1,7 +1,7 @@
 @props(["align" => "right", "width" => "48", "contentClasses" => "bg-white py-1 dark:bg-gray-700"])
 
 @php
-	switch ($align) {
+ switch ($align) {
  	case "left":
  		$alignmentClasses = "start-0 ltr:origin-top-left rtl:origin-top-right";
  		break;

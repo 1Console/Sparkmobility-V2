@@ -18,7 +18,7 @@
     </head>
 
     <body class="font-sans text-gray-900 antialiased overflow-x-hidden overflow-y-auto ">
-        <div class="min-h-screen w-full flex sm:justify-center  pt-6 sm:p-0 bg-white dark:bg-gray-900">
+        <div class="min-h-screen w-full flex sm:justify-center pt-6 sm:p-0 bg-white dark:bg-gray-900">
 				@yield('content')
 			</div>
         </div>

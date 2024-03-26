@@ -4,8 +4,8 @@
 		<p>What admins are saying about the product</p>
 	</div>
 
-	<div class="mb-8 h-full w-full text-xs">
-		<div class="max-w-screen-2xl mx-auto px-4 lg:px-0">
+	<div class="mb-8 w-full text-xs">
+		<div class="mx-auto max-w-screen-xxl px-4 lg:px-0">
 			<!-- Start coding here -->
 			<div class="relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
 				<div
@@ -1487,15 +1487,4 @@
 			</div>
 		</div>
 	</div>
-
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
-	<br />
 </div>
