@@ -8,8 +8,6 @@
 				<p class="text-sm text-gray-500">Manage all vehicles here</p>
 			</div>
 
-				
-
 			<hr class="my-4" />
 
 			{{-- Table --}}
@@ -400,7 +398,7 @@
 													class="size-4 border-gray-300 bg-gray-100 text-brand-400"
 												/>
 
-												<span class="ms-4 inline-flex">Dameged</span>
+												<span class="ms-4 inline-flex">Damaged</span>
 											</div>
 										</label>
 									</li>
@@ -600,102 +598,7 @@
 					</ul>
 				</nav>
 
+            </div>                
+        </div>
+</div>        
 	
-				<!-- User Wallet Modal toggle -->
-				<div
-					id="editUserWalletModal"
-					tabindex="-1"
-					aria-hidden="true"
-					class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden p-4 md:inset-0"
-				>
-					<div class="relative max-h-full w-full max-w-md">
-						<!-- Modal content -->
-						<form class="relative rounded-lg bg-white shadow">
-							<!-- Modal header -->
-							<div
-								class="relative flex items-start justify-between rounded-t border-b p-6"
-							>
-								<div class="flex flex-col">
-									<h3 class="text-xl font-semibold text-gray-900">Wallet</h3>
-									<p class="text-sm text-gray-500">Add, Remove or Refund money</p>
-								</div>
-								<button
-									type="button"
-									class="absolute right-3 top-3 inline-flex size-8 items-center justify-center rounded-full bg-transparent text-sm text-red-600 hover:bg-red-100"
-									data-modal-hide="editUserWalletModal"
-								>
-									<svg
-										class="size-3"
-										aria-hidden="true"
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 14 14"
-									>
-										<path
-											stroke="currentColor"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-										/>
-									</svg>
-									<span class="sr-only">Close modal</span>
-								</button>
-							</div>
-							<!-- Modal body -->
-							<div class="p-6">
-								<div class="flex flex-col gap-1.5">
-									<label for="wallet-amount" class="mb-2 block font-medium">
-										<input
-											type="number"
-											name="wallet-amount"
-											id="wallet-amount"
-											class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-500 shadow-sm focus:border-brand-400 focus:ring-brand-400"
-											placeholder="Enter amount"
-											required=""
-										/>
-									</label>
-									<div>
-										<p class="text-lg font-bold text-gray-700">
-											Current balance
-											<span class="text-brand-400">N,3000</span>
-										</p>
-									</div>
-								</div>
-							</div>
-
-							<!-- Modal footer -->
-
-							<div class="rounded-b border-t border-gray-200 p-6 rtl:space-x-reverse">
-								<span
-									class="mb-2.5 block text-xs font-semibold uppercase text-gray-400"
-								>
-									Action
-								</span>
-								<div class="flex items-center space-x-3">
-									<button
-										type="button"
-										class="rounded-lg bg-brand-400 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-100"
-									>
-										Add
-									</button>
-									<button
-										type="button"
-										class="rounded-lg bg-amber-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-amber-600 focus:outline-none focus:ring-4 focus:ring-amber-100"
-									>
-										Refund
-									</button>
-									<button
-										type="button"
-										class="rounded-lg bg-red-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-500 focus:outline-none focus:ring-4 focus:ring-red-100"
-									>
-										Remove
-									</button>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
