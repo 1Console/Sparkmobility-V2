@@ -30,7 +30,7 @@
     composer install
     ```
 
-    \*\*\* Incase you encounter an issue running composer install, launch Xampp and goto Apache > Config > PHP(php.ini) and remove the semicolon `';'` before `extension=zip` on line 962, save the file. Then, run the command again.
+    \*\*\* Incase you encounter an issue running `composer install`, launch Xampp and goto Apache > Config > PHP(php.ini) and remove the semicolon `';'` before `extension=zip` on line 962, save the file. Then, run the command again.
 
     ```shell
     cp .env.example .env

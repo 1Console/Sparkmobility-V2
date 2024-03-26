@@ -6,7 +6,7 @@
 	</div>
 
 	<div class="mt-8 h-full w-full text-xs">
-		<div class="max-w-screen-2xl mx-auto px-4 lg:px-0">
+		<div class="mx-auto max-w-screen-xxl px-4 lg:px-0">
 			<!-- Start coding here -->
 			<div class="relative overflow-hidden bg-white shadow-md dark:bg-gray-800 sm:rounded-lg">
 				<div

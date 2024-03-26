@@ -24,7 +24,7 @@ const collapseSidebar = new Collapse(
 	$mainSidebar,
 	$sidebarTrigger,
 	sidebarOptions,
-	instanceOptions,
+	instanceOptions
 );
 
 // Function to toggle collapse based on screen width
@@ -44,6 +44,7 @@ window.addEventListener("resize", toggleCollapseOnWidth);
 
 // Emit event assuming there's a parent element with ID "main-container"
 const $sidebarContainer = document.getElementById("main-container");
+
 $sidebarContainer.addEventListener("click", (event) => {
 	const clickedElement = event.target;
 	if (clickedElement === $sidebarTrigger) {
