@@ -9,52 +9,52 @@
 		<div class="flex flex-1 flex-col pt-28 md:pt-16">
 			<div class="mb-6 mt-4 flex -space-x-3 px-4 text-white rtl:space-x-reverse">
 				<div
-					class="border-1 relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-red-400"
+					class="relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-red-400"
 				>
 					<span class="font-medium">AX</span>
 				</div>
 				<div
-					class="border-1 relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-sky-500"
+					class="relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-sky-500"
 				>
 					<span class="font-medium">KZ</span>
 				</div>
 				<div
-					class="border-1 relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-purple-500"
+					class="relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-purple-500"
 				>
 					<span class="font-medium">CC</span>
 				</div>
 				<div
-					class="border-1 relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-slate-400"
+					class="relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-slate-400"
 				>
 					<span class="font-medium">OL</span>
 				</div>
 				<div
-					class="border-1 relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-amber-500"
+					class="relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-amber-500"
 				>
 					<span class="font-medium">PC</span>
 				</div>
 				<div
-					class="border-1 relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-zinc-500"
+					class="relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-zinc-500"
 				>
 					<span class="font-medium">JL</span>
 				</div>
 				<div
-					class="border-1 relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-emerald-700"
+					class="relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-emerald-700"
 				>
 					<span class="font-medium">OE</span>
 				</div>
 				<div
-					class="border-1 relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-orange-500"
+					class="relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-orange-500"
 				>
 					<span class="font-medium">ME</span>
 				</div>
 				<div
-					class="border-1 relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-blue-400"
+					class="relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-blue-400"
 				>
 					<span class="font-medium">DA</span>
 				</div>
 				<a
-					class="border-1 relative inline-flex h-9 w-9 items-center justify-center rounded-full border-white bg-gray-800 text-xs font-medium hover:bg-gray-600"
+					class="relative inline-flex h-9 w-9 items-center justify-center rounded-full border-white bg-gray-800 text-xs font-medium hover:bg-gray-600"
 					href="#"
 				>
 					+26

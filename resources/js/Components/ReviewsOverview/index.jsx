@@ -3,8 +3,8 @@ import PartnerImage from "/public/images/partners/partnerImage1.png";
 
 export default function ReviewsOverview() {
 	return (
-		<div className="rounded-lg bg-blue-100 p-8">
-			<div className="mb-8">
+		<div className="rounded-lg bg-blue-100 py-4 md:p-8">
+			<div className="mb-8 px-4">
 				<h3 className="text-xl font-extrabold text-[#727272]">Reviews</h3>
 				<p>What admins are saying about the product</p>
 			</div>

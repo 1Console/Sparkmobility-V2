@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import NavBar from "@/Components/NavBar";
 import SideBar from "@/Components/SideBar";
 import { ErrorBoundary } from "react-error-boundary";
+import Breadcrumbs from "@/Components/Breadcrumbs";
 // import ApplicationLogo from "@/Components/ApplicationLogo";
 // import Dropdown from "@/Components/Dropdown";
 // import NavLink from "@/Components/NavLink";
@@ -152,7 +153,7 @@ export default function AuthenticatedLayout({ children }) {
 		// </div>
 		<div>
 			<NavBar />
-			
+
 			<div className="relative flex md:h-screen">
 				<SideBar />
 
@@ -170,8 +171,16 @@ export default function AuthenticatedLayout({ children }) {
 							</div>
 						}
 					>
-						<main className="mx-auto w-full overflow-y-auto bg-neutral-100 px-8 md:mt-16 md:flex-1">
+						<main className="mx-auto mt-24 w-full overflow-hidden overflow-y-auto bg-neutral-100 px-4 md:mt-16 md:flex-1 md:px-6">
+							<Breadcrumbs />
 							{children}
+
+							<div className="my-6 h-auto gap-1 flex justify-center px-6 text-center md:hidden text-xs font-thin text-gray-600">
+								<span>Copyright © {new Date().getFullYear()}.</span>
+								<span>
+									Powered by Trekk
+								</span>
+							</div>
 						</main>
 					</Suspense>
 				</ErrorBoundary>

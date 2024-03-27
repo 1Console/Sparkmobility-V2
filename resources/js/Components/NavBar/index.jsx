@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import Logo from "/public/images/TrekkLogo.png";
 import Searchbar from "../SearchBar";
 import { format } from "date-fns";
+import { Link, usePage } from "@inertiajs/react";
 
 import { Collapse } from "flowbite";
-import { Link } from "@inertiajs/react";
 
 // export default function NavBar({ active = false, className = "", children, ...props }) {
 export default function NavBar() {
+	const { name, email } = usePage().props.auth.user;
 	const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
 	useEffect(() => {
@@ -87,16 +88,14 @@ export default function NavBar() {
 						</button>
 						{/* toggle sidebar start end  */}
 
-						<a href="/" className="mr-6 flex">
-							{/* {{-- < span class="self-center text-2xl font-semibold whitespace-nowrap">Spark Mobility</span> --}} */}
+						<Link href={name ? route("dashboard") : undefined} className="mr-6 flex">
 							<img className="ms-3 w-20" src={Logo} alt="Trekk Logo" />
-						</a>
+						</Link>
+
 						<Searchbar />
-						{/* @include("partials.top_search_section") */}
 					</div>
 
 					<div className="flex items-center justify-between space-x-2 md:justify-end lg:order-2">
-						{/* {{-- Date --}} */}
 						<span className="hidden shrink-0 items-center text-sm sm:inline-flex">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +111,6 @@ export default function NavBar() {
 									d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
 								/>
 							</svg>
-							<span id="todaysDate"></span>
 							<span>{format(new Date(), "eeee, MMMM do")}</span>
 						</span>
 
@@ -576,7 +574,7 @@ export default function NavBar() {
 								<hr className="hidden w-5 rotate-90 text-gray-400 md:block" />
 
 								<span className="hidden flex-col items-start md:flex">
-									<span className="text-xs">Trekkscooters</span>
+									<span className="text-xs">{name}</span>
 									<span className="text-xxs text-brand-400">Super Admin</span>
 								</span>
 							</button>
@@ -588,10 +586,10 @@ export default function NavBar() {
 							>
 								<div className="px-4 py-3">
 									<span className="block text-sm font-semibold text-gray-900">
-										Admin Pro
+										Super Admin
 									</span>
 									<span className="block truncate text-sm text-gray-500">
-										name.pro@trekkscooters.com
+										{email}
 									</span>
 								</div>
 								<ul
@@ -697,7 +695,7 @@ export default function NavBar() {
 											href={route("logout")}
 											className="block px-4 py-2 text-sm hover:bg-brand-100"
 										>
-											Sign out
+											Log out
 										</Link>
 									</li>
 								</ul>

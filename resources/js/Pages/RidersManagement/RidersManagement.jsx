@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Head } from "@inertiajs/react";
 import { faker } from "@faker-js/faker";
 import cn from "classnames";
 import { format } from "date-fns";
+import { Button, Label, Modal, Select, TextInput } from "flowbite-react";
 
 export default function RidersManagement() {
 	const [tableData, setTableData] = useState([]);
+	const [openEditUserModal, setOpenEditUserModal] = useState(false);
+	const [openWalletModal, setOpenWalletModal] = useState(false);
+	const walletAmountInputRef = useRef(null);
 
 	useEffect(() => {
 		populateTableRows(7); // Populate table with 7 rows on component mount
@@ -114,7 +118,7 @@ export default function RidersManagement() {
 				{/* <!-- Breadcrumb --> */}
 				<div className="bcrumbs"></div>
 
-				<div className="rounded-lg border border-gray-200 bg-white p-6">
+				<div className="rounded-lg border border-gray-200 bg-white p-2 md:p-6">
 					<div className="mt-4 space-y-1 px-4">
 						<h3 className="text-3xl font-semibold text-gray-700">Riders management</h3>
 						<p className="text-sm text-gray-500">
@@ -155,10 +159,10 @@ export default function RidersManagement() {
 					{/* {{-- Table --}} */}
 					<div className="flex flex-col rounded bg-white px-2">
 						<div className="flex flex-col items-start space-y-2 pb-4 md:flex-row md:items-center md:justify-between md:space-y-0">
-							<div className="flex items-center justify-between gap-2 md:flex-row md:items-center">
-								<span>
+							<div className="flex flex-wrap justify-between gap-2 md:flex-row md:items-center">
+								<div className="flex">
 									<svg
-										className="size-5 text-gray-600"
+										className="size-5 self-center text-gray-600"
 										aria-hidden="true"
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"
@@ -171,7 +175,7 @@ export default function RidersManagement() {
 											d="M18.8 4H5.2a1 1 0 0 0-.7 1.7l5.3 6 .2.7v4.8c0 .2 0 .4.2.4l3 2.3c.3.2.8 0 .8-.4v-7.1c0-.3 0-.5.2-.7l5.3-6a1 1 0 0 0-.7-1.7Z"
 										/>
 									</svg>
-								</span>
+								</div>
 								<div>
 									<button
 										type="button"
@@ -755,7 +759,7 @@ export default function RidersManagement() {
 															<input
 																id={`checkbox-riders-table-${i + 1}`}
 																type="checkbox"
-																className="select-rider focus:ring-brand-300 size-4 rounded border-gray-300 bg-gray-100 text-brand-400 focus:ring-2"
+																className="focus:ring-brand-300 size-4 rounded border-gray-300 bg-gray-100 text-brand-400 focus:ring-2"
 															/>
 															<label
 																htmlFor={`checkbox-riders-table-${i + 1}`}
@@ -808,9 +812,8 @@ export default function RidersManagement() {
 													<td className="p-4">
 														<button
 															type="button"
-															data-modal-target="editUserWalletModal"
-															data-modal-show="editUserWalletModal"
-															className="rounded px-4 py-2 font-medium hover:cursor-text hover:bg-cyan-50"
+															onClick={() => setOpenWalletModal(true)}
+															className="rounded border px-4 py-2 font-medium  hover:cursor-pointer hover:bg-cyan-50"
 														>
 															{walletBalance}
 														</button>
@@ -818,19 +821,20 @@ export default function RidersManagement() {
 													<td className="p-4">{fines}</td>
 													<td className="p-4">
 														<div className="flex items-center capitalize">
-															<div className={statusSymbol}></div>$
-															{userStatus}
+															<div className={statusSymbol}></div>
+															<span>{userStatus}</span>
 														</div>
 													</td>
 													<td className="max-w-sm overflow-hidden truncate p-4 xl:max-w-xs">
 														{formattedDate}
 													</td>
 													<td className="p-4">
-														{/* <!-- Edit user modal toggle --> */}
+														{/* <!-- Edit rider modal toggle --> */}
 														<button
 															type="button"
-															data-modal-target="editUserModal"
-															data-modal-show="editUserModal"
+															onClick={() =>
+																setOpenEditUserModal(true)
+															}
 															className="text-gray-500 hover:text-brand-400"
 														>
 															<svg
@@ -896,186 +900,175 @@ export default function RidersManagement() {
 								</li>
 							</ul>
 						</nav>
-
-						{/* <!-- Edit user modal --> */}
-						<div
-							id="editUserModal"
-							tabIndex="-1"
-							aria-hidden="true"
-							className="fixed inset-x-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden p-4 md:inset-0"
-						>
-							<div className="relative max-h-full w-full max-w-2xl">
-								{/* Modal content */}
-								<form className="relative rounded-lg bg-white shadow">
-									{/* Modal header */}
-									<div className="relative flex items-start justify-between rounded-t border-b p-4">
-										<div className="flex flex-col">
-											<h3 className="text-xl font-semibold text-gray-900">
-												Edit rider
-											</h3>
-											<p className="text-sm text-gray-500">
-												Edit rider profile information
-											</p>
-										</div>
-										<button
-											type="button"
-											className="absolute right-3 top-3 inline-flex size-8 items-center justify-center rounded-full bg-transparent text-sm text-red-600 hover:bg-red-100"
-											data-modal-hide="editUserModal"
-										>
-											<svg
-												className="size-3"
-												aria-hidden="true"
-												xmlns="http://www.w3.org/2000/svg"
-												fill="none"
-												viewBox="0 0 14 14"
-											>
-												<path
-													stroke="currentColor"
-													strokeLinecap="round"
-													strokeLinejoin="round"
-													strokeWidth="2"
-													d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-												/>
-											</svg>
-											<span className="sr-only">Close modal</span>
-										</button>
-									</div>
-
-									{/* Modal body */}
-									<div className="space-y-6 p-6">
-										<div className="grid grid-cols-6 gap-6">
-											<div className="col-span-6 sm:col-span-3">
-												<label
-													htmlFor="first-name"
-													className="mb-2 block font-medium"
-												>
-													First Name
-												</label>
-												<input
-													type="text"
-													name="first-name"
-													id="first-name"
-													className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
-													placeholder="Bonnie"
-													required=""
-												/>
-											</div>
-											{/* Add more input fields as needed */}
-										</div>
-									</div>
-
-									{/* Modal footer */}
-									<div className="flex items-center space-x-3 rounded-b border-t border-gray-200 p-6 rtl:space-x-reverse">
-										<button
-											type="submit"
-											className="rounded-lg bg-brand-400 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-100"
-										>
-											Save all
-										</button>
-									</div>
-								</form>
-							</div>
-						</div>
-
-						{/* <!-- User Wallet Modal toggle --> */}
-						<div
-							id="editUserWalletModal"
-							tabIndex="-1"
-							aria-hidden="true"
-							className="fixed inset-x-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden p-4 md:inset-0"
-						>
-							<div className="relative max-h-full w-full max-w-md">
-								{/* Modal content */}
-								<form className="relative rounded-lg bg-white shadow">
-									{/* Modal header */}
-									<div className="relative flex items-start justify-between rounded-t border-b p-6">
-										<div className="flex flex-col">
-											<h3 className="text-xl font-semibold text-gray-900">
-												Wallet
-											</h3>
-											<p className="text-sm text-gray-500">
-												Add, Remove or Refund money
-											</p>
-										</div>
-										<button
-											type="button"
-											className="absolute right-3 top-3 inline-flex size-8 items-center justify-center rounded-full bg-transparent text-sm text-red-600 hover:bg-red-100"
-											data-modal-hide="editUserWalletModal"
-										>
-											<svg
-												className="size-3"
-												aria-hidden="true"
-												xmlns="http://www.w3.org/2000/svg"
-												fill="none"
-												viewBox="0 0 14 14"
-											>
-												<path
-													stroke="currentColor"
-													strokeLinecap="round"
-													strokeLinejoin="round"
-													strokeWidth="2"
-													d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-												/>
-											</svg>
-											<span className="sr-only">Close modal</span>
-										</button>
-									</div>
-
-									{/* Modal body */}
-									<div className="p-6">
-										<div className="flex flex-col gap-1.5">
-											<label
-												htmlFor="wallet-amount"
-												className="mb-2 block font-medium"
-											>
-												<input
-													type="number"
-													name="wallet-amount"
-													id="wallet-amount"
-													className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-500 shadow-sm focus:border-brand-400 focus:ring-brand-400"
-													placeholder="Enter amount"
-													required=""
-												/>
-											</label>
-											<div>
-												<p className="text-lg font-bold text-gray-700">
-													Current balance
-													<span className="text-brand-400">N,3000</span>
-												</p>
-											</div>
-										</div>
-									</div>
-
-									{/* Modal footer */}
-									<div className="rounded-b border-t border-gray-200 p-6 rtl:space-x-reverse">
-										<span className="mb-2.5 block text-xs font-semibold uppercase text-gray-400">
-											Action
-										</span>
-										<div className="flex items-center space-x-3">
-											<button
-												type="button"
-												className="rounded-lg bg-brand-400 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-brand-400 focus:outline-none focus:ring-4 focus:ring-brand-100"
-											>
-												Add
-											</button>
-											<button
-												type="button"
-												className="rounded-lg bg-amber-500 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-amber-600 focus:outline-none focus:ring-4 focus:ring-amber-100"
-											>
-												Refund
-											</button>
-											<button
-												type="button"
-												className="rounded-lg bg-red-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-500 focus:outline-none focus:ring-4 focus:ring-red-100"
-											>
-												Remove
-											</button>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
 					</div>
+
+					{/* <!-- User Wallet Modal toggle --> */}
+					<Modal
+						show={openWalletModal}
+						size="md"
+						popup
+						dismissible
+						onClose={() => setOpenWalletModal(false)}
+						initialFocus={walletAmountInputRef}
+					>
+						<Modal.Header>
+							<div className="mb-2 flex-1 overflow-auto p-4 pb-0">
+								<h3 className="text-xl font-medium text-gray-900 dark:text-white">
+									Wallet
+								</h3>
+								<p className="text-sm text-gray-500">Add, Remove or Refund money</p>
+							</div>
+						</Modal.Header>
+						<Modal.Body>
+							<div className="space-y-4">
+								<div>
+									<div className="mb-2 block">
+										<Label htmlFor="wallet-amount" value="" />
+									</div>
+									<TextInput
+										id="wallet-amount"
+										type="number"
+										ref={walletAmountInputRef}
+										placeholder="Enter amount"
+										required
+										className="focus:border-brand-400 focus:ring-brand-400"
+									/>
+								</div>
+								<div>
+									<p className="flex gap-2 text-lg font-bold">
+										<span className="text-gray-700">Current balance</span>
+										<span className="text-brand-400">₦3,000</span>
+									</p>
+								</div>
+								<div className="w-full">
+									<span className="mb-2.5 block text-xs font-semibold uppercase text-gray-500">
+										Action
+									</span>
+									<div className="flex items-center gap-3">
+										<Button className="bg-brand-400">Add</Button>
+										<Button className="bg-amber-500">Refund</Button>
+										<Button className="bg-red-600">Remove</Button>
+									</div>
+								</div>
+							</div>
+						</Modal.Body>
+					</Modal>
+
+					{/* <!-- Edit rider modal --> */}
+					<Modal
+						show={openEditUserModal}
+						size="lg"
+						popup
+						dismissible
+						onClose={() => setOpenEditUserModal(false)}
+					>
+						<Modal.Header>
+							<div className="mb-2 flex-1 overflow-auto p-4 pb-0">
+								<h3 className="text-xl font-medium text-gray-900 dark:text-white">
+									Edit rider
+								</h3>
+								<p className="text-sm text-gray-500">
+									Edit rider profile information
+								</p>
+							</div>
+						</Modal.Header>
+						<Modal.Body>
+							<form className="space-y-4">
+								<div className="grid grid-cols-6 gap-6">
+									<div className="col-span-6 sm:col-span-3">
+										<Label
+											htmlFor="first-name"
+											value="First Name"
+											className="mb-2 block font-medium"
+										/>
+										<TextInput
+											id="first-name"
+											name="first-name"
+											placeholder="Bonnie"
+											required
+											className="block w-full rounded-lg border border-gray-300 bg-gray-50 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
+										/>
+									</div>
+									<div className="col-span-6 sm:col-span-3">
+										<Label
+											htmlFor="last-name"
+											value="Last Name"
+											className="mb-2 block font-medium"
+										/>
+										<TextInput
+											id="last-name"
+											name="last-name"
+											placeholder="Green"
+											required
+											className="block w-full rounded-lg border border-gray-300 bg-gray-50 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
+										/>
+									</div>
+									<div className="col-span-6 sm:col-span-3">
+										<Label
+											htmlFor="email"
+											value="Email"
+											className="mb-2 block font-medium"
+										/>
+										<TextInput
+											id="email"
+											name="email"
+											placeholder="Green"
+											required
+											className="block w-full rounded-lg border border-gray-300 bg-gray-50 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
+										/>
+									</div>
+									<div className="col-span-6 sm:col-span-3">
+										<Label
+											htmlFor="phone-number"
+											value="Phone Number"
+											className="mb-2 block font-medium"
+										/>
+										<TextInput
+											id="phone-number"
+											name="phone-number"
+											placeholder="e.g. +(234) 000 3456 789"
+											required
+											className="block w-full rounded-lg border border-gray-300 bg-gray-50 text-sm text-gray-900 shadow-sm focus:border-brand-400 focus:ring-brand-400"
+										/>
+									</div>
+									<div className="col-span-6 sm:col-span-3">
+										<Label
+											htmlFor="gender"
+											value="Gender"
+											className="mb-2 block font-medium"
+										/>
+										<Select id="gender" required>
+											<option>Select</option>
+											<option>Male</option>
+											<option>Female</option>
+										</Select>
+									</div>
+									<div className="col-span-6 sm:col-span-3">
+										<Label
+											htmlFor="community"
+											value="Community"
+											className="mb-2 block font-medium"
+										/>
+										<Select id="community" required>
+											<option value="">Select community</option>
+											<option value="Abuja">Abuja</option>
+											<option value="Lagos">Lagos</option>
+											<option value="Run">Run</option>
+											<option value="Bells">Bells</option>
+											<option value="Ikoyi">Ikoyi</option>
+											<option value="ABU">ABU</option>
+											<option value="Futa">Futa</option>
+										</Select>
+									</div>
+								</div>
+								<div className="w-full">
+									<div className="flex items-center gap-3">
+										<Button className="bg-brand-400">Save all</Button>
+									</div>
+								</div>
+							</form>
+						</Modal.Body>
+					</Modal>
 				</div>
 			</div>
 		</>

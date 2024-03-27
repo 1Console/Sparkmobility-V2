@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AdminOverview() {
 	return (
-		<div className="mb-5 rounded-lg bg-red-100 p-8">
+		<div className="mb-5 rounded-lg bg-red-100 py-4 md:p-8">
 			<div className="mx-auto w-full max-w-screen-xxl px-4 lg:px-0">
 				<div className="relative flex flex-col gap-8 overflow-hidden dark:bg-gray-800 sm:rounded-lg">
 					<div className="flex flex-col items-center justify-between space-y-3 md:flex-row md:gap-4 md:space-y-0">
@@ -30,14 +30,14 @@ export default function AdminOverview() {
 									<input
 										type="text"
 										id="simple-search"
-										className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 pl-10 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
+										className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 pl-10 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500"
 										placeholder="Search"
 										required=""
 									/>
 								</div>
 							</form>
 						</div>
-						<div className="flex w-full flex-shrink-0 flex-col items-stretch justify-end space-y-2 md:w-auto md:flex-row md:items-center md:space-x-3 md:space-y-0">
+						<div className="flex w-full shrink-0 flex-col items-stretch justify-end space-y-2 md:w-auto md:flex-row md:items-center md:space-x-3 md:space-y-0">
 							<div className="flex w-full items-center space-x-3 md:w-auto">
 								<button
 									id="actionsDropdownButton"

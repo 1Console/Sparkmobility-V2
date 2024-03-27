@@ -1,92 +1,63 @@
-import React, { useEffect } from "react";
+/* eslint-disable no-undef */
+import React, { useEffect, useState, useRef } from "react";
 import { Link, usePage } from "@inertiajs/react";
 import cn from "classnames";
 export default function SideBar() {
 	const { url, props } = usePage();
-	console.log(url);
 
-	console.log("url check", props);
+	const [isExpanded, setIsExpanded] = useState(false);
+	const chevronRef = useRef(null);
+
+	const toggleAccordion = () => {
+		setIsExpanded((prevState) => !prevState);
+	};
 
 	useEffect(() => {
-		highlightCurrentMenuItem();
-	}, [url]);
-
-	const submenuItems = [
-		"/riders-management/active-rides/",
-		"/riders-management/all-transactions/",
-		"/riders-management/rides-management/",
-		"/riders-management/ride-transactions/",
-	];
-
-	console.log(document.querySelector('.side-menu a[href="' + url + '"]'));
-
-	function highlightCurrentMenuItem() {
-		const menuItem = document.querySelector('.side-menu a[href="' + url + '"]');
-		if (menuItem) {
-			menuItem.classList.add("border-l-4", "border-l-brand-400");
-		}
-
 		if (url.startsWith("/riders-management/")) {
-			const toggleButton = document.querySelector("#menu-accordion-color-heading-1 button");
-			const toggleMenu = document.querySelector("#menu-accordion-color-body-1");
-
-			if (toggleButton.getAttribute("aria-expanded") === "false") {
-				toggleButton.setAttribute("aria-expanded", "true");
-			} else {
-				toggleButton.setAttribute("aria-expanded", "false");
-				toggleMenu.classList.add("hidden");
-			}
-
-			submenuItems.forEach((item) => {
-				const menuItem = document.querySelector(
-					`#menu-accordion-color-body-1 a[href='${item}']`
-				);
-				if (menuItem && url === item) {
-					menuItem.classList.remove("border-l-transparent");
-					menuItem.classList.add("border-l-brand-400");
-				}
-			});
+			setIsExpanded(true);
+		} else {
+			setIsExpanded(false);
 		}
-	}
+	}, [url]);
 
 	return (
 		<aside
-			className="absolute z-20 flex h-full w-64 flex-shrink-0 flex-col bg-white transition-all delay-700 duration-1000 ease-in-out md:w-80 lg:relative"
+			className="absolute z-20 flex h-full w-64 shrink-0 flex-col bg-white transition-all delay-700 duration-1000 ease-in-out md:w-80 lg:relative"
 			aria-label="Sidebar"
 			id="Sidebar"
 		>
 			<div className="relative flex h-full min-h-0 flex-1 flex-col overflow-y-auto border-r border-gray-200 shadow">
 				<div className="flex flex-1 flex-col pt-28 md:pt-16">
 					<div className="mb-6 mt-4 flex -space-x-3 px-4 text-white rtl:space-x-reverse">
-						<div className="border-1 relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-red-400">
+						<div className="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-red-400">
 							<span className="font-medium">AX</span>
 						</div>
-						<div className="border-1 relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-sky-500">
+						<div className="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-sky-500">
 							<span className="font-medium">KZ</span>
 						</div>
-						<div className="border-1 relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-purple-500">
+						<div className="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-purple-500">
 							<span className="font-medium">CC</span>
 						</div>
-						<div className="border-1 relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-slate-400">
+						<div className="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-slate-400">
 							<span className="font-medium">OL</span>
 						</div>
-						<div className="border-1 relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-amber-500">
+						<div className="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-amber-500">
 							<span className="font-medium">PC</span>
 						</div>
-						<div className="border-1 relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-zinc-500">
+						<div className="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-zinc-500">
 							<span className="font-medium">JL</span>
 						</div>
-						<div className="border-1 relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-emerald-700">
+						<div className="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-emerald-700">
 							<span className="font-medium">OE</span>
 						</div>
-						<div className="border-1 relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-orange-500">
+						<div className="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-orange-500">
 							<span className="font-medium">ME</span>
 						</div>
-						<div className="border-1 relative inline-flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-blue-400">
+						<div className="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-blue-400">
 							<span className="font-medium">DA</span>
 						</div>
 						<a
-							className="border-1 relative inline-flex h-9 w-9 items-center justify-center rounded-full border-white bg-gray-800 text-xs font-medium hover:bg-gray-600"
+							className="relative inline-flex size-9 items-center justify-center rounded-full border-white bg-gray-800 text-xs font-medium hover:bg-gray-600"
 							href="#"
 						>
 							+26
@@ -97,13 +68,13 @@ export default function SideBar() {
 						<h2 className="mb-2 pl-4 text-xs font-thin uppercase text-gray-500">
 							Admin Access
 						</h2>
-						<div className="side-menu flex flex-col space-y-0.5 text-sm">
+						<div className="flex flex-col space-y-0.5 text-sm">
 							<Link
 								href={route("dashboard")}
 								className={cn(
 									"mr-4 flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400",
 									{
-										"border-solid border-l-4 border-l-brand-400":
+										"border-l-4 border-solid border-l-brand-400":
 											props.ziggy.location === route("dashboard"),
 									}
 								)}
@@ -265,15 +236,22 @@ export default function SideBar() {
 							<span
 								id="menu-accordion-grp-1"
 								data-accordion="collapse"
-								data-active-classes="bg-brand-100 text-brand-400 border-l-4 border-l-brand-400"
+								data-active-classes="bg-brand-100 text-brand-400"
 								className="mr-4"
 							>
 								<span id="menu-accordion-color-heading-1">
 									<button
 										type="button"
-										className="flex w-full items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
+										onClick={toggleAccordion}
+										className={cn(
+											"flex w-full items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400",
+											{
+												"border-l-4 border-solid border-l-brand-400":
+													isExpanded,
+											}
+										)}
 										data-accordion-target="#menu-accordion-color-body-1"
-										aria-expanded="false"
+										aria-expanded={isExpanded ? "true" : "false"}
 										aria-controls="menu-accordion-color-body-1"
 									>
 										<div className="flex justify-start space-x-2.5">
@@ -291,15 +269,20 @@ export default function SideBar() {
 													d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"
 												/>
 											</svg>
-
-											<Link href={route("riders-management")}>
+											<span>Riders Management</span>
+											{/* <Link href={route("riders-management")}>
 												Riders Management
-											</Link>
+											</Link> */}
 										</div>
 
 										<svg
-											id="accordion-icon-rotate"
-											className="size-5 text-gray-400 transition-all duration-75 hover:text-brand-400"
+											className={cn(
+												"size-5 text-gray-400 transition-all duration-75 hover:text-brand-400",
+												{
+													"rotate-90": isExpanded,
+												}
+											)}
+											ref={chevronRef}
 											aria-hidden="true"
 											xmlns="http://www.w3.org/2000/svg"
 											fill="none"
@@ -322,9 +305,48 @@ export default function SideBar() {
 									className="mr-4 hidden space-y-0.5 pl-4 pr-2 pt-1"
 									aria-labelledby="menu-accordion-color-heading-1"
 								>
-									<a
-										href="/riders-management/rides-management/"
-										className="flex items-center justify-between rounded-r-full border-l-4 border-l-transparent py-2 pl-8 pr-2 hover:bg-brand-100 hover:text-brand-400"
+									<Link
+										href={route("riders-management")}
+										className={cn(
+											"flex items-center justify-between rounded-r-full border-l-4 py-2 pl-7 pr-2 hover:bg-brand-100 hover:text-brand-400",
+											{
+												"border-l-4 border-solid border-l-brand-400":
+													props.ziggy.location ===
+													route("riders-management"),
+											}
+										)}
+									>
+										<span className="flex justify-start space-x-2.5">
+											All Riders
+										</span>
+
+										<svg
+											className="size-5 text-gray-400 hover:text-brand-400"
+											aria-hidden="true"
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 24 24"
+										>
+											<path
+												stroke="currentColor"
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												strokeWidth="1.5"
+												d="m10 16 4-4-4-4"
+											/>
+										</svg>
+									</Link>
+
+									<Link
+										href={route("riders-management.rides-management")}
+										className={cn(
+											"flex items-center justify-between rounded-r-full border-l-4 py-2 pl-7 pr-2 hover:bg-brand-100 hover:text-brand-400",
+											{
+												"border-l-4 border-solid border-l-brand-400":
+													props.ziggy.location ===
+													route("riders-management.rides-management"),
+											}
+										)}
 									>
 										<span className="flex justify-start space-x-2.5">
 											Rides management
@@ -345,10 +367,18 @@ export default function SideBar() {
 												d="m10 16 4-4-4-4"
 											/>
 										</svg>
-									</a>
-									<a
-										href="/riders-management/active-rides/"
-										className="flex items-center justify-between rounded-r-full border-l-4 border-l-transparent py-2 pl-8 pr-2 hover:bg-brand-100 hover:text-brand-400"
+									</Link>
+
+									<Link
+										href={route("riders-management.active-rides")}
+										className={cn(
+											"flex items-center justify-between rounded-r-full border-l-4 py-2 pl-7 pr-2 hover:bg-brand-100 hover:text-brand-400",
+											{
+												"border-l-4 border-solid border-l-brand-400":
+													props.ziggy.location ===
+													route("riders-management.active-rides"),
+											}
+										)}
 									>
 										<span className="flex justify-start space-x-2.5">
 											Active rides
@@ -369,11 +399,18 @@ export default function SideBar() {
 												d="m10 16 4-4-4-4"
 											/>
 										</svg>
-									</a>
+									</Link>
 
-									<a
-										href="/riders-management/ride-transactions/"
-										className="flex items-center justify-between rounded-r-full border-l-4 border-l-transparent py-2 pl-8 pr-2 hover:bg-brand-100 hover:text-brand-400"
+									<Link
+										href={route("riders-management.ride-transactions")}
+										className={cn(
+											"flex items-center justify-between rounded-r-full border-l-4 py-2 pl-7 pr-2 hover:bg-brand-100 hover:text-brand-400",
+											{
+												"border-l-4 border-solid border-l-brand-400":
+													props.ziggy.location ===
+													route("riders-management.ride-transactions"),
+											}
+										)}
 									>
 										<span className="flex justify-start space-x-2.5">
 											Ride transactions
@@ -394,11 +431,18 @@ export default function SideBar() {
 												d="m10 16 4-4-4-4"
 											/>
 										</svg>
-									</a>
+									</Link>
 
-									<a
-										href="/riders-management/all-transactions/"
-										className="flex items-center justify-between rounded-r-full border-l-4 border-l-transparent py-2 pl-8 pr-2 hover:bg-brand-100 hover:text-brand-400"
+									<Link
+										href={route("riders-management.all-transactions")}
+										className={cn(
+											"flex items-center justify-between rounded-r-full border-l-4 py-2 pl-7 pr-2 hover:bg-brand-100 hover:text-brand-400",
+											{
+												"border-l-4 border-solid border-l-brand-400 bg-neutral-50 font-medium":
+													props.ziggy.location ===
+													route("riders-management.all-transactions"),
+											}
+										)}
 									>
 										<span className="flex justify-start space-x-2.5">
 											All transactions
@@ -419,7 +463,7 @@ export default function SideBar() {
 												d="m10 16 4-4-4-4"
 											/>
 										</svg>
-									</a>
+									</Link>
 								</div>
 							</span>
 							{/* {{-- toggler end --}} */}
@@ -675,8 +719,11 @@ export default function SideBar() {
 									/>
 								</svg>
 							</a>
-							<a
-								href="#"
+
+							<Link
+								method="post"
+								as="button"
+								href={route("logout")}
 								className="mr-4 flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
 							>
 								<div className="flex justify-start space-x-2.5">
@@ -695,13 +742,7 @@ export default function SideBar() {
 										/>
 									</svg>
 
-									{/* <!-- Authentication --> */}
-									{/* <form method="POST" action="{{ route(" logout") }}"> */}
-									<form method="POST" action="">
-										{/* @csrf */}
-
-										<button type="submit">Logout</button>
-									</form>
+									<span>Log out</span>
 								</div>
 
 								<svg
@@ -719,14 +760,15 @@ export default function SideBar() {
 										d="m10 16 4-4-4-4"
 									/>
 								</svg>
-							</a>
+							</Link>
 						</div>
 					</div>
 				</div>
 				<div className="my-4 hidden h-auto grow px-6 md:flex">
-					<span className="mt-auto text-xs font-thin text-gray-400">
-						Powered by Trekk
-					</span>
+					<div className="mt-auto flex gap-1 text-xs font-thin text-gray-400">
+						<span>Copyright © {new Date().getFullYear()}.</span>
+						<span>Powered by Trekk</span>
+					</div>
 				</div>
 			</div>
 		</aside>

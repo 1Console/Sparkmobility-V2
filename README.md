@@ -93,6 +93,7 @@ The wiki has some helpful information for developers:
 #### TailwindCSS
 -   TailwindCSS Docs --> [https://tailwindcss.com/docs/utility-first/](https://tailwindcss.com/docs/utility-first/)
 -   Learn how the TailwindCSS framework works, prototyping a new idea, or creating a demo to share online. --> [Tailwind Play](https://play.tailwindcss.com/)
+-   Learn more about the free and open-source Flowbite React UI components. --> [Flowbite React UI Documentation](https://www.flowbite-react.com/docs/getting-started/introduction)
 
 #### Git version control 
 -   [https://geekflare.com/how-to-create-a-new-git-branch/](https://geekflare.com/how-to-create-a-new-git-branch/)

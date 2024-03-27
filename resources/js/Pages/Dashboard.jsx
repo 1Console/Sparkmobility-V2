@@ -21,7 +21,7 @@ export default function Dashboard() {
 			<Head title="Dashboard" />
 
 			<div className="flex h-auto flex-col lg:h-full lg:flex-1 lg:flex-row">
-				<section className="flex w-full px-4 md:overflow-y-auto md:px-8">
+				<section className="flex w-full px-3 md:overflow-y-auto md:px-5">
 					<div className="flex w-full flex-1 flex-col">
 						<div className="mb-6 mt-10 space-y-1.5 md:mt-6">
 							<h1 className="text-xl font-medium text-gray-800">Overview</h1>
