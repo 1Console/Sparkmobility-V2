@@ -33,31 +33,31 @@ export default function PartnersOverview() {
 			</div>
 
 			<div className="flex flex-wrap items-end gap-2 text-white rtl:space-x-reverse">
-				<div className="border-1 relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-red-400">
+				<div className="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-emerald-700">
 					<span className="font-medium">AX</span>
 				</div>
-				<div className="border-1 relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-sky-500">
+				<div className="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-sky-500">
 					<span className="font-medium">KZ</span>
 				</div>
-				<div className="border-1 relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-red-800">
+				<div className="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-red-800">
 					<span className="font-medium">OS</span>
 				</div>
-				<div className="border-1 relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-purple-800">
+				<div className="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-purple-800">
 					<span className="font-medium">CC</span>
 				</div>
-				<div className="border-1 relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-slate-800">
+				<div className="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-slate-800">
 					<span className="font-medium">OL</span>
 				</div>
-				<div className="border-1 relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-amber-700">
+				<div className="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-amber-700">
 					<span className="font-medium">PC</span>
 				</div>
-				<div className="border-1 relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-lime-600">
+				<div className="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-lime-600">
 					<span className="font-medium">JL</span>
 				</div>
-				<div className="border-1 relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-indigo-900">
+				<div className="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-indigo-900">
 					<span className="font-medium">OE</span>
 				</div>
-				<div className="border-1 relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-blue-900">
+				<div className="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-blue-900">
 					<span className="font-medium">DA</span>
 				</div>
 

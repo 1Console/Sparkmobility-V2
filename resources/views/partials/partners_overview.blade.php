@@ -30,47 +30,47 @@
 
 	<div class="flex flex-wrap items-end gap-2 text-white rtl:space-x-reverse">
 		<div
-			class="border-1 relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-red-400"
+			class="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-red-400"
 		>
 			<span class="font-medium">AX</span>
 		</div>
 		<div
-			class="border-1 relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-sky-500"
+			class="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-sky-500"
 		>
 			<span class="font-medium">KZ</span>
 		</div>
 		<div
-			class="border-1 relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-red-800"
+			class="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-red-800"
 		>
 			<span class="font-medium">OS</span>
 		</div>
 		<div
-			class="border-1 relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-purple-800"
+			class="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-purple-800"
 		>
 			<span class="font-medium">CC</span>
 		</div>
 		<div
-			class="border-1 relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-slate-800"
+			class="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-slate-800"
 		>
 			<span class="font-medium">OL</span>
 		</div>
 		<div
-			class="border-1 relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-amber-700"
+			class="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-amber-700"
 		>
 			<span class="font-medium">PC</span>
 		</div>
 		<div
-			class="border-1 relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-lime-600"
+			class="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-lime-600"
 		>
 			<span class="font-medium">JL</span>
 		</div>
 		<div
-			class="border-1 relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-indigo-900"
+			class="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-indigo-900"
 		>
 			<span class="font-medium">OE</span>
 		</div>
 		<div
-			class="border-1 relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-blue-900"
+			class="relative inline-flex size-9 items-center justify-center overflow-hidden rounded-full bg-blue-900"
 		>
 			<span class="font-medium">DA</span>
 		</div>
