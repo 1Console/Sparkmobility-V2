@@ -1,7 +1,54 @@
-import React from "react";
-import { Link } from "@inertiajs/react";
-
+import React, { useEffect } from "react";
+import { Link, usePage } from "@inertiajs/react";
+import cn from "classnames";
 export default function SideBar() {
+	const { url, props } = usePage();
+	console.log(url);
+
+	console.log("url check", props);
+
+	useEffect(() => {
+		highlightCurrentMenuItem();
+	}, [url]);
+
+	const submenuItems = [
+		"/riders-management/active-rides/",
+		"/riders-management/all-transactions/",
+		"/riders-management/rides-management/",
+		"/riders-management/ride-transactions/",
+	];
+
+	console.log(document.querySelector('.side-menu a[href="' + url + '"]'));
+
+	function highlightCurrentMenuItem() {
+		const menuItem = document.querySelector('.side-menu a[href="' + url + '"]');
+		if (menuItem) {
+			menuItem.classList.add("border-l-4", "border-l-brand-400");
+		}
+
+		if (url.startsWith("/riders-management/")) {
+			const toggleButton = document.querySelector("#menu-accordion-color-heading-1 button");
+			const toggleMenu = document.querySelector("#menu-accordion-color-body-1");
+
+			if (toggleButton.getAttribute("aria-expanded") === "false") {
+				toggleButton.setAttribute("aria-expanded", "true");
+			} else {
+				toggleButton.setAttribute("aria-expanded", "false");
+				toggleMenu.classList.add("hidden");
+			}
+
+			submenuItems.forEach((item) => {
+				const menuItem = document.querySelector(
+					`#menu-accordion-color-body-1 a[href='${item}']`
+				);
+				if (menuItem && url === item) {
+					menuItem.classList.remove("border-l-transparent");
+					menuItem.classList.add("border-l-brand-400");
+				}
+			});
+		}
+	}
+
 	return (
 		<aside
 			className="absolute z-20 flex h-full w-64 flex-shrink-0 flex-col bg-white transition-all delay-700 duration-1000 ease-in-out md:w-80 lg:relative"
@@ -51,9 +98,15 @@ export default function SideBar() {
 							Admin Access
 						</h2>
 						<div className="side-menu flex flex-col space-y-0.5 text-sm">
-							<a
-								href="/dashboard/"
-								className="mr-4 flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
+							<Link
+								href={route("dashboard")}
+								className={cn(
+									"mr-4 flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400",
+									{
+										"border-solid border-l-4 border-l-brand-400":
+											props.ziggy.location === route("dashboard"),
+									}
+								)}
 							>
 								<div className="flex items-center justify-start space-x-2.5 text-brand-400">
 									<svg
@@ -89,7 +142,7 @@ export default function SideBar() {
 										d="m9 16 4-4-4-4"
 									/>
 								</svg>
-							</a>
+							</Link>
 							<a
 								href="/commands/"
 								className="mr-4 flex items-center justify-between rounded-r-full py-2 pl-4 pr-2 hover:bg-brand-100 hover:text-brand-400"
@@ -239,8 +292,6 @@ export default function SideBar() {
 												/>
 											</svg>
 
-											{/* <a href="/riders-management/">Riders Management</a> */}
-											{/* <a href={route("riders-management")}>Riders Management</a> */}
 											<Link href={route("riders-management")}>
 												Riders Management
 											</Link>

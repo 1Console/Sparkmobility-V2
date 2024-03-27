@@ -1,69 +1,46 @@
-import React from "react";
-// import { Link } from "@inertiajs/react";
-import ResponsiveNavLink from "../ResponsiveNavLink";
+import React, { useEffect, useState } from "react";
 import Logo from "/public/images/TrekkLogo.png";
 import Searchbar from "../SearchBar";
 import { format } from "date-fns";
 
-// import { Collapse } from "flowbite";
-
-// const Sidebar = () => {
-// 	const mainSidebarRef = useRef(null);
-// 	const sidebarTriggerRef = useRef(null);
-// 	const collapseSidebarRef = useRef(null);
-
-// 	useEffect(() => {
-// 		const sidebarOptions = {
-// 			onCollapse: () => {
-// 				console.log("element has been collapsed");
-// 			},
-// 			onExpand: () => {
-// 				console.log("element has been expanded");
-// 			},
-// 			onToggle: () => {
-// 				console.log("element has been toggled");
-// 			},
-// 		};
-
-// 		const instanceOptions = {
-// 			id: "mainSidebar",
-// 			override: true,
-// 		};
-
-// 		collapseSidebarRef.current = new Collapse(
-// 			mainSidebarRef.current,
-// 			sidebarTriggerRef.current,
-// 			sidebarOptions,
-// 			instanceOptions
-// 		);
-
-// 		toggleCollapseOnWidth();
-
-// 		window.addEventListener("resize", toggleCollapseOnWidth);
-
-// 		return () => {
-// 			window.removeEventListener("resize", toggleCollapseOnWidth);
-// 		};
-// 	}, []);
-
-// 	const toggleCollapseOnWidth = () => {
-// 		if (window.innerWidth < 992) {
-// 			collapseSidebarRef.current?.collapse();
-// 		} else {
-// 			collapseSidebarRef.current?.expand();
-// 		}
-// 	};
-
-// 	const handleSidebarClick = (event) => {
-// 		const clickedElement = event.target;
-// 		if (clickedElement === sidebarTriggerRef.current) {
-// 			collapseSidebarRef.current?.toggle();
-// 		}
-// 	};
-// }
+import { Collapse } from "flowbite";
+import { Link } from "@inertiajs/react";
 
 // export default function NavBar({ active = false, className = "", children, ...props }) {
-export default function NavBar({ active = false, className = "", children, ...props }) {
+export default function NavBar() {
+	const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+
+	useEffect(() => {
+		const collapseSidebar = new Collapse(
+			document.getElementById("Sidebar"),
+			document.getElementById("toggleSidebar")
+		);
+
+		// Function to toggle collapse based on screen width
+		function toggleCollapseOnWidth() {
+			if (typeof window !== "undefined" && window.innerWidth < 992) {
+				collapseSidebar.collapse();
+				setSidebarCollapsed(true);
+			} else {
+				collapseSidebar.expand();
+				setSidebarCollapsed(false);
+			}
+		}
+
+		toggleCollapseOnWidth();
+
+		window.addEventListener("resize", toggleCollapseOnWidth);
+
+		// Clean up function to remove event listener
+		return () => {
+			window.removeEventListener("resize", toggleCollapseOnWidth);
+		};
+	}, []);
+
+	const handleSidebarToggle = () => {
+		setSidebarCollapsed(!sidebarCollapsed);
+	};
+
 	return (
 		// <>
 		// 	<Link
@@ -85,7 +62,8 @@ export default function NavBar({ active = false, className = "", children, ...pr
 						{/* toggle sidebar start  */}
 						<button
 							id="toggleSidebar"
-							aria-expanded="true"
+							onClick={handleSidebarToggle}
+							aria-expanded={sidebarCollapsed ? "false" : "true"}
 							aria-controls="sidebar"
 							type="button"
 							className="mr-2 cursor-pointer rounded-lg p-2 text-gray-600 hover:bg-brand-100 hover:text-gray-900 focus:bg-gray-100 focus:ring-2 focus:ring-gray-100"
@@ -118,14 +96,6 @@ export default function NavBar({ active = false, className = "", children, ...pr
 					</div>
 
 					<div className="flex items-center justify-between space-x-2 md:justify-end lg:order-2">
-						<div className="flex w-full shrink-0 justify-center">
-							<ResponsiveNavLink href={route("profile.edit")}>
-								Profile
-							</ResponsiveNavLink>
-							<ResponsiveNavLink method="post" href={route("logout")} as="button">
-								Log Out
-							</ResponsiveNavLink>
-						</div>
 						{/* {{-- Date --}} */}
 						<span className="hidden shrink-0 items-center text-sm sm:inline-flex">
 							<svg
@@ -562,13 +532,9 @@ export default function NavBar({ active = false, className = "", children, ...pr
 									</svg>
 									<div className="text-sm font-medium text-gray-900">Billing</div>
 								</a>
-								{/* <form method="POST" action="{{ route(" logout") }}"> */}
-								<form method="POST" action="">
-									{/* @csrf */}
-									<button
-										href="#"
-										className="group block rounded-lg p-4 text-center hover:bg-brand-100"
-									>
+
+								<Link method="post" as="button" href={route("logout")}>
+									<div className="group rounded-lg p-4 text-center hover:bg-brand-100">
 										<svg
 											className="mx-auto mb-2 size-5 text-gray-400 group-hover:text-gray-500"
 											aria-hidden="true"
@@ -585,8 +551,8 @@ export default function NavBar({ active = false, className = "", children, ...pr
 											/>
 										</svg>
 										Logout
-									</button>
-								</form>
+									</div>
+								</Link>
 							</div>
 						</div>
 
@@ -633,12 +599,14 @@ export default function NavBar({ active = false, className = "", children, ...pr
 									aria-labelledby="user-menu-button"
 								>
 									<li>
-										<a
-											href="#"
+										<Link
+											method="post"
+											as="button"
+											href={route("profile.edit")}
 											className="block px-4 py-2 text-sm hover:bg-brand-100"
 										>
 											My profile
-										</a>
+										</Link>
 									</li>
 									<li>
 										<a
@@ -723,12 +691,14 @@ export default function NavBar({ active = false, className = "", children, ...pr
 								</ul>
 								<ul className="py-1 text-gray-500" aria-labelledby="dropdown">
 									<li>
-										<a
-											href="#"
+										<Link
+											method="post"
+											as="button"
+											href={route("logout")}
 											className="block px-4 py-2 text-sm hover:bg-brand-100"
 										>
 											Sign out
-										</a>
+										</Link>
 									</li>
 								</ul>
 							</div>
