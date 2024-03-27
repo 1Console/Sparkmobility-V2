@@ -9,8 +9,6 @@ import { format } from "date-fns";
 // window.Alpine = Alpine;
 // Alpine.start();
 
-
-
 // Set current date on navbar
 const formattedDate = format(new Date(), "eeee, MMMM do");
 console.log(formattedDate);

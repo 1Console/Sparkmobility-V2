@@ -1,12 +1,12 @@
 // import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import React from "react";
+import { Head } from "@inertiajs/react";
 import Stats from "@/Components/Stats";
 import AdminOverview from "@/Components/AdminOverview";
 import PartnersOverview from "@/Components/PartnersOverview";
 import PromosOverview from "@/Components/PromosOverview";
 import ReviewsOverview from "@/Components/ReviewsOverview";
 import TicketsOverview from "@/Components/TicketsOverview";
-import { Head } from "@inertiajs/react";
 
 export default function Dashboard() {
 	// export default function Dashboard({ auth }) {

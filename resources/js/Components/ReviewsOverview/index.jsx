@@ -9,7 +9,7 @@ export default function ReviewsOverview() {
 				<p>What admins are saying about the product</p>
 			</div>
 
-			<div className="max-w-screen-xxl mx-auto w-full px-4 lg:px-0">
+			<div className="mx-auto w-full max-w-screen-xxl px-4 lg:px-0">
 				<div className="relative flex flex-col gap-8 overflow-hidden dark:bg-gray-800 sm:rounded-lg">
 					<div className="flex flex-col items-center justify-between space-y-3 md:flex-row md:gap-4 md:space-y-0">
 						{/* Search */}
